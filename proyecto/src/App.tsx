@@ -12,10 +12,10 @@ import { VehicleList } from "./features/vehicles/VehicleList/VehicleList";
 import { Agenda } from "./features/agenda/Agenda/Agenda";
 import { InventoryList } from "./features/inventory/InventoryList/InventoryList";
 import { FinanceDashboard } from "./features/finance/FinanceDashboard/FinanceDashboard";
+import { Customization } from "./features/customization/Customization/Customization";
+import { Settings } from "./features/settings/Settings/Settings";
 
 // Placeholder Pages
-const Customization = () => <div style={{ padding: '2rem' }}><h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-on-surface)' }}>Personalización</h1><p style={{ color: 'var(--color-on-surface-variant)', marginTop: '0.5rem' }}>Próximamente.</p></div>;
-const Settings      = () => <div style={{ padding: '2rem' }}><h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-on-surface)' }}>Cuenta y Configuración</h1><p style={{ color: 'var(--color-on-surface-variant)', marginTop: '0.5rem' }}>Próximamente.</p></div>;
 
 function App() {
   return (
