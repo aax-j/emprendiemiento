@@ -10,9 +10,9 @@ import { SetupWorkshop } from "./features/onboarding/SetupWorkshop/SetupWorkshop
 import { ClientList } from "./features/clients/ClientList/ClientList";
 import { VehicleList } from "./features/vehicles/VehicleList/VehicleList";
 import { Agenda } from "./features/agenda/Agenda/Agenda";
+import { InventoryList } from "./features/inventory/InventoryList/InventoryList";
 
 // Placeholder Pages
-const Inventory     = () => <div style={{ padding: '2rem' }}><h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-on-surface)' }}>Inventario</h1><p style={{ color: 'var(--color-on-surface-variant)', marginTop: '0.5rem' }}>Próximamente.</p></div>;
 const Finance       = () => <div style={{ padding: '2rem' }}><h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-on-surface)' }}>Finanzas</h1><p style={{ color: 'var(--color-on-surface-variant)', marginTop: '0.5rem' }}>Próximamente.</p></div>;
 const Customization = () => <div style={{ padding: '2rem' }}><h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-on-surface)' }}>Personalización</h1><p style={{ color: 'var(--color-on-surface-variant)', marginTop: '0.5rem' }}>Próximamente.</p></div>;
 const Settings      = () => <div style={{ padding: '2rem' }}><h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-on-surface)' }}>Cuenta y Configuración</h1><p style={{ color: 'var(--color-on-surface-variant)', marginTop: '0.5rem' }}>Próximamente.</p></div>;
@@ -38,7 +38,7 @@ function App() {
           <Route path="agenda" element={<Agenda />} />
           <Route path="clients" element={<ClientList />} />
           <Route path="vehicles" element={<VehicleList />} />
-          <Route path="inventory" element={<Inventory />} />
+          <Route path="inventory" element={<InventoryList />} />
           <Route path="finance" element={<Finance />} />
           <Route path="customization" element={<Customization />} />
           <Route path="settings" element={<Settings />} />

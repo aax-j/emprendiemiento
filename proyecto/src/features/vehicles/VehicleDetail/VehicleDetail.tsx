@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { VehicleWithClient } from '../../../lib/api/vehicles';
 import { getRepairHistory, createRepair, updateRepair, deleteRepair, RepairHistory } from '../../../lib/api/repairs';
+import { getRepairItems, saveRepairItems, RepairItem } from '../../../lib/api/inventory';
+import { RepairItemsManager } from './RepairItemsManager';
 
 import { Icon } from '../../../components/Icon/Icon';
 import styles from './VehicleDetail.module.css';
@@ -10,6 +12,7 @@ const STATUS_CONFIG: Record<string, { label: string, icon: string, cls: string }
   pendiente:   { label: 'Pendiente',   icon: 'radio_button_unchecked', cls: 'open' },
   en_proceso:  { label: 'En Proceso',  icon: 'pending',                cls: 'inProgress' },
   completado:  { label: 'Completado',  icon: 'check_circle',           cls: 'completed' },
+  cancelado:   { label: 'Cancelado',   icon: 'cancel',                 cls: 'open' },
 };
 
 const fmt = (date: string | null) =>
@@ -30,8 +33,23 @@ const RepairModal: React.FC<RepairModalProps> = ({ vehicleId, workshopId, repair
   const [cost, setCost]                 = useState(repair?.cost?.toString() ?? '');
   const [startDate, setStartDate]       = useState(repair?.start_date ?? '');
   const [deliveryDate, setDeliveryDate] = useState(repair?.delivery_date ?? '');
+  const [items, setItems]               = useState<Omit<RepairItem, 'id' | 'repair_id' | 'inventory'>[]>([]);
   const [loading, setLoading]           = useState(false);
   const [error, setError]               = useState<string | null>(null);
+
+  useEffect(() => {
+    if (repair) {
+      getRepairItems(repair.id).then(data => {
+        setItems(data.map(d => ({
+          inventory_id: d.inventory_id,
+          quantity: d.quantity,
+          unit_price: d.unit_price,
+          _name: d.inventory?.name,
+          _type: d.inventory?.item_type
+        } as any)));
+      }).catch(console.error);
+    }
+  }, [repair]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -45,15 +63,23 @@ const RepairModal: React.FC<RepairModalProps> = ({ vehicleId, workshopId, repair
         start_date: startDate || null,
         delivery_date: deliveryDate || null,
       };
+      let savedRepairId = repair?.id;
       if (repair) {
         await updateRepair(repair.id, payload);
       } else {
-        await createRepair({
+        const newRepair = await createRepair({
           vehicle_id: vehicleId,
           workshop_id: workshopId,
           ...payload,
         });
+        savedRepairId = newRepair.id;
       }
+      
+      // Save items
+      if (savedRepairId) {
+        await saveRepairItems(savedRepairId, items);
+      }
+
       onSuccess();
       onClose();
     } catch (err: any) {
@@ -117,6 +143,7 @@ const RepairModal: React.FC<RepairModalProps> = ({ vehicleId, workshopId, repair
                   <option value="pendiente">Pendiente</option>
                   <option value="en_proceso">En Proceso</option>
                   <option value="completado">Completado</option>
+                  <option value="cancelado">Cancelado</option>
                 </select>
               </div>
               <div className={styles.inputGroup}>
@@ -132,6 +159,13 @@ const RepairModal: React.FC<RepairModalProps> = ({ vehicleId, workshopId, repair
                 />
               </div>
             </div>
+
+            <RepairItemsManager 
+              workshopId={workshopId}
+              items={items}
+              onChange={setItems}
+              onCostChange={(newTotal) => setCost(newTotal.toString())}
+            />
           </div>
           <div className={styles.modalFooter}>
             <button type="button" className={styles.cancelBtn} onClick={onClose} disabled={loading}>Cancelar</button>
@@ -261,7 +295,7 @@ export const VehicleDetail: React.FC<VehicleDetailProps> = ({
                 <span className={styles.statLabel}>Completadas</span>
               </div>
               <div className={styles.statItem}>
-                <span className={styles.statValue}>{history.filter(h => h.status !== 'completado').length}</span>
+                <span className={styles.statValue}>{history.filter(h => h.status === 'pendiente' || h.status === 'en_proceso').length}</span>
                 <span className={styles.statLabel}>Activas</span>
               </div>
             </div>
