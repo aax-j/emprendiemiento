@@ -87,19 +87,25 @@ export const saveRepairItems = async (
   repairId: string,
   items: Omit<RepairItem, 'id' | 'repair_id' | 'inventory'>[]
 ): Promise<void> => {
-  // First, get existing items to compare for stock updates (if we want to update stock)
-  // But the user asked: "¿Deseas que al agregar un ítem a una reparación, el stock en la tabla de inventario se reste automáticamente?"
-  // I will implement a basic "replace all" approach for the items, which is easier for editing.
-  // We delete existing items and insert the new ones. 
-  // If we need to subtract stock, we should do it here.
+  // 1. Get existing items to restore their stock
+  const { data: existingItems } = await supabase
+    .from('repair_items')
+    .select('inventory_id, quantity')
+    .eq('repair_id', repairId);
 
-  // To keep it simple and robust, let's just delete all and insert new.
-  // Warning: This doesn't revert stock. If the user wants stock management, we need a more complex diff.
-  // Assuming no strict stock deduction yet unless explicitly requested, but let's implement basic deduction.
+  if (existingItems && existingItems.length > 0) {
+    for (const oldItem of existingItems) {
+      if (!oldItem.inventory_id) continue;
+      // Get current stock
+      const { data: inv } = await supabase.from('inventory').select('stock').eq('id', oldItem.inventory_id).single();
+      if (inv) {
+        // Restore stock
+        await supabase.from('inventory').update({ stock: inv.stock + oldItem.quantity }).eq('id', oldItem.inventory_id);
+      }
+    }
+  }
 
-  // For now, just save the items. 
-  
-  // 1. Delete existing
+  // 2. Delete all existing items for this repair
   const { error: delError } = await supabase
     .from('repair_items')
     .delete()
@@ -107,7 +113,7 @@ export const saveRepairItems = async (
     
   if (delError) throw delError;
 
-  // 2. Insert new
+  // 3. Insert new and subtract stock
   if (items.length > 0) {
     const payloads = items.map((i: any) => {
       const { _name, _type, inventory, ...rest } = i;
@@ -122,5 +128,15 @@ export const saveRepairItems = async (
       .insert(payloads);
       
     if (insError) throw insError;
+
+    // Deduct stock for new items
+    for (const newItem of items) {
+      if (!newItem.inventory_id) continue;
+      const { data: inv } = await supabase.from('inventory').select('stock').eq('id', newItem.inventory_id).single();
+      if (inv) {
+        // Deduct stock
+        await supabase.from('inventory').update({ stock: Math.max(0, inv.stock - newItem.quantity) }).eq('id', newItem.inventory_id);
+      }
+    }
   }
 };

@@ -11,9 +11,9 @@ import { ClientList } from "./features/clients/ClientList/ClientList";
 import { VehicleList } from "./features/vehicles/VehicleList/VehicleList";
 import { Agenda } from "./features/agenda/Agenda/Agenda";
 import { InventoryList } from "./features/inventory/InventoryList/InventoryList";
+import { FinanceDashboard } from "./features/finance/FinanceDashboard/FinanceDashboard";
 
 // Placeholder Pages
-const Finance       = () => <div style={{ padding: '2rem' }}><h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-on-surface)' }}>Finanzas</h1><p style={{ color: 'var(--color-on-surface-variant)', marginTop: '0.5rem' }}>Próximamente.</p></div>;
 const Customization = () => <div style={{ padding: '2rem' }}><h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-on-surface)' }}>Personalización</h1><p style={{ color: 'var(--color-on-surface-variant)', marginTop: '0.5rem' }}>Próximamente.</p></div>;
 const Settings      = () => <div style={{ padding: '2rem' }}><h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-on-surface)' }}>Cuenta y Configuración</h1><p style={{ color: 'var(--color-on-surface-variant)', marginTop: '0.5rem' }}>Próximamente.</p></div>;
 
@@ -39,7 +39,7 @@ function App() {
           <Route path="clients" element={<ClientList />} />
           <Route path="vehicles" element={<VehicleList />} />
           <Route path="inventory" element={<InventoryList />} />
-          <Route path="finance" element={<Finance />} />
+          <Route path="finance" element={<FinanceDashboard />} />
           <Route path="customization" element={<Customization />} />
           <Route path="settings" element={<Settings />} />
         </Route>
