@@ -1,0 +1,147 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.nav {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-ghost-border);
+  background-color: var(--color-surface-container-lowest);
+}
+
+.monthTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-on-surface);
+  text-transform: capitalize;
+}
+
+.navBtns {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navBtn {
+  background: none;
+  border: 1px solid var(--color-ghost-border);
+  color: var(--color-on-surface);
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  transition: all 0.2s;
+}
+
+.navBtn:hover {
+  background-color: var(--color-surface-container-high);
+}
+
+.todayBtn {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+}
+
+/* ─── Grid ────────────────────────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  flex: 1;
+  overflow: hidden;
+}
+
+.dayName {
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-outline);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--color-surface-container-low);
+  border-bottom: 1px solid var(--color-ghost-border);
+  border-right: 1px solid var(--color-ghost-border);
+}
+
+.dayName:last-child {
+  border-right: none;
+}
+
+.cell {
+  background-color: var(--color-surface-container-lowest);
+  border-bottom: 1px solid var(--color-ghost-border);
+  border-right: 1px solid var(--color-ghost-border);
+  padding: 0.5rem;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: background-color 0.1s;
+}
+
+.cell:nth-child(7n) {
+  border-right: none;
+}
+
+.cell:hover {
+  background-color: var(--color-surface-container-low);
+}
+
+.notCurrentMonth {
+  background-color: var(--color-surface-container-lowest);
+  opacity: 0.3;
+}
+
+.dayNumber {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-outline);
+  margin-bottom: 0.25rem;
+}
+
+.isToday .dayNumber {
+  color: var(--color-primary);
+  background-color: var(--color-primary-fixed);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+}
+
+/* ─── Events ──────────────────────────────────────────────────────────────── */
+.event {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-primary-fixed);
+  color: var(--color-on-primary-fixed);
+  border-left: 3px solid var(--color-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.event:hover {
+  transform: translateX(2px);
+  filter: brightness(1.1);
+}
+
+.status_in_progress {
+  background-color: var(--color-tertiary-fixed);
+  color: var(--color-on-tertiary-fixed-variant);
+  border-left-color: var(--color-tertiary);
+}
+
+.status_completed {
+  background-color: #d4edda;
+  color: #1a5928;
+  border-left-color: #28a745;
+}
