@@ -1,0 +1,13 @@
+2026/04/21-00:05:38.725 4364 Reusing MANIFEST C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\.wwebjs_auth\session-autotech-bot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/21-00:05:38.726 4364 Recovering log #35
+2026/04/21-00:05:38.791 4364 Reusing old log C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\.wwebjs_auth\session-autotech-bot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000035.log 
+2026/04/21-00:06:21.282 1ee8 Level-0 table #40: started
+2026/04/21-00:06:21.322 1ee8 Level-0 table #40: 1403886 bytes OK
+2026/04/21-00:06:21.326 1ee8 Delete type=0 #35
+2026/04/21-00:06:24.592 4364 Compacting 1@1 + 1@2 files
+2026/04/21-00:06:24.699 4364 Generated table #41@1: 71349 keys, 2262633 bytes
+2026/04/21-00:06:24.707 4364 Generated table #42@1: 1198 keys, 47307 bytes
+2026/04/21-00:06:24.707 4364 Compacted 1@1 + 1@2 files => 2309940 bytes
+2026/04/21-00:06:24.708 4364 compacted to: files[ 0 0 2 0 0 0 0 ]
+2026/04/21-00:06:24.709 4364 Delete type=2 #37
+2026/04/21-00:06:24.709 4364 Delete type=2 #40

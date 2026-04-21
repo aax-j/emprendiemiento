@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conectar WhatsApp — AutoTech</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --primary: #25d366;
+      --primary-dark: #128c7e;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --error: #f85149;
+      --radius: 1rem;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.4);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .logo-text {
+      font-size: 1.375rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-text span { color: var(--primary); }
+
+    h1 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    /* QR Container */
+    .qr-box {
+      background: #fff;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      display: inline-flex;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.15);
+      animation: pulse-border 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-border {
+      0%, 100% { box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.15); }
+      50%       { box-shadow: 0 0 0 8px rgba(37, 211, 102, 0.05); }
+    }
+
+    .qr-box img {
+      width: 220px;
+      height: 220px;
+      display: block;
+      border-radius: 0.25rem;
+    }
+
+    /* Skeleton mientras carga */
+    .qr-skeleton {
+      width: 220px;
+      height: 220px;
+      background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+      background-size: 400% 100%;
+      animation: shimmer 1.4s ease infinite;
+      border-radius: 0.25rem;
+    }
+
+    @keyframes shimmer {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* Status badge */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+
+    .status-badge.disconnected { background: rgba(248, 81, 73, 0.12); color: var(--error); }
+    .status-badge.initializing { background: rgba(210, 153, 34, 0.12); color: #d29922; }
+    .status-badge.qr          { background: rgba(37, 211, 102, 0.12); color: var(--primary); }
+    .status-badge.ready        { background: rgba(37, 211, 102, 0.2);  color: var(--primary); }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .dot.blink {
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.2; }
+    }
+
+    /* Steps */
+    .steps {
+      text-align: left;
+      font-size: 0.8125rem;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .steps li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      list-style: none;
+    }
+
+    .steps .num {
+      background: rgba(37, 211, 102, 0.15);
+      color: var(--primary);
+      border-radius: 9999px;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Connected state */
+    .connected-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      animation: pop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes pop {
+      0%   { transform: scale(0); }
+      80%  { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    .connected-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .connected-sub {
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    /* Error */
+    .error-msg {
+      background: rgba(248, 81, 73, 0.1);
+      border: 1px solid rgba(248, 81, 73, 0.3);
+      color: var(--error);
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.8125rem;
+      margin-top: 1rem;
+    }
+
+    .btn-retry {
+      margin-top: 1rem;
+      padding: 0.625rem 1.5rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      font-family: inherit;
+      transition: opacity 0.2s;
+    }
+
+    .btn-retry:hover { opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <div class="card" id="app">
+
+    <div class="logo">
+      <div class="logo-icon">📱</div>
+      <div class="logo-text">Auto<span>Tech</span></div>
+    </div>
+
+    <!-- Estado: inicializando / sin respuesta del servidor -->
+    <div id="view-loading">
+      <h1>Conectando con WhatsApp</h1>
+      <p class="subtitle">Iniciando el servicio, por favor espera...</p>
+      <span class="status-badge initializing">
+        <span class="dot blink"></span>
+        Inicializando…
+      </span>
+      <div class="qr-box">
+        <div class="qr-skeleton"></div>
+      </div>
+    </div>
+
+    <!-- Estado: QR listo -->
+    <div id="view-qr" style="display:none">
+      <h1>Escanea el código QR</h1>
+      <p class="subtitle">Abre WhatsApp en tu teléfono y escanea el código para vincular tu cuenta al taller.</p>
+      <span class="status-badge qr">
+        <span class="dot blink"></span>
+        Esperando escaneo
+      </span>
+      <div class="qr-box">
+        <img id="qr-img" src="" alt="Código QR de WhatsApp" />
+      </div>
+      <ul class="steps">
+        <li><span class="num">1</span><span>Abre <strong>WhatsApp</strong> en tu celular.</span></li>
+        <li><span class="num">2</span><span>Ve a <strong>Dispositivos vinculados</strong> → <strong>Vincular dispositivo</strong>.</span></li>
+        <li><span class="num">3</span><span>Apunta la cámara a este código QR.</span></li>
+      </ul>
+    </div>
+
+    <!-- Estado: Conectado ✅ -->
+    <div id="view-ready" style="display:none">
+      <div class="connected-icon">✅</div>
+      <div class="connected-title">¡WhatsApp Conectado!</div>
+      <p class="connected-sub">Tu taller ya puede enviar y recibir mensajes automáticos a través de WhatsApp.<br/>Puedes cerrar esta ventana.</p>
+      <span class="status-badge ready" style="margin-top:1.25rem">
+        <span class="dot"></span>
+        Activo
+      </span>
+    </div>
+
+    <!-- Estado: Error de conexión con servidor -->
+    <div id="view-error" style="display:none">
+      <h1>Sin conexión al servidor</h1>
+      <div class="error-msg">No se pudo conectar con el servidor del bot en <code>localhost:3001</code>. Asegúrate de que el bot esté corriendo con <code>node server.js</code>.</div>
+      <button class="btn-retry" onclick="poll()">Reintentar</button>
+    </div>
+
+  </div>
+
+  <script>
+    const API = 'http://localhost:3001/api';
+    let interval = null;
+
+    function showView(id) {
+      ['loading','qr','ready','error'].forEach(v => {
+        document.getElementById(`view-${v}`).style.display = v === id ? '' : 'none';
+      });
+    }
+
+    async function poll() {
+      try {
+        // 1. Obtener estado
+        const statusRes = await fetch(`${API}/status`);
+        if (!statusRes.ok) throw new Error('Error de red');
+        const { status } = await statusRes.json();
+
+        if (status === 'ready') {
+          showView('ready');
+          clearInterval(interval); // dejar de polling
+          return;
+        }
+
+        if (status === 'qr') {
+          // 2. Obtener QR
+          const qrRes = await fetch(`${API}/qr`);
+          const { qr } = await qrRes.json();
+          if (qr) {
+            document.getElementById('qr-img').src = qr;
+            showView('qr');
+          }
+          return;
+        }
+
+        // initializing / disconnected
+        showView('loading');
+
+        // Si está desconectado, disparar conexión
+        if (status === 'disconnected') {
+          await fetch(`${API}/connect`, { method: 'POST' });
+        }
+
+      } catch (err) {
+        console.error('Error de polling:', err);
+        showView('error');
+        clearInterval(interval);
+      }
+    }
+
+    // Arrancar polling
+    poll();
+    interval = setInterval(poll, 2500);
+  </script>
+</body>
+</html>
