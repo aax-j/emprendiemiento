@@ -1,0 +1,684 @@
+/* ─── Page Layout ─────────────────────────────────────────────────────────── */
+.page {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pageTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-on-surface);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.pageSubtitle {
+  font-size: 0.875rem;
+  color: var(--color-on-surface-variant);
+  margin: 0.25rem 0 0;
+}
+
+/* ─── Toolbar ─────────────────────────────────────────────────────────────── */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.searchBox {
+  flex: 1;
+  min-width: 240px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.875rem;
+  color: var(--color-outline);
+  font-size: 1.125rem;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.625rem 2.75rem;
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-full);
+  font-family: var(--font-family-base);
+  font-size: 0.875rem;
+  background-color: var(--color-surface-container-lowest);
+  color: var(--color-on-surface);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-fixed);
+}
+
+.clearSearch {
+  position: absolute;
+  right: 0.875rem;
+  color: var(--color-outline);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: var(--radius-full);
+  transition: color 0.2s;
+}
+
+.clearSearch:hover {
+  color: var(--color-on-surface);
+}
+
+.toolbarRight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resultCount {
+  font-size: 0.8125rem;
+  color: var(--color-on-surface-variant);
+  white-space: nowrap;
+}
+
+/* ─── Table Card ──────────────────────────────────────────────────────────── */
+.tableCard {
+  background-color: var(--color-surface-container-lowest);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-ghost-border);
+  box-shadow: var(--shadow-ambient);
+  overflow: hidden;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.th {
+  padding: 0.875rem 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-outline);
+  text-align: left;
+  background-color: var(--color-surface-container-low);
+  border-bottom: 1px solid var(--color-ghost-border);
+  white-space: nowrap;
+}
+
+.tr {
+  transition: background-color 0.15s;
+  cursor: pointer;
+}
+
+.tr:hover {
+  background-color: var(--color-surface-container-low);
+}
+
+.td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--color-ghost-border);
+  vertical-align: middle;
+}
+
+.tr:last-child .td {
+  border-bottom: none;
+}
+
+.clientCell {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));
+  color: var(--color-on-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  flex-shrink: 0;
+}
+
+.clientName {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-on-surface);
+  display: block;
+}
+
+.clientNote {
+  font-size: 0.75rem;
+  color: var(--color-on-surface-variant);
+  display: block;
+  margin-top: 0.125rem;
+  font-style: italic;
+}
+
+.tdText {
+  font-size: 0.875rem;
+  color: var(--color-on-surface-variant);
+}
+
+.empty {
+  color: var(--color-outline-variant);
+}
+
+/* ─── Actions ─────────────────────────────────────────────────────────────── */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+}
+
+.actionBtn {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  color: var(--color-outline);
+  transition: all 0.2s;
+}
+
+.actionBtn:hover {
+  background-color: var(--color-surface-container-high);
+  color: var(--color-on-surface);
+}
+
+.dangerActionBtn:hover {
+  background-color: var(--color-error-container);
+  color: var(--color-error);
+}
+
+/* ─── Empty State ─────────────────────────────────────────────────────────── */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--color-on-surface-variant);
+}
+
+.emptyTitle {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.emptySubtitle {
+  font-size: 0.875rem;
+  color: var(--color-on-surface-variant);
+  margin: 0.5rem 0 0;
+}
+
+/* ─── Skeleton Loading ────────────────────────────────────────────────────── */
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.skeletonText,
+.skeletonAvatar {
+  border-radius: var(--radius-md);
+  height: 0.875rem;
+  background: linear-gradient(90deg, var(--color-surface-container) 25%, var(--color-surface-container-high) 50%, var(--color-surface-container) 75%);
+  background-size: 400px 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.skeletonAvatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.skeletonCell {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+/* ─── Buttons ─────────────────────────────────────────────────────────────── */
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.primaryBtn:hover {
+  background-color: var(--color-primary-container);
+  box-shadow: 0 4px 12px rgba(0, 73, 125, 0.25);
+}
+
+.primaryBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancelBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-md);
+  background-color: transparent;
+  color: var(--color-on-surface-variant);
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 1px solid var(--color-outline-variant);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancelBtn:hover {
+  background-color: var(--color-surface-container-high);
+  color: var(--color-on-surface);
+}
+
+.dangerBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-md);
+  background-color: var(--color-error-container);
+  color: var(--color-error);
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dangerBtn:hover {
+  background-color: var(--color-error);
+  color: var(--color-on-error);
+}
+
+/* ─── Modal ───────────────────────────────────────────────────────────────── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal {
+  background-color: var(--color-surface-container-lowest);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-ghost-border);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 560px;
+  animation: slideUp 0.25s ease-out;
+}
+
+.detailModal {
+  background-color: var(--color-surface-container-lowest);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-ghost-border);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 640px;
+  animation: slideUp 0.25s ease-out;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--color-ghost-border);
+}
+
+.modalTitle {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.closeBtn {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  color: var(--color-outline);
+  transition: all 0.2s;
+}
+
+.closeBtn:hover {
+  background-color: var(--color-surface-container-high);
+  color: var(--color-on-surface);
+}
+
+.modalBody {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.modalFooter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--color-ghost-border);
+}
+
+/* ─── Form Elements ───────────────────────────────────────────────────────── */
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-on-surface-variant);
+}
+
+.input {
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-md);
+  font-family: var(--font-family-base);
+  font-size: 0.9375rem;
+  background-color: var(--color-surface-container-lowest);
+  color: var(--color-on-surface);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-fixed);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.errorBox {
+  padding: 0.75rem 1rem;
+  background-color: var(--color-error-container);
+  color: var(--color-on-error-container);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+}
+
+/* ─── Client Detail ───────────────────────────────────────────────────────── */
+.detailBody {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detailHero {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.detailAvatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));
+  color: var(--color-on-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.375rem;
+  flex-shrink: 0;
+}
+
+.detailName {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: var(--color-on-surface);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.detailMeta {
+  font-size: 0.8125rem;
+  color: var(--color-on-surface-variant);
+  margin: 0.25rem 0 0;
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.detailCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  padding: 1rem;
+  background-color: var(--color-surface-container-low);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-ghost-border);
+}
+
+.detailCardLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-outline);
+  margin: 0;
+}
+
+.detailCardValue {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-on-surface);
+  margin: 0.25rem 0 0;
+}
+
+.detailNotes {
+  padding: 1rem;
+  background-color: var(--color-surface-container-low);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-ghost-border);
+}
+
+.detailNotesText {
+  font-size: 0.9375rem;
+  color: var(--color-on-surface-variant);
+  line-height: 1.6;
+  margin: 0.5rem 0 0;
+}
+
+.vehicleSection {
+  border: 1px solid var(--color-ghost-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.vehicleSectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  background-color: var(--color-surface-container-low);
+  border-bottom: 1px solid var(--color-ghost-border);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  font-size: 0.9375rem;
+}
+
+.vehicleEmpty {
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-on-surface-variant);
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vehicleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-container-low);
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.vehicleRow:hover {
+  background-color: var(--color-surface-container-high);
+}
+
+.vehiclePlateSmall {
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  color: var(--color-on-surface);
+  background-color: var(--color-on-primary-fixed);
+  color: var(--color-surface-container-lowest);
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.vehicleNameSmall {
+  font-size: 0.875rem;
+  color: var(--color-on-surface-variant);
+  flex: 1;
+}
+
+/* ─── Delete Warning ──────────────────────────────────────────────────────── */
+.deleteWarning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+}
+
+.deleteWarning p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-on-surface);
+}
+
+.deleteSubtext {
+  font-size: 0.8125rem !important;
+  color: var(--color-on-surface-variant) !important;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .detailGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .th:nth-child(3),
+  .td:nth-child(3),
+  .th:nth-child(4),
+  .td:nth-child(4) {
+    display: none;
+  }
+}

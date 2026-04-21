@@ -1,0 +1,90 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  border-bottom: 1px solid var(--color-primary-fixed-dim);
+  height: 72px;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.leftArea {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.workshopName {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-on-primary);
+  letter-spacing: -0.01em;
+}
+
+.rightArea {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.iconBtn {
+  color: var(--color-on-primary);
+  opacity: 0.8;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  padding: 0.5rem;
+}
+
+.iconBtn:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menuBtn {
+  display: none;
+  color: var(--color-on-primary);
+  padding: 0.5rem;
+  border-radius: var(--radius-full);
+  margin-right: 0.5rem;
+}
+
+.menuBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .menuBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .topbar {
+    padding: 1rem;
+  }
+}
+
+.profileArea {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.75rem;
+}

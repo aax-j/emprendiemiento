@@ -1,0 +1,34 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-surface);
+  margin: 0;
+  padding: 0;
+}
+
+.mainContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--color-surface-container-lowest);
+}
+
+.scrollArea {
+  flex-grow: 1;
+  overflow-y: auto;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+
+
+.pageContainer {
+  flex: 1;
+  padding-top: 5rem; /* Space for TopAppBar */
+  overflow-y: auto;
+  overflow-x: hidden;
+}

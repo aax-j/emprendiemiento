@@ -1,0 +1,67 @@
+:root {
+  /* Tonal Architecture (The Precision Engine) */
+  --color-primary: #00497d;
+  --color-primary-container: #0061a4;
+  --color-on-primary: #ffffff;
+  --color-on-primary-fixed: #001d36;
+  --color-primary-fixed: #d1e4ff;
+
+  --color-surface: #f7fafd;
+  --color-on-surface: #181c1e;
+  --color-on-surface-variant: #414750;
+  
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f1f4f7;
+  --color-surface-container: #ebeef1;
+  --color-surface-container-high: #e5e8eb;
+  --color-surface-container-highest: #e0e3e6;
+
+  --color-outline: #717782;
+  --color-outline-variant: #c1c7d2;
+  --color-ghost-border: rgba(193, 199, 210, 0.2);
+
+  --color-tertiary: #713700;
+  --color-tertiary-fixed: #ffdcc6;
+  --color-on-tertiary-fixed-variant: #713700;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+  
+  --color-secondary: #4a607c;
+  --color-secondary-container: #c8dfff;
+  --color-on-secondary-container: #4c627e;
+
+  /* Fonts */
+  --font-family-base: 'Inter', sans-serif;
+
+  /* Radii */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-ambient: 0 10px 40px -10px rgba(24, 28, 30, 0.05);
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-blur: 24px;
+}
+
+[data-theme='dark'] {
+  --color-surface: #0f1416;
+  --color-on-surface: #e1e3e4;
+  --color-on-surface-variant: #c1c7ce;
+  --color-surface-container-lowest: #0b0f11;
+  --color-surface-container-low: #181c1e;
+  --color-surface-container: #1c2022;
+  --color-surface-container-high: #272a2c;
+  --color-surface-container-highest: #323537;
+  --color-primary: #9fcaff;
+  --color-on-primary: #003258;
+  --color-primary-container: #00497d;
+  --color-ghost-border: rgba(193, 199, 210, 0.1);
+  --glass-bg: rgba(11, 15, 17, 0.8);
+}
