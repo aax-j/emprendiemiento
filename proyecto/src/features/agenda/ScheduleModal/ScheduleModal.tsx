@@ -106,6 +106,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({ onClose, onSuccess
         year: null,
         color: null,
         notes: null,
+        last_oil_change: null,
         client_id: selectedClient.id,
       }, profile.workshop_id);
       

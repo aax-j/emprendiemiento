@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { Icon } from '../Icon/Icon';
+import logoBlue from '../../assets/logo-blue.jpg';
 import styles from './Sidebar.module.css';
 
 interface SidebarProps {
@@ -23,7 +24,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
         <div className={styles.brand}>
           <div className={styles.brandIcon}>
-            <Icon name="precision_manufacturing" />
+            <img src={logoBlue} alt="AutoTech Logo" className={styles.logoImg} />
           </div>
           <span className={styles.brandName}>AutoTech</span>
         </div>
