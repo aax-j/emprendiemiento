@@ -3,8 +3,10 @@ import { VehicleWithClient } from '../../../lib/api/vehicles';
 import { getRepairHistory, createRepair, updateRepair, deleteRepair, RepairHistory } from '../../../lib/api/repairs';
 import { getRepairItems, saveRepairItems, RepairItem } from '../../../lib/api/inventory';
 import { RepairItemsManager } from './RepairItemsManager';
+import { generateAndSavePDF } from '../../../lib/pdf';
 
 import { Icon } from '../../../components/Icon/Icon';
+import { PrintableRepairReport } from '../../../components/PrintableReports/PrintableRepairReport';
 import styles from './VehicleDetail.module.css';
 
 // ─── Status helpers ───────────────────────────────────────────────────────────
@@ -199,8 +201,26 @@ export const VehicleDetail: React.FC<VehicleDetailProps> = ({
   const [loadingHistory, setLoadingHistory]     = useState(true);
   const [showRepairModal, setShowRepairModal]   = useState(false);
   const [editingRepair, setEditingRepair]       = useState<RepairHistory | null>(null);
+  
+  // Printing state
+  const [printingRepair, setPrintingRepair]     = useState<{ repair: RepairHistory, items: RepairItem[] } | null>(null);
 
   useEffect(() => { fetchHistory(); }, [vehicle.id]);
+
+  useEffect(() => {
+    if (printingRepair) {
+      setTimeout(async () => {
+        try {
+          await generateAndSavePDF('print-repair', `Reparacion_${printingRepair.repair.id.slice(0, 8)}.pdf`);
+        } catch (e) {
+          console.error('Error saving PDF', e);
+          alert('Hubo un error al generar el PDF. Verifica los permisos.');
+        } finally {
+          setPrintingRepair(null);
+        }
+      }, 100);
+    }
+  }, [printingRepair]);
 
   const fetchHistory = async () => {
     setLoadingHistory(true);
@@ -218,6 +238,15 @@ export const VehicleDetail: React.FC<VehicleDetailProps> = ({
     if (!confirm('¿Eliminar este registro de reparación?')) return;
     await deleteRepair(id);
     await fetchHistory();
+  };
+
+  const handlePrintRepair = async (repair: RepairHistory) => {
+    try {
+      const items = await getRepairItems(repair.id);
+      setPrintingRepair({ repair: { ...repair, vehicles: vehicle } as any, items });
+    } catch (err) {
+      console.error('Error loading repair items for print:', err);
+    }
   };
 
   return (
@@ -355,6 +384,9 @@ export const VehicleDetail: React.FC<VehicleDetailProps> = ({
                           </span>
                         </div>
                         <div className={styles.repairActions}>
+                          <button className={styles.iconActionBtn} title="Imprimir Reporte" onClick={() => handlePrintRepair(repair)}>
+                            <Icon name="print" style={{ fontSize: '1rem' }} />
+                          </button>
                           <button className={styles.iconActionBtn} title="Editar" onClick={() => { setEditingRepair(repair); setShowRepairModal(true); }}>
                             <Icon name="edit" style={{ fontSize: '1rem' }} />
                           </button>
@@ -418,6 +450,14 @@ export const VehicleDetail: React.FC<VehicleDetailProps> = ({
       )}
       {renderEditModal}
       {renderDeleteModal}
+
+      {/* Hidden printable area */}
+      {printingRepair && (
+        <PrintableRepairReport 
+          repair={printingRepair.repair} 
+          repairItems={printingRepair.items} 
+        />
+      )}
     </div>
   );
 };

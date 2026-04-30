@@ -89,7 +89,8 @@ export const InventoryList = () => {
               <tr>
                 <th>Nombre</th>
                 <th>Tipo</th>
-                <th>Precio Base</th>
+                <th>Costo (Compra)</th>
+                <th>Precio (Venta)</th>
                 <th>Stock</th>
                 <th style={{ width: '100px' }}>Acciones</th>
               </tr>
@@ -103,7 +104,8 @@ export const InventoryList = () => {
                     <td>
                       <span className={styles.typeChip}>{item.item_type}</span>
                     </td>
-                    <td>${item.price.toLocaleString('es-CO')}</td>
+                    <td style={{ color: 'var(--color-error)' }}>${(item.cost || 0).toLocaleString('es-CO')}</td>
+                    <td style={{ color: 'var(--color-primary)' }}>${item.price.toLocaleString('es-CO')}</td>
                     <td>
                       <span className={`${styles.stockBadge} ${lowStock ? styles.lowStock : ''}`}>
                         {item.stock}

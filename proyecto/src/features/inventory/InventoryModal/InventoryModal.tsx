@@ -14,6 +14,7 @@ export const InventoryModal: React.FC<InventoryModalProps> = ({ item, onClose, o
   const { profile } = useAuth();
   const [name, setName] = useState(item?.name ?? '');
   const [itemType, setItemType] = useState(item?.item_type ?? 'repuesto');
+  const [cost, setCost] = useState(item?.cost?.toString() ?? '');
   const [price, setPrice] = useState(item?.price?.toString() ?? '');
   const [stock, setStock] = useState(item?.stock?.toString() ?? '0');
   const [minStockAlert, setMinStockAlert] = useState(item?.min_stock_alert?.toString() ?? '5');
@@ -30,6 +31,7 @@ export const InventoryModal: React.FC<InventoryModalProps> = ({ item, onClose, o
       const payload = {
         name,
         item_type: itemType,
+        cost: parseFloat(cost) || 0,
         price: parseFloat(price) || 0,
         stock: parseInt(stock, 10) || 0,
         min_stock_alert: parseInt(minStockAlert, 10) || 0,
@@ -88,7 +90,21 @@ export const InventoryModal: React.FC<InventoryModalProps> = ({ item, onClose, o
               </div>
 
               <div className={styles.inputGroup}>
-                <label className={styles.label}>Precio Base ($)</label>
+                <label className={styles.label}>Costo de Compra ($)</label>
+                <input
+                  type="number"
+                  className={styles.input}
+                  value={cost}
+                  onChange={e => setCost(e.target.value)}
+                  placeholder="0.00"
+                  min="0"
+                  step="0.01"
+                  required
+                />
+              </div>
+
+              <div className={styles.inputGroup}>
+                <label className={styles.label}>Precio Venta ($)</label>
                 <input
                   type="number"
                   className={styles.input}
@@ -125,10 +141,9 @@ export const InventoryModal: React.FC<InventoryModalProps> = ({ item, onClose, o
                 />
               </div>
             </div>
-            
             <p className={styles.helperText}>
               <Icon name="info" style={{ fontSize: '1rem' }} />
-              El precio base se usará por defecto en las reparaciones, pero podrás modificarlo según sea el caso.
+              El <strong>Costo de Compra</strong> se usará para calcular la utilidad de tu taller en los reportes, mientras que el <strong>Precio Venta</strong> es lo que se cobrará al cliente en la reparación.
             </p>
           </div>
 

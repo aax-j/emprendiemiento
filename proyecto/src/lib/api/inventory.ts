@@ -5,6 +5,7 @@ export interface InventoryItem {
   workshop_id: string;
   name: string;
   item_type: string;
+  cost: number;
   price: number;
   stock: number;
   min_stock_alert: number;
@@ -17,7 +18,8 @@ export interface RepairItem {
   inventory_id: string;
   quantity: number;
   unit_price: number;
-  inventory?: Pick<InventoryItem, 'name' | 'item_type'>;
+  unit_cost: number;
+  inventory?: Pick<InventoryItem, 'name' | 'item_type' | 'cost'>;
 }
 
 // -- INVENTORY CRUD --
@@ -129,11 +131,23 @@ export const saveRepairItems = async (
       
     if (insError) throw insError;
 
-    // Deduct stock for new items
+    // Deduct stock for new items and ensure unit_cost is populated
     for (const newItem of items) {
       if (!newItem.inventory_id) continue;
-      const { data: inv } = await supabase.from('inventory').select('stock').eq('id', newItem.inventory_id).single();
+      const { data: inv } = await supabase.from('inventory').select('stock, cost').eq('id', newItem.inventory_id).single();
       if (inv) {
+        // We also need to update the inserted items with the correct unit_cost if it wasn't provided,
+        // but since we are inserting the payload directly from UI, the UI should ideally send the unit_cost.
+        // If the UI didn't send unit_cost, we could do an update here, but it's more efficient if the UI sends it.
+        // Actually, we can update the row we just inserted to ensure unit_cost is set to the current inv.cost
+        // in case the UI missed it.
+        if (newItem.unit_cost === undefined || newItem.unit_cost === null) {
+           await supabase.from('repair_items')
+             .update({ unit_cost: inv.cost || 0 })
+             .eq('repair_id', repairId)
+             .eq('inventory_id', newItem.inventory_id);
+        }
+
         // Deduct stock
         await supabase.from('inventory').update({ stock: Math.max(0, inv.stock - newItem.quantity) }).eq('id', newItem.inventory_id);
       }
