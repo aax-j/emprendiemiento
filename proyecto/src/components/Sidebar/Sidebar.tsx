@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { Icon } from '../Icon/Icon';
@@ -11,6 +12,13 @@ interface SidebarProps {
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const { signOut } = useAuth();
+  const [isCustomizationDirty, setIsCustomizationDirty] = useState(false);
+
+  useEffect(() => {
+    const handleDirty = (e: any) => setIsCustomizationDirty(e.detail);
+    window.addEventListener('customization-dirty', handleDirty);
+    return () => window.removeEventListener('customization-dirty', handleDirty);
+  }, []);
 
   return (
     <>
@@ -58,8 +66,23 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </NavLink>
 
           <NavLink to="/customization" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}>
-            <Icon name="dashboard_customize" className={styles.icon} />
-            Personalización
+            <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <Icon name="dashboard_customize" className={styles.icon} />
+              Personalización
+              {isCustomizationDirty && (
+                <div 
+                  title="Cambios sin guardar"
+                  style={{ 
+                    width: '10px', 
+                    height: '10px', 
+                    backgroundColor: '#f59e0b', 
+                    borderRadius: '50%', 
+                    marginLeft: '4px',
+                    boxShadow: '0 0 8px rgba(245, 158, 11, 0.5)'
+                  }} 
+                />
+              )}
+            </div>
           </NavLink>
         </nav>
 

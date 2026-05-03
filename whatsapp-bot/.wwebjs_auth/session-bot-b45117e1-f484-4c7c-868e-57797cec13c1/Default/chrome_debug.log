@@ -1,0 +1,695 @@
+[0430/182612.757:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182613.021:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182613.518:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182614.153:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182615.172:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182615.438:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182616.019:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182619.465:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8A02D00D4100000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182619.471:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8D02D00D4100000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182619.471:INFO:CONSOLE:0] "[.WebGL-0x4e3400761c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182619.631:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8702D00D4100000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182619.633:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8402D00D4100000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182620.235:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182622.651:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182622.922:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182623.325:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182623.863:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182624.136:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8402B009C180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182624.137:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8702B009C180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182624.138:INFO:CONSOLE:0] "[.WebGL-0xe7404718d00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182624.138:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8A02B009C180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182624.139:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8D02B009C180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182624.139:INFO:CONSOLE:0] "[.WebGL-0xe74012a0e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182624.140:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8002D009C180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182624.141:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8302D009C180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182624.141:INFO:CONSOLE:0] "[.WebGL-0xe74012a1c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182624.199:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8602D009C180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182624.200:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8902D009C180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182624.200:INFO:CONSOLE:0] "[.WebGL-0xe7406a44600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182624.338:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F009C180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182624.339:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F009C180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182625.138:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182625.417:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182625.848:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182626.297:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182626.565:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8002B00BC280000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182626.568:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8302B00BC280000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182626.568:INFO:CONSOLE:0] "[.WebGL-0x189c06152300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182626.570:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8602B00BC280000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182626.570:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8902B00BC280000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182626.570:INFO:CONSOLE:0] "[.WebGL-0x189c06153100]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182626.570:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802C00BC280000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182626.570:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02C00BC280000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182626.570:INFO:CONSOLE:0] "[.WebGL-0x189c06153f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182626.617:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02C00BC280000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182626.617:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102D00BC280000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182626.617:INFO:CONSOLE:0] "[.WebGL-0x189c06b11500]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182626.742:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8002F00BC280000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182626.744:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8302F00BC280000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182627.624:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182627.901:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182628.311:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182628.747:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182629.018:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8402B006C1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182629.020:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8702B006C1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182629.021:INFO:CONSOLE:0] "[.WebGL-0x7a0400127800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182629.022:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8A02B006C1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182629.022:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8D02B006C1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182629.024:INFO:CONSOLE:0] "[.WebGL-0x7a0400126300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182629.024:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02C006C1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182629.024:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02C006C1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182629.024:INFO:CONSOLE:0] "[.WebGL-0x7a0401170700]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182629.075:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8202D006C1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182629.075:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8502D006C1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182629.075:INFO:CONSOLE:0] "[.WebGL-0x7a0403fe7100]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182629.216:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F006C1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182629.217:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F006C1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182629.609:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182630.166:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182630.438:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182630.930:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182631.375:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182632.702:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182632.982:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182633.734:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182634.247:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802B00C4590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182634.252:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02B00C4590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182634.252:INFO:CONSOLE:0] "[.WebGL-0x66b402b18d00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182634.255:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02B00C4590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182634.255:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102C00C4590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182634.255:INFO:CONSOLE:0] "[.WebGL-0x66b404290d00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182634.256:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8402D00C4590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182634.256:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8702D00C4590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182634.257:INFO:CONSOLE:0] "[.WebGL-0x66b404291b00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182634.306:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8A02D00C4590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182634.306:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8D02D00C4590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182634.307:INFO:CONSOLE:0] "[.WebGL-0x66b40618c000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182634.432:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802F00C4590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182634.433:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02F00C4590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182635.212:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182635.486:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182637.837:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182638.288:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802B005C690000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182638.897:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182640.209:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182640.499:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182640.965:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182641.452:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8402B0044650000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182641.457:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8702B0044650000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182641.457:INFO:CONSOLE:0] "[.WebGL-0x294c03e55b00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182641.459:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8A02B0044650000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182641.460:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8D02B0044650000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182641.460:INFO:CONSOLE:0] "[.WebGL-0x294c00e17100]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182641.461:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02C0044650000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182641.461:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02C0044650000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182641.461:INFO:CONSOLE:0] "[.WebGL-0x294c03e54d00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182641.518:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8202D0044650000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182641.525:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8502D0044650000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182641.525:INFO:CONSOLE:0] "[.WebGL-0x294c05ee1400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182641.701:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F0044650000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182641.702:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F0044650000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182642.711:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182642.985:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182643.557:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182644.426:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182644.692:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8702D0074180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182644.694:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8402D0074180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182644.694:INFO:CONSOLE:0] "[.WebGL-0x53cc01078700]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182644.694:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8A02D0074180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182644.694:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8D02D0074180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182644.698:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102C0074180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182644.698:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02B0074180000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182645.195:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182645.474:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182645.994:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182646.452:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02A00DC2C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182646.453:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02A00DC2C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182646.453:INFO:CONSOLE:0] "[.WebGL-0x7d2c03145c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182646.456:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8202B00DC2C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182646.456:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8502B00DC2C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182646.456:INFO:CONSOLE:0] "[.WebGL-0x7d2c00dfa200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182646.456:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8402C00DC2C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182646.456:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8702C00DC2C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182646.456:INFO:CONSOLE:0] "[.WebGL-0x7d2c0011a900]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182646.500:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8A02C00DC2C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182646.501:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8D02C00DC2C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182646.501:INFO:CONSOLE:0] "[.WebGL-0x7d2c059b4600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182647.473:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8002F00DC2C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182647.474:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8302F00DC2C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182648.075:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182650.208:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182650.488:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182651.002:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182651.568:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182651.874:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802B0054300000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182651.876:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02B0054300000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182651.876:INFO:CONSOLE:0] "[.WebGL-0x697c00119400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182651.876:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02B0054300000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182651.876:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102C0054300000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182651.876:INFO:CONSOLE:0] "[.WebGL-0x697c00c4e900]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182651.876:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8002D0054300000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182651.878:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8302D0054300000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182651.878:INFO:CONSOLE:0] "[.WebGL-0x697c00c4b100]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182651.929:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8602D0054300000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182651.929:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8902D0054300000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182651.929:INFO:CONSOLE:0] "[.WebGL-0x697c08b00e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182652.145:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F0054300000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182652.147:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F0054300000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182652.691:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182652.973:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182653.438:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182653.911:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182654.249:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802B0024730000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182654.254:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02B0024730000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182654.254:INFO:CONSOLE:0] "[.WebGL-0x73cc00ad5500]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182654.254:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02B0024730000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182654.254:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102C0024730000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182654.254:INFO:CONSOLE:0] "[.WebGL-0x73cc00ad6300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182654.254:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8002D0024730000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182654.254:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8302D0024730000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182654.254:INFO:CONSOLE:0] "[.WebGL-0x73cc02b9a900]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182654.311:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8602D0024730000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182654.311:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8902D0024730000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182654.311:INFO:CONSOLE:0] "[.WebGL-0x73cc0704ce00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182654.492:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F0024730000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182654.494:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F0024730000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182655.229:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182655.512:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182656.018:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182656.505:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182657.705:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182657.984:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182658.488:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182658.937:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802B0084590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182658.941:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02B0084590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182658.941:INFO:CONSOLE:0] "[.WebGL-0x778400131b00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182658.942:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02B0084590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182658.944:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102C0084590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182658.944:INFO:CONSOLE:0] "[.WebGL-0x7784030de300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182658.944:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8402D0084590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182658.944:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8702D0084590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182658.944:INFO:CONSOLE:0] "[.WebGL-0x778400bd6900]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182658.990:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8A02D0084590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182658.995:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8D02D0084590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182658.995:INFO:CONSOLE:0] "[.WebGL-0x778406613800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182659.147:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802F0084590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182659.149:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02F0084590000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182700.238:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182700.509:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182701.015:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182701.524:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182701.840:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802B008C150000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182701.841:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02B008C150000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182701.841:INFO:CONSOLE:0] "[.WebGL-0x4b5c00118d00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182701.844:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02B008C150000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182701.844:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102C008C150000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182701.844:INFO:CONSOLE:0] "[.WebGL-0x4b5c0639c700]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182701.844:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8002D008C150000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182701.844:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8302D008C150000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182701.844:INFO:CONSOLE:0] "[.WebGL-0x4b5c0639d500]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182701.904:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8602D008C150000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182701.904:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8902D008C150000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182701.904:INFO:CONSOLE:0] "[.WebGL-0x4b5c063a2200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182702.061:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F008C150000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182702.062:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F008C150000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182702.691:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182702.972:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182703.434:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182703.911:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182704.210:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8402B000C1A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182704.212:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8702B000C1A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182704.212:INFO:CONSOLE:0] "[.WebGL-0x512c04703f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182704.213:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8A02B000C1A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182704.214:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8D02B000C1A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182704.214:INFO:CONSOLE:0] "[.WebGL-0x512c019f4000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182704.214:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8002D000C1A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182704.217:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8302D000C1A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182704.217:INFO:CONSOLE:0] "[.WebGL-0x512c00114700]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182704.270:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8602D000C1A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182704.270:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8902D000C1A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182704.271:INFO:CONSOLE:0] "[.WebGL-0x512c04701c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182704.453:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F000C1A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182704.455:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F000C1A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182705.192:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182705.470:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182706.168:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182706.637:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8402B00C4200000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182706.640:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8702B00C4200000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182706.640:INFO:CONSOLE:0] "[.WebGL-0x39bc053c8700]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182707.026:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182707.725:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182707.992:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182708.582:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182709.241:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802B006C080000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182709.241:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02B006C080000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182709.241:INFO:CONSOLE:0] "[.WebGL-0x511c029d4000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182709.241:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02B006C080000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182709.241:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102C006C080000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182709.241:INFO:CONSOLE:0] "[.WebGL-0x511c04842a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182709.241:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8002D006C080000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182709.241:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8302D006C080000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182709.241:INFO:CONSOLE:0] "[.WebGL-0x511c01114000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182709.286:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8602D006C080000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182709.287:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8902D006C080000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182709.287:INFO:CONSOLE:0] "[.WebGL-0x511c05f91c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182710.307:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F006C080000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182710.308:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F006C080000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182710.911:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182711.434:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182712.695:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182712.974:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182713.414:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182713.893:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8402B007C290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182713.898:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8702B007C290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182713.898:INFO:CONSOLE:0] "[.WebGL-0x61bc0574bf00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182713.898:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8A02B007C290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182713.898:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8D02B007C290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182713.898:INFO:CONSOLE:0] "[.WebGL-0x61bc021cf800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182713.901:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8002D007C290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182713.901:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8302D007C290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182713.901:INFO:CONSOLE:0] "[.WebGL-0x61bc0574a300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182713.956:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8602D007C290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182713.958:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8902D007C290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182713.958:INFO:CONSOLE:0] "[.WebGL-0x61bc06aa6200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182714.124:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F007C290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182714.125:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F007C290000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182714.641:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182715.188:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182715.468:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182715.971:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182716.641:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182716.942:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802B008C340000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182716.943:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02B008C340000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182716.943:INFO:CONSOLE:0] "[.WebGL-0x34dc03b04000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182716.945:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02B008C340000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182716.945:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102C008C340000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182716.945:INFO:CONSOLE:0] "[.WebGL-0x34dc054fc000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182716.945:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8402D008C340000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182716.945:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8702D008C340000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182716.946:INFO:CONSOLE:0] "[.WebGL-0x34dc054fe300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182717.008:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8A02D008C340000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182717.008:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8D02D008C340000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182717.009:INFO:CONSOLE:0] "[.WebGL-0x34dc07952a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182717.222:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802F008C340000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182717.224:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02F008C340000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182717.694:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182717.965:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182718.559:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182719.462:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182720.194:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182720.466:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182720.946:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182721.405:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802B00B4680000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182721.412:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02B00B4680000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182721.412:INFO:CONSOLE:0] "[.WebGL-0x206400aca200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182721.413:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02B00B4680000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182721.413:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102C00B4680000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182721.414:INFO:CONSOLE:0] "[.WebGL-0x206404183f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182721.414:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8002D00B4680000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182721.414:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8302D00B4680000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182721.414:INFO:CONSOLE:0] "[.WebGL-0x206404184d00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182721.464:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8602D00B4680000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182721.465:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8902D00B4680000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182721.465:INFO:CONSOLE:0] "[.WebGL-0x206406616200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182721.614:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F00B4680000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182721.615:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F00B4680000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182722.698:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182722.973:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182723.542:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182724.013:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802B00D4600000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182724.015:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02B00D4600000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182724.015:INFO:CONSOLE:0] "[.WebGL-0x5a24007ba300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182724.516:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182725.262:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182725.544:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182726.033:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182726.582:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802B00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182726.585:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02B00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182726.586:INFO:CONSOLE:0] "[.WebGL-0x103c00aa8000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182726.586:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02B00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182726.586:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102C00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182726.586:INFO:CONSOLE:0] "[.WebGL-0x103c03fba200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182726.586:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8002D00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182726.587:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8302D00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182726.587:INFO:CONSOLE:0] "[.WebGL-0x103c00aae200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182726.647:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8602D00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182726.648:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8902D00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182726.648:INFO:CONSOLE:0] "[.WebGL-0x103c06817800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182726.927:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182727.208:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182727.549:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182727.549:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182728.805:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182729.190:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182729.191:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182729.191:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8203000747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182729.193:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8503000747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182729.193:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8902D00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182729.194:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8602D00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182729.255:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8002D00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182729.260:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8302D00747B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182741.981:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182742.262:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182745.636:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yP/r/MTIZmCagunk.js (79)
+[0430/182746.798:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802B00BC0B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182746.798:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02B00BC0B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182746.798:INFO:CONSOLE:0] "[.WebGL-0x129c00cdce00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182746.798:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02B00BC0B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182746.799:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102C00BC0B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182746.800:INFO:CONSOLE:0] "[.WebGL-0x129c00cdc700]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182746.800:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8402D00BC0B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182746.800:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8702D00BC0B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182746.800:INFO:CONSOLE:0] "[.WebGL-0x129c0a464e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182746.862:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8A02D00BC0B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182746.863:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8D02D00BC0B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182746.863:INFO:CONSOLE:0] "[.WebGL-0x129c0a46a900]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182747.811:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F00BC0B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182747.813:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F00BC0B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182748.665:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182750.184:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182750.463:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182750.921:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182751.766:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182751.980:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8302D00FC720000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182751.982:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8002D00FC720000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182751.982:INFO:CONSOLE:0] "[.WebGL-0x1c14060b3800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182751.983:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8602D00FC720000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182751.983:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8902D00FC720000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182751.983:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102C00FC720000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182751.983:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02B00FC720000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182752.051:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02B00FC720000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182752.051:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802B00FC720000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182752.705:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182752.986:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182753.599:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182754.094:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182754.431:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802B005C050000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182754.434:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02B005C050000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182754.434:INFO:CONSOLE:0] "[.WebGL-0x24f406a62a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182754.436:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02B005C050000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182754.436:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102C005C050000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182754.436:INFO:CONSOLE:0] "[.WebGL-0x24f406a63800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182754.436:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8002D005C050000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182754.436:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8302D005C050000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182754.436:INFO:CONSOLE:0] "[.WebGL-0x24f406a64600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182754.496:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8602D005C050000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182754.496:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8902D005C050000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182754.496:INFO:CONSOLE:0] "[.WebGL-0x24f403e90700]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182754.687:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F005C050000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182754.688:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F005C050000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182755.202:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182755.484:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182756.355:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yP/r/MTIZmCagunk.js (79)
+[0430/182757.051:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182807.337:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8802B00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182807.338:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8B02B00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182807.338:INFO:CONSOLE:0] "[.WebGL-0x23840544d500]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182807.338:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02B00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182807.338:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102C00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182807.338:INFO:CONSOLE:0] "[.WebGL-0x23840b7daa00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182807.338:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02C00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182807.338:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02C00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182807.338:INFO:CONSOLE:0] "[.WebGL-0x23840b7de200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182807.400:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8202D00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182807.407:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8502D00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182807.408:INFO:CONSOLE:0] "[.WebGL-0x238405a96a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182807.639:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182807.661:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182808.137:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182808.540:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182808.832:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182808.835:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182808.838:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8203000AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182808.838:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8503000AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182808.838:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02C00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182808.838:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02C00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182808.889:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8202D00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182808.891:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8502D00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182809.088:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8102C00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182809.089:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8E02B00AC7C0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182810.215:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182810.495:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182811.086:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182811.536:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8402B00CC1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182811.537:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8702B00CC1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182811.537:INFO:CONSOLE:0] "[.WebGL-0x52d400c59500]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182811.537:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8A02B00CC1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182811.537:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8D02B00CC1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182811.537:INFO:CONSOLE:0] "[.WebGL-0x52d402a4a900]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182811.538:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02C00CC1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182811.538:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02C00CC1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182811.538:INFO:CONSOLE:0] "[.WebGL-0x52d400118600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://web.whatsapp.com/ (0)
+[0430/182811.585:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8202D00CC1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182811.586:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8502D00CC1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182811.586:INFO:CONSOLE:0] "[.WebGL-0x52d4063a8d00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://web.whatsapp.com/ (0)
+[0430/182812.590:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8C02F00CC1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182812.590:INFO:CONSOLE:0] "[GroupMarkerNotSet(crbug.com/242999)!:A8F02F00CC1B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.", source: https://web.whatsapp.com/ (0)
+[0430/182813.565:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)
+[0430/182815.186:INFO:CONSOLE:0] "Uncaught (in promise) UnknownError: Failed to execute 'open' on 'CacheStorage': Unexpected internal error.", source: https://web.whatsapp.com/sw.js (0)
+[0430/182815.458:INFO:CONSOLE:232] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yo/r/lsRH3jjpJ0i.js (232)
+[0430/182816.365:INFO:CONSOLE:79] "ErrorUtils caught an error:
+
+[storage] storage bucket persistence denied (aquire-persistent-storage-denied)
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yO/r/_yY9P-NFw0B.js (79)

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { supabase } from '../../../lib/supabase';
 import { useAuth } from '../../../contexts/AuthContext';
@@ -16,17 +16,25 @@ export const Login = () => {
     setError(null);
     setLoading(true);
 
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+    try {
+      const { data, error: signInError } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
 
-    if (error) {
-      setError(error.message);
+      if (signInError) {
+        setError(signInError.message);
+        setLoading(false);
+      } else if (!data?.session) {
+        setError("Inicio de sesión exitoso, pero no se obtuvo sesión. ¿Quizás falta confirmar tu correo?");
+        setLoading(false);
+      }
+      // Si todo sale bien, onAuthStateChange de AuthContext actualizará session y authLoading
+      // lo que disparará el Navigate de abajo.
+    } catch (err: any) {
+      setError(err.message || 'Error inesperado al iniciar sesión');
       setLoading(false);
     }
-    // No navegamos manualmente aquí. Esperamos a que el AuthContext actualice su estado
-    // y el useEffect de abajo se encargue de la redirección correcta.
   };
 
   // Redirect automatically when session and profile are fully loaded

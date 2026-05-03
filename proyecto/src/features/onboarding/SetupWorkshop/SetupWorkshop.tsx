@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../../../lib/supabase';
 import { useAuth } from '../../../contexts/AuthContext';
@@ -13,6 +13,24 @@ export const SetupWorkshop = () => {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
+  // Double-check if the profile already exists (in case AuthContext missed it due to a network hiccup)
+  useEffect(() => {
+    const checkExistingProfile = async () => {
+      if (!user) return;
+      try {
+        const { data } = await supabase.from('profiles').select('*').eq('id', user.id).single();
+        if (data && data.workshop_id) {
+          // If it actually exists, refresh the context and go to main app
+          await refreshProfile();
+          navigate('/');
+        }
+      } catch (e) {
+        // Ignore errors here
+      }
+    };
+    checkExistingProfile();
+  }, [user, navigate, refreshProfile]);
+
   const handleSetup = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!user) return;
@@ -21,6 +39,19 @@ export const SetupWorkshop = () => {
     setLoading(true);
 
     try {
+      // First, strictly check if profile already exists to prevent duplicate key errors
+      const { data: existingProfile } = await supabase
+        .from('profiles')
+        .select('*')
+        .eq('id', user.id)
+        .maybeSingle();
+
+      if (existingProfile) {
+        await refreshProfile();
+        navigate('/');
+        return;
+      }
+
       // Create a timeout promise
       const timeout = new Promise((_, reject) => 
         setTimeout(() => reject(new Error('La base de datos no responde (Tiempo excedido). Verifica tu conexión y tu Llave API.')), 10000)
@@ -52,7 +83,14 @@ export const SetupWorkshop = () => {
           role: 'admin' // First user is always admin
         }]);
 
-      if (profileError) throw profileError;
+      if (profileError) {
+        if (profileError.code === '23505') { // Postgres unique violation
+           await refreshProfile();
+           navigate('/');
+           return;
+        }
+        throw profileError;
+      }
 
       // 3. Refresh context and redirect
       await refreshProfile();

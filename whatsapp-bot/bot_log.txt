@@ -1,0 +1,903 @@
+[2026-05-03T00:47:23.552Z] ERR: (node:11712) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T00:47:23.570Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T00:47:32.416Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T00:47:41.881Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T00:47:58.332Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid: Asesor
+[2026-05-03T00:51:53.507Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid: Asesor
+[2026-05-03T00:52:03.488Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid: Asesor
+[2026-05-03T02:01:11.464Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid: Asesor
+[2026-05-03T02:05:03.763Z] ERR: (node:13988) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T02:05:03.789Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T02:05:21.112Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T02:05:34.883Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T02:06:44.196Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Asesor
+[2026-05-03T02:13:09.107Z] ERR: (node:24352) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T02:13:09.127Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T02:13:20.987Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T02:13:32.000Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T02:15:56.484Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Asesor
+[2026-05-03T02:47:18.350Z] ERR: (node:20696) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T02:47:18.358Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T02:47:24.587Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T02:47:29.704Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T03:05:00.654Z] ERR: (node:24652) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T03:05:00.667Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T03:08:55.998Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T03:09:18.588Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T03:12:04.575Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T03:12:22.316Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Eeee-0005
+[2026-05-03T03:12:29.231Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Revisión
+[2026-05-03T03:12:51.957Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Viernes 15 de mayo
+[2026-05-03T03:13:07.907Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 8pm
+[2026-05-03T03:14:12.814Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Aceite
+[2026-05-03T03:14:24.416Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Eeee-0005
+[2026-05-03T03:14:37.789Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: No
+[2026-05-03T03:14:44.942Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Aceite
+[2026-05-03T03:14:52.061Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0004
+[2026-05-03T03:22:14.309Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T03:22:19.511Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0004
+[2026-05-03T03:22:27.202Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Revisión
+[2026-05-03T03:22:45.758Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 25/10
+[2026-05-03T03:22:52.595Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 8pm
+[2026-05-03T03:23:08.183Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T03:23:12.452Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0005
+[2026-05-03T03:24:16.908Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Revisión
+[2026-05-03T03:24:27.856Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 25/05
+[2026-05-03T03:24:35.933Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 20:00
+[2026-05-03T03:24:45.431Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 18:00
+[2026-05-03T03:25:52.788Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T03:25:56.695Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0005
+[2026-05-03T03:27:48.406Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T03:28:03.426Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Hola
+[2026-05-03T03:28:08.328Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Hola
+[2026-05-03T03:28:17.863Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T03:28:24.359Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0004
+[2026-05-03T03:28:31.106Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Revisión
+[2026-05-03T03:28:40.914Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 18/05
+[2026-05-03T03:28:51.531Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 4pm
+[2026-05-03T03:32:24.658Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T03:32:27.535Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0004
+[2026-05-03T03:32:35.799Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cambio
+[2026-05-03T03:32:45.030Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 04/05
+[2026-05-03T03:32:50.307Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 5pm
+[2026-05-03T03:35:37.896Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T03:35:43.726Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0004
+[2026-05-03T03:35:49.074Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cambio
+[2026-05-03T03:35:52.835Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 05/05
+[2026-05-03T03:35:57.787Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 4pm
+[2026-05-03T03:38:36.074Z] ERR: (node:10712) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T03:38:36.083Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T03:41:08.514Z] ERR: (node:8560) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T03:41:08.528Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T03:41:35.453Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T03:41:41.265Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T03:41:44.772Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T03:41:50.212Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T03:42:44.063Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar qq
+[2026-05-03T03:42:49.622Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0004
+[2026-05-03T03:42:50.409Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 1 de 5.
+[2026-05-03T03:42:50.678Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 1 de 5)
+[2026-05-03T03:42:50.679Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|1
+[2026-05-03T03:42:54.965Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 05/05
+[2026-05-03T03:42:55.233Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 2 de 5.
+[2026-05-03T03:42:55.496Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 2 de 5)
+[2026-05-03T03:42:55.497Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|2
+[2026-05-03T03:43:00.085Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 05/05
+[2026-05-03T03:43:00.580Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 3 de 5.
+[2026-05-03T03:43:00.821Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 3 de 5)
+[2026-05-03T03:43:00.822Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|3
+[2026-05-03T03:43:05.760Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 14:00
+[2026-05-03T03:43:06.286Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 4 de 5.
+[2026-05-03T03:43:06.600Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? true (Paso 4 de 5)
+[2026-05-03T03:43:06.600Z] LOG: [AutoTech Bot] 📝 Llamando a saveBooking para default-booking...
+[2026-05-03T03:43:06.603Z] LOG: [AutoTech Bot] 🗓️ Intentando guardar cita. Data: Dddd-0004, 05/05, 05/05, 14:00
+[2026-05-03T03:43:07.223Z] LOG: [AutoTech Bot] ✅ Cita guardada con éxito para placa DDDD0004 en 2026-05-05
+[2026-05-03T03:47:48.799Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T03:47:53.140Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0005
+[2026-05-03T03:47:53.825Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 1 de 5.
+[2026-05-03T03:47:54.152Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 1 de 5)
+[2026-05-03T03:47:54.153Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|1
+[2026-05-03T03:49:49.066Z] ERR: (node:13796) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T03:49:49.079Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T03:50:23.536Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T03:50:28.097Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T03:50:34.420Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T03:50:40.224Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T03:50:48.614Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T03:50:49.368Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 2 de 5.
+[2026-05-03T03:50:49.641Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 2 de 5)
+[2026-05-03T03:50:49.642Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|2
+[2026-05-03T03:50:58.745Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cancelar
+[2026-05-03T03:50:59.263Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 3 de 5.
+[2026-05-03T03:50:59.523Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 3 de 5)
+[2026-05-03T03:50:59.523Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|3
+[2026-05-03T03:51:04.257Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cancel
+[2026-05-03T03:51:04.739Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 4 de 5.
+[2026-05-03T03:51:05.013Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? true (Paso 4 de 5)
+[2026-05-03T03:51:05.013Z] LOG: [AutoTech Bot] 📝 Llamando a saveBooking para default-booking...
+[2026-05-03T03:51:05.016Z] LOG: [AutoTech Bot] 🗓️ Intentando guardar cita. Data: Dddd-0005, Agendar, Cancelar, Cancel
+[2026-05-03T03:51:05.285Z] LOG: [AutoTech Bot] 🆕 Creando vehículo y cliente para placa: DDDD0005
+[2026-05-03T03:51:06.842Z] LOG: [AutoTech Bot] ✅ Cita guardada con éxito para placa DDDD0005 en 2026-05-02
+[2026-05-03T03:51:10.480Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T03:51:14.250Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0005
+[2026-05-03T03:51:15.047Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 1 de 5.
+[2026-05-03T03:51:15.316Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 1 de 5)
+[2026-05-03T03:51:15.317Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|1
+[2026-05-03T03:54:28.445Z] ERR: (node:23636) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T03:54:28.459Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T03:54:31.464Z] LOG: [AutoTech Bot] 🔄 Buscando talleres para reconexión automática...
+[2026-05-03T03:54:32.164Z] LOG: [AutoTech Bot] 📍 Encontrados 9 talleres.
+[2026-05-03T03:54:32.165Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T03:54:32.169Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T03:54:32.183Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T03:54:32.194Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T03:54:32.196Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T03:54:32.197Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T03:54:32.199Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T03:54:32.200Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T03:54:32.202Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T03:54:32.202Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T03:54:32.203Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T03:54:32.203Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T03:54:32.204Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T03:54:32.205Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T03:54:32.206Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T03:54:32.207Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T03:54:32.208Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T03:54:32.208Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T03:55:30.497Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T03:55:34.847Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T03:55:36.520Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T03:55:42.352Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T03:55:43.945Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T03:55:51.701Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T03:55:55.522Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T03:56:00.005Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T03:56:26.956Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T03:56:32.367Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T03:56:36.170Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T03:56:41.660Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T03:56:43.421Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T03:56:46.970Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T03:56:51.296Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T03:56:52.380Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T03:56:55.310Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T03:56:56.186Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T03:56:59.780Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T03:57:01.662Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T03:57:03.427Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T03:57:11.557Z] ERR: (node:27532) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T03:57:11.568Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T03:57:14.571Z] LOG: [AutoTech Bot] 🔄 Buscando talleres para reconexión automática...
+[2026-05-03T03:57:15.443Z] LOG: [AutoTech Bot] 📍 Encontrados 9 talleres.
+[2026-05-03T03:57:15.444Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T03:57:15.447Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T03:57:15.451Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T03:57:15.451Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T03:57:15.453Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T03:57:15.453Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T03:57:15.455Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T03:57:15.456Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T03:57:15.459Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T03:57:15.463Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T03:57:15.464Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T03:57:15.464Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T03:57:15.465Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T03:57:15.465Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T03:57:15.466Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T03:57:15.466Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T03:57:15.467Z] LOG: [AutoTech Bot] 🤖 Auto-iniciando taller: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T03:57:15.467Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T03:57:27.387Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T03:57:28.316Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T03:57:31.370Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T03:57:35.171Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T03:57:38.087Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T03:57:41.382Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T03:57:43.298Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T03:57:45.195Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T03:58:26.704Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T03:58:27.962Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T03:58:31.007Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T03:58:34.736Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T03:58:37.597Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T03:58:40.947Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T03:58:43.126Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T03:58:45.028Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T03:58:46.720Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T03:58:47.965Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T03:58:51.010Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T03:58:54.747Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T03:58:57.606Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T03:59:00.949Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T03:59:03.129Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T03:59:05.043Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T03:59:06.727Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T03:59:07.973Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T03:59:11.023Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T03:59:14.758Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T03:59:17.607Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T03:59:20.960Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T03:59:23.130Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T03:59:25.049Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T03:59:26.737Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T03:59:27.983Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T03:59:31.034Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T03:59:34.761Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T03:59:37.615Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T03:59:40.973Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T03:59:43.137Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T03:59:45.054Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T03:59:46.752Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T03:59:47.995Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T03:59:51.046Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T03:59:54.776Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T03:59:57.628Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:00:00.982Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:00:03.150Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:00:05.062Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:00:50.821Z] ERR: (node:10580) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T04:00:50.837Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T04:00:52.848Z] LOG: [AutoTech Bot] 🔄 Buscando talleres con sesiones activas para reconexión...
+[2026-05-03T04:00:53.473Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:00:53.475Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:00:53.478Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:00:53.479Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:00:53.481Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:00:53.482Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:00:53.483Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:00:53.484Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:00:53.485Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:00:53.486Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:00:53.488Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:00:53.492Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:00:53.493Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:00:53.493Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:00:53.495Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:00:53.495Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:00:53.497Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:00:53.497Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:01:08.678Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:01:09.129Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:01:09.218Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:01:09.273Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:01:09.916Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:01:09.964Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:01:15.673Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:01:19.279Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:02:03.382Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:02:05.000Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:02:05.034Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:02:07.069Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:02:07.987Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:02:09.498Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:02:15.242Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:02:19.029Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:02:23.393Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:02:25.018Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:02:25.039Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:02:27.084Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:02:28.000Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:02:29.513Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:02:35.245Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:02:39.034Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:02:43.401Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:02:45.024Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:02:45.055Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:02:47.093Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:02:48.006Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:02:49.524Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:02:55.259Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:02:59.051Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:03:03.415Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:03:05.038Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:03:05.063Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:03:07.106Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:03:08.012Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:03:09.536Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:03:15.274Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:03:19.059Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:03:23.428Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:03:25.050Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:03:25.081Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:03:27.117Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:03:28.020Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:03:29.547Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:03:35.285Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:03:39.061Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:04:34.378Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:04:36.109Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:04:36.188Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:04:38.224Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:04:39.040Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:04:40.415Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:04:46.238Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:04:50.039Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:05:34.390Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:05:36.118Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:05:36.196Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:05:38.236Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:05:39.054Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:05:40.428Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:05:46.245Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:05:50.046Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:05:54.394Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:05:56.133Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:05:56.212Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:05:58.246Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:05:59.067Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:06:00.438Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:06:06.262Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:06:10.061Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:06:14.397Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:06:22.822Z] ERR: (node:28864) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T04:06:22.835Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T04:06:23.599Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:06:24.891Z] LOG: [AutoTech Bot] 🔄 Buscando talleres con sesiones activas para reconexión...
+[2026-05-03T04:06:25.686Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:06:25.687Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:06:25.691Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:06:25.691Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:06:25.693Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:06:25.693Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:06:25.694Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:06:25.695Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:06:25.697Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:06:25.698Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:06:25.700Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:06:25.700Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:06:25.701Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:06:25.702Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:06:25.703Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:06:25.703Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:06:38.667Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:06:38.844Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:06:40.606Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:06:42.238Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:06:43.101Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:06:45.345Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:06:48.675Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:07:17.296Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:07:36.627Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:07:37.759Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:07:38.292Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:07:40.236Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:07:40.780Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:07:47.487Z] ERR: (node:29916) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T04:07:47.501Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T04:07:49.505Z] LOG: [AutoTech Bot] 🔄 Buscando talleres con sesiones activas para reconexión...
+[2026-05-03T04:07:50.180Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:07:50.181Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:07:50.186Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:07:50.187Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:07:50.188Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:07:50.189Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:07:50.191Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:07:50.197Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:07:50.198Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:07:50.198Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:07:50.199Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:07:50.200Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:07:50.201Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:07:50.201Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:07:50.203Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:07:50.203Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:07:50.204Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:07:50.205Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:08:03.168Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:08:03.891Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:08:03.980Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:08:07.622Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:08:13.911Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:08:14.730Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:08:15.466Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:08:17.529Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:08:19.805Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:08:33.149Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T04:08:40.652Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T04:09:01.781Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:09:02.547Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:09:03.473Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:09:06.272Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:09:13.457Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:09:14.327Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:09:17.174Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:09:19.609Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:09:21.797Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:09:22.558Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:09:23.491Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:09:26.283Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:09:33.467Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:09:34.343Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:09:37.188Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:09:39.613Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:09:41.812Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:09:42.565Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:09:43.496Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:09:46.288Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:09:53.472Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:09:54.354Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:09:57.193Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:09:59.627Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:10:01.818Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:10:02.580Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:10:03.502Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:10:06.304Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:10:13.481Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:10:14.359Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:10:17.200Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:10:19.633Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:10:21.820Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:10:22.582Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:10:23.513Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:10:26.310Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:10:33.487Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:10:34.362Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:10:37.216Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:10:39.634Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:11:04.176Z] ERR: (node:7112) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T04:11:04.190Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T04:11:06.205Z] LOG: [AutoTech Bot] 🔄 Buscando talleres con sesiones activas para reconexión...
+[2026-05-03T04:11:06.833Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:11:06.836Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:11:06.838Z] ERR: [AutoTech Bot] ❌ Error en reconexión automática: {}
+[2026-05-03T04:11:19.537Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:11:19.544Z] ERR: ReferenceError: loadConfig is not defined
+    at createClientInstance (C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\server.js:58:23)
+    at C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\server.js:727:45
+    at Layer.handle [as handle_request] (C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\node_modules\express\lib\router\index.js:376:14)
+    at router.process_params (C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\node_modules\express\lib\router\index.js:280:10)
+    at serveStatic (C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\node_modules\serve-static\index.js:75:16)
+    at Layer.handle [as handle_request] (C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (C:\Users\genes\OneDrive\Escritorio\AutoTech\emprendiemiento-main\whatsapp-bot\node_modules\express\lib\router\index.js:346:12)
+[2026-05-03T04:12:23.921Z] ERR: (node:17032) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T04:12:23.934Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T04:12:25.944Z] LOG: [AutoTech Bot] 🔄 Buscando talleres con sesiones activas para reconexión...
+[2026-05-03T04:12:26.645Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:12:26.648Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:12:26.654Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:12:26.655Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:12:26.657Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:12:26.658Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:12:26.659Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:12:26.660Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:12:26.662Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:12:26.663Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:12:26.669Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:12:26.669Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:12:26.670Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:12:26.671Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:12:26.672Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:12:26.673Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:12:26.674Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:12:26.674Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:12:38.758Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:12:38.898Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:12:39.585Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:12:39.919Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:12:46.416Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:12:46.494Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:12:47.472Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:12:52.234Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:13:38.413Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:13:38.491Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:13:39.255Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:13:39.476Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:13:45.547Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:13:45.609Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:13:47.132Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:13:52.023Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:13:58.426Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:14:05.170Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:14:05.191Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:14:05.217Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:14:05.555Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:14:05.617Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:14:07.146Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:14:12.029Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:14:18.433Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:14:18.512Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:14:19.272Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:14:19.491Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:14:25.571Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:14:25.623Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:14:27.149Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:14:33.773Z] ERR: (node:27840) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T04:14:33.786Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T04:14:35.799Z] LOG: [AutoTech Bot] 🔄 Buscando talleres con sesiones activas para reconexión...
+[2026-05-03T04:14:36.424Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:14:36.425Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:14:36.433Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:14:36.433Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:14:36.435Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:14:36.436Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:14:36.436Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:14:36.437Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:14:36.439Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:14:36.442Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:14:36.444Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:14:36.444Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:14:36.446Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:14:36.447Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:14:36.450Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:14:36.451Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:14:36.453Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:14:36.453Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:14:53.443Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:14:53.596Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:14:53.658Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:14:54.459Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:14:54.926Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:14:58.525Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:15:00.291Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:15:00.976Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:15:49.895Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:15:50.424Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:15:51.724Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:15:52.045Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:15:52.220Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:15:58.080Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:15:59.903Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:16:00.778Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:16:09.899Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:16:10.441Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:16:11.733Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:16:12.068Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:16:12.230Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:16:18.095Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:16:19.906Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:16:20.780Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:16:29.907Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:16:30.457Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:16:31.740Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:16:32.069Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:16:32.239Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:16:38.101Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:16:39.908Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:16:40.793Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:16:49.916Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T04:16:50.472Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T04:16:51.751Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T04:16:52.080Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T04:16:52.251Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T04:16:58.119Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T04:16:59.919Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T04:17:00.802Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T04:17:08.791Z] ERR: (node:9108) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T04:17:08.803Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T04:17:54.571Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:17:58.718Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:18:18.264Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T04:19:26.917Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T04:19:27.516Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 2 de 5.
+[2026-05-03T04:19:27.940Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 2 de 5)
+[2026-05-03T04:19:27.941Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|2
+[2026-05-03T04:19:36.620Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 05/05
+[2026-05-03T04:19:37.114Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 3 de 5.
+[2026-05-03T04:19:37.375Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 3 de 5)
+[2026-05-03T04:19:37.376Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|3
+[2026-05-03T04:19:41.795Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 2pm
+[2026-05-03T04:19:42.318Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 4 de 5.
+[2026-05-03T04:19:42.575Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? true (Paso 4 de 5)
+[2026-05-03T04:19:42.576Z] LOG: [AutoTech Bot] 📝 Llamando a saveBooking para default-booking...
+[2026-05-03T04:19:42.578Z] LOG: [AutoTech Bot] 🗓️ Intentando guardar cita. Data: Dddd-0005, Agendar, 05/05, 2pm
+[2026-05-03T04:19:43.169Z] LOG: [AutoTech Bot] ✅ Cita guardada con éxito para placa DDDD0005 en 2026-05-05
+[2026-05-03T04:19:45.961Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T04:19:52.294Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0005
+[2026-05-03T04:19:53.305Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 1 de 5.
+[2026-05-03T04:19:53.558Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 1 de 5)
+[2026-05-03T04:19:53.559Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|1
+[2026-05-03T04:21:20.529Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cancelar
+[2026-05-03T04:21:39.394Z] ERR: (node:26020) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T04:21:39.407Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T04:21:54.247Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:21:59.216Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:22:05.048Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T04:27:44.892Z] ERR: (node:13916) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T04:27:44.901Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T04:29:09.851Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:29:09.852Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T04:29:09.854Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:29:14.226Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:36:33.929Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T04:36:40.632Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0005
+[2026-05-03T04:36:41.764Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 1 de 5.
+[2026-05-03T04:36:42.049Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 1 de 5)
+[2026-05-03T04:36:42.049Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|1
+[2026-05-03T04:39:59.762Z] ERR: (node:17216) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T04:39:59.773Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T04:40:51.974Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:40:51.976Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T04:40:51.980Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:40:56.084Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:41:27.443Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T04:41:28.126Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 2 de 5.
+[2026-05-03T04:41:28.392Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 2 de 5)
+[2026-05-03T04:41:28.392Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|2
+[2026-05-03T04:41:31.827Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cancelar
+[2026-05-03T04:41:36.077Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T04:42:54.254Z] ERR: (node:13988) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T04:42:54.265Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T04:43:01.453Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:43:01.454Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T04:43:01.457Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:43:05.783Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:43:16.533Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cancelar
+[2026-05-03T04:43:20.846Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T04:44:15.796Z] ERR: (node:28152) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T04:44:15.809Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T04:44:57.005Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:44:57.006Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T04:44:57.008Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:45:00.978Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:47:35.695Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Hola
+[2026-05-03T04:47:36.650Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 1 de 5.
+[2026-05-03T04:47:36.935Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 1 de 5)
+[2026-05-03T04:47:36.935Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|1
+[2026-05-03T04:47:41.431Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cancelar
+[2026-05-03T04:47:44.917Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T04:48:51.248Z] ERR: (node:10528) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T04:48:51.257Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T04:48:55.992Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:48:55.993Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T04:48:55.996Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:49:00.441Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:49:17.761Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cancelar
+[2026-05-03T04:49:22.305Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T04:49:31.998Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0005
+[2026-05-03T04:49:33.131Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 1 de 5.
+[2026-05-03T04:49:33.398Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 1 de 5)
+[2026-05-03T04:49:33.399Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|1
+[2026-05-03T04:50:21.069Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cancelar
+[2026-05-03T04:50:24.800Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T04:50:33.619Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0006
+[2026-05-03T04:50:34.386Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 1 de 5.
+[2026-05-03T04:50:34.669Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 1 de 5)
+[2026-05-03T04:50:34.670Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|1
+[2026-05-03T04:51:43.432Z] ERR: (node:25512) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T04:51:43.441Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T04:52:02.669Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:52:02.670Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T04:52:02.672Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:52:07.422Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:55:49.294Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cancelar
+[2026-05-03T04:55:53.993Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T04:55:59.164Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd
+[2026-05-03T04:55:59.995Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa DDDD NO existe en la DB (Cliente nuevo).
+[2026-05-03T04:55:59.996Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 1 de 5.
+[2026-05-03T04:56:00.271Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 1 de 5)
+[2026-05-03T04:56:00.272Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|1
+[2026-05-03T04:57:01.143Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cancelar
+[2026-05-03T04:58:26.927Z] ERR: (node:26748) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T04:58:26.937Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T04:58:32.667Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:58:32.669Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T04:58:32.674Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:58:37.019Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T04:58:42.401Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T04:58:47.707Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Ddd
+[2026-05-03T04:58:48.478Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa DDD NO existe en la DB (Cliente nuevo).
+[2026-05-03T04:58:48.749Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 1 de 5.
+[2026-05-03T04:58:48.798Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 1 de 5)
+[2026-05-03T04:58:48.798Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|1
+[2026-05-03T05:00:00.028Z] LOG: 🧹 Iniciando limpieza diaria de sesiones completadas...
+[2026-05-03T05:00:00.570Z] LOG: ✅ Limpieza completada.
+[2026-05-03T05:00:50.432Z] ERR: (node:18200) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T05:00:50.442Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T05:00:55.179Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:00:55.180Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T05:00:55.181Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:01:00.140Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:01:02.235Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cancelar
+[2026-05-03T05:01:07.827Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T05:01:11.399Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Ddd
+[2026-05-03T05:01:11.941Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa DDD NO existe en la DB (Cliente nuevo).
+[2026-05-03T05:01:22.290Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0004
+[2026-05-03T05:01:23.752Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa DDDD0004 EXISTE. ¿Dueño coincidente?: NO
+[2026-05-03T05:03:00.595Z] ERR: (node:23364) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T05:03:00.605Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T05:03:04.950Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:03:04.951Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T05:03:04.953Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:03:09.058Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:03:19.774Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cancelar
+[2026-05-03T05:03:24.775Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T05:03:28.065Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Hhh
+[2026-05-03T05:03:28.676Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa HHH NO existe en la DB (Cliente nuevo).
+[2026-05-03T05:03:36.529Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0004
+[2026-05-03T05:03:37.879Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa DDDD0004 EXISTE. ¿Dueño coincidente?: NO
+[2026-05-03T05:03:37.879Z] LOG: [AutoTech Bot] 💡 TIP: Para que este cliente sea reconocido, asegúrate de que en la DB el teléfono sea: 128033411334202
+[2026-05-03T05:05:12.626Z] ERR: (node:27008) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T05:05:12.637Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T05:05:18.591Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:05:18.593Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T05:05:18.596Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:05:22.657Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:05:35.592Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T05:05:35.616Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:05:36.597Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa AGENDAR NO existe en la DB (Cliente nuevo).
+[2026-05-03T05:05:46.062Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0004
+[2026-05-03T05:05:46.076Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:05:47.203Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa DDDD0004 EXISTE. ¿Dueño coincidente?: NO
+[2026-05-03T05:05:47.204Z] LOG: [AutoTech Bot] 💡 TIP: Para que este cliente sea reconocido, asegúrate de que en la DB el teléfono sea: 128033411334202
+[2026-05-03T05:06:51.269Z] ERR: (node:28320) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T05:06:51.280Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T05:06:54.184Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:06:54.185Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T05:06:54.187Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:06:58.412Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:07:04.985Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T05:07:05.011Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:07:05.956Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa AGENDAR NO existe en la DB (Cliente nuevo).
+[2026-05-03T05:07:14.064Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0004
+[2026-05-03T05:07:14.078Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:07:15.162Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa DDDD0004 EXISTE. ¿Dueño coincidente?: NO
+[2026-05-03T05:07:15.163Z] LOG: [AutoTech Bot] 💡 TIP: Para que este cliente sea reconocido, asegúrate de que en la DB el teléfono sea: 128033411334202
+[2026-05-03T05:11:31.521Z] ERR: (node:29208) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T05:11:31.532Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T05:11:34.560Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:11:34.562Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T05:11:34.565Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:11:38.655Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:11:42.294Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T05:11:42.313Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:11:43.231Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa AGENDAR NO existe en la DB (Cliente nuevo).
+[2026-05-03T05:11:48.305Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0004
+[2026-05-03T05:11:48.346Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:11:49.375Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa DDDD0004. Dueño en DB: gene.
+[2026-05-03T05:11:49.375Z] LOG: [AutoTech Bot] ✅ Propiedad confirmada.
+[2026-05-03T05:11:49.377Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 1 de 5.
+[2026-05-03T05:11:49.657Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 1 de 5)
+[2026-05-03T05:11:49.658Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|1
+[2026-05-03T05:12:02.729Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cancelar
+[2026-05-03T05:12:02.743Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:12:07.343Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T05:12:07.358Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:12:09.775Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Aa
+[2026-05-03T05:12:09.788Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:12:10.326Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa AA NO existe en la DB (Cliente nuevo).
+[2026-05-03T05:12:13.026Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Aa
+[2026-05-03T05:12:13.041Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:12:13.569Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa AA NO existe en la DB (Cliente nuevo).
+[2026-05-03T05:12:18.712Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Dddd-0004
+[2026-05-03T05:12:18.727Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:12:19.773Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa DDDD0004. Dueño en DB: gene.
+[2026-05-03T05:12:19.773Z] LOG: [AutoTech Bot] ✅ Propiedad confirmada.
+[2026-05-03T05:12:19.775Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 1 de 5.
+[2026-05-03T05:12:20.027Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 1 de 5)
+[2026-05-03T05:12:20.027Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|1
+[2026-05-03T05:12:30.401Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: C
+[2026-05-03T05:12:30.413Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:12:30.938Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 2 de 5.
+[2026-05-03T05:12:31.190Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 2 de 5)
+[2026-05-03T05:12:31.190Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|2
+[2026-05-03T05:12:35.057Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 05)05
+[2026-05-03T05:12:35.074Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:12:35.342Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 3 de 5.
+[2026-05-03T05:12:35.644Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 3 de 5)
+[2026-05-03T05:12:35.644Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|3
+[2026-05-03T05:12:40.124Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 2pm
+[2026-05-03T05:12:40.135Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:12:40.674Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 4 de 5.
+[2026-05-03T05:12:40.978Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? true (Paso 4 de 5)
+[2026-05-03T05:12:40.979Z] LOG: [AutoTech Bot] 📝 Llamando a saveBooking para default-booking...
+[2026-05-03T05:12:40.981Z] LOG: [AutoTech Bot] 🗓️ Intentando guardar cita. Data: Dddd-0004, C, 05)05, 2pm
+[2026-05-03T05:12:41.554Z] LOG: [AutoTech Bot] ✅ Cita guardada con éxito para placa DDDD0004 en 2026-05-03
+[2026-05-03T05:15:17.361Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Agendar
+[2026-05-03T05:15:17.384Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:15:27.369Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: Cccc-0003
+[2026-05-03T05:15:27.381Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:15:28.468Z] LOG: [AutoTech Bot] 🔍 Verificación: Placa CCCC0003. Dueño en DB: gene.
+[2026-05-03T05:15:28.469Z] LOG: [AutoTech Bot] ✅ Propiedad confirmada.
+[2026-05-03T05:15:28.471Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 1 de 5.
+[2026-05-03T05:15:28.746Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 1 de 5)
+[2026-05-03T05:15:28.747Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|1
+[2026-05-03T05:15:30.004Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 05/05
+[2026-05-03T05:15:30.021Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:15:30.289Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 2 de 5.
+[2026-05-03T05:15:30.556Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 2 de 5)
+[2026-05-03T05:15:30.557Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|2
+[2026-05-03T05:15:33.341Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 05/05
+[2026-05-03T05:15:33.357Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:15:33.648Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 3 de 5.
+[2026-05-03T05:15:33.903Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? false (Paso 3 de 5)
+[2026-05-03T05:15:33.903Z] LOG: [AutoTech Bot] 💾 Guardando estado intermedio: FLOW:default-booking|3
+[2026-05-03T05:15:35.857Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 128033411334202@lid. Autor: undefined. NotifyName: Gene. Body: 2pm
+[2026-05-03T05:15:35.874Z] LOG: [AutoTech Bot] 📱 Mensaje de: 128033411334202 (ID: 128033411334202@lid)
+[2026-05-03T05:15:36.148Z] LOG: [AutoTech Bot] ➡️ Avanzando al paso 4 de 5.
+[2026-05-03T05:15:36.411Z] LOG: [AutoTech Bot] 🏁 ¿Es último paso? true (Paso 4 de 5)
+[2026-05-03T05:15:36.412Z] LOG: [AutoTech Bot] 📝 Llamando a saveBooking para default-booking...
+[2026-05-03T05:15:36.415Z] LOG: [AutoTech Bot] 🗓️ Intentando guardar cita. Data: Cccc-0003, 05/05, 05/05, 2pm
+[2026-05-03T05:15:36.987Z] LOG: [AutoTech Bot] ✅ Cita guardada con éxito para placa CCCC0003 en 2026-05-05
+[2026-05-03T05:24:28.042Z] ERR: (node:31056) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T05:24:28.052Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T05:24:30.053Z] LOG: [AutoTech Bot] 🔄 Buscando talleres con sesiones activas para reconexión...
+[2026-05-03T05:24:30.838Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T05:24:30.839Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T05:24:30.840Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T05:24:30.843Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: 336657d3-df17-4797-b73b-e4ac9e034f8d
+[2026-05-03T05:24:30.846Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T05:24:30.846Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T05:24:30.847Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T05:24:30.849Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T05:24:30.850Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T05:24:30.851Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T05:24:30.852Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T05:24:30.853Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T05:24:30.855Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T05:24:30.855Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T05:24:30.855Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T05:24:30.856Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T05:24:30.858Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:24:30.858Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:24:30.859Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T05:24:30.860Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: b45117e1-f484-4c7c-868e-57797cec13c1
+[2026-05-03T05:24:30.861Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T05:24:30.861Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T05:24:30.862Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T05:24:30.862Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T05:24:30.870Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T05:24:30.871Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T05:24:30.872Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T05:24:30.873Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T05:24:30.874Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T05:24:30.875Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T05:24:30.876Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T05:24:30.877Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T05:24:30.878Z] LOG: [AutoTech Bot] 🤖 Reconectando taller activo: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T05:24:30.881Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T05:24:30.882Z] LOG: [AutoTech Bot] 📂 Detectado modo standalone. Cargando desde AppData...
+[2026-05-03T05:24:30.883Z] LOG: [AutoTech Bot] 📂 Configuración cargada desde disco para: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T05:24:42.541Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T05:24:45.550Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T05:24:47.808Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T05:24:48.015Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T05:24:48.076Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T05:24:48.249Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T05:24:54.512Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 5f412813-94ab-4dc1-a0bf-4c748f5af3eb
+[2026-05-03T05:25:39.680Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 17efc11a-4cec-4532-b7c1-be8f275bb84b
+[2026-05-03T05:25:40.397Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: efa29b41-75e9-4606-ab5f-2249e8ac63b7
+[2026-05-03T05:25:42.202Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T05:25:43.001Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
+[2026-05-03T05:25:43.017Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
+[2026-05-03T05:25:43.574Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d

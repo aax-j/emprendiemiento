@@ -2,15 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
-  border-bottom: 1px solid var(--color-primary-fixed-dim);
+  padding: 0 2rem;
+  background-color: rgba(var(--color-primary-rgb, 0, 86, 179), 0.95);
+  backdrop-filter: blur(10px);
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   height: 72px;
   position: sticky;
   top: 0;
   z-index: 40;
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.1);
 }
+
 
 .leftArea {
   display: flex;
@@ -40,6 +43,7 @@
   justify-content: center;
   border-radius: var(--radius-full);
   padding: 0.5rem;
+  position: relative;
 }
 
 .iconBtn:hover {
@@ -88,3 +92,118 @@
   font-weight: 700;
   font-size: 0.75rem;
 }
+
+.badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: var(--color-error, #dc3545);
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  min-width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  width: 320px;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  color: #1a1a1a;
+  z-index: 100;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdownHeader {
+  margin: 0;
+  padding: 16px 20px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  letter-spacing: -0.02em;
+}
+
+.dropdownEmpty {
+  margin: 0;
+  padding: 30px 20px;
+  font-size: 0.875rem;
+  color: #888;
+  text-align: center;
+}
+
+.dropdownList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.dropdownItem {
+  font-size: 0.875rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.whatsappLink {
+  text-decoration: none;
+  color: #25D366; /* WhatsApp Brand Color */
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.whatsappLink:hover {
+  text-decoration: underline;
+}
+
+.resolveBtn {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+}
+
+.resolveBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(16, 185, 129, 0.3);
+}
+
+.resolveBtn:active {
+  transform: translateY(0);
+}
+
