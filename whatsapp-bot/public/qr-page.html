@@ -303,6 +303,10 @@
     const API = 'http://localhost:3001/api';
     let interval = null;
 
+    // Extraer el workshopId de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const workshopId = urlParams.get('workshopId');
+
     function showView(id) {
       ['loading','qr','ready','error'].forEach(v => {
         document.getElementById(`view-${v}`).style.display = v === id ? '' : 'none';
@@ -310,9 +314,15 @@
     }
 
     async function poll() {
+      if (!workshopId) {
+        document.querySelector('.error-msg').innerText = "Falta el workshopId en la URL. No se puede conectar.";
+        showView('error');
+        return;
+      }
+
       try {
         // 1. Obtener estado
-        const statusRes = await fetch(`${API}/status`);
+        const statusRes = await fetch(`${API}/status/${workshopId}`);
         if (!statusRes.ok) throw new Error('Error de red');
         const { status } = await statusRes.json();
 
@@ -324,7 +334,7 @@
 
         if (status === 'qr') {
           // 2. Obtener QR
-          const qrRes = await fetch(`${API}/qr`);
+          const qrRes = await fetch(`${API}/qr/${workshopId}`);
           const { qr } = await qrRes.json();
           if (qr) {
             document.getElementById('qr-img').src = qr;
@@ -338,7 +348,7 @@
 
         // Si está desconectado, disparar conexión
         if (status === 'disconnected') {
-          await fetch(`${API}/connect`, { method: 'POST' });
+          await fetch(`${API}/connect/${workshopId}`, { method: 'POST' });
         }
 
       } catch (err) {

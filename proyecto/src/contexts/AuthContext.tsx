@@ -58,11 +58,20 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const fetchAndCacheProfile = async (userId: string): Promise<Profile | null> => {
     try {
-      const { data, error } = await supabase
+      const fetchPromise = supabase
         .from('profiles')
         .select('*')
         .eq('id', userId)
         .single();
+        
+      const timeoutPromise = new Promise<any>((_, reject) => 
+        setTimeout(() => reject(new Error('Profile fetch timeout')), 8000)
+      );
+
+      const { data, error } = await Promise.race([
+        fetchPromise,
+        timeoutPromise
+      ]);
 
       if (error) {
         if (error.code === 'PGRST116') {
@@ -78,8 +87,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const newProfile = data as Profile;
       setCachedProfile(newProfile);
       return newProfile;
-    } catch {
-      // Network failure — keep existing cached profile
+    } catch (err: any) {
+      console.warn('Profile fetch exception (keeping cache):', err.message);
+      // Network failure or timeout — keep existing cached profile
       return getCachedProfile();
     }
   };

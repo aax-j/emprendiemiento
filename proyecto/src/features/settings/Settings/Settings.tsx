@@ -41,6 +41,8 @@ export const Settings = () => {
   // WhatsApp status
   const [waStatus, setWaStatus] = useState<WaStatus>('disconnected');
   const [waLoading, setWaLoading] = useState(false);
+  const [showQRModal, setShowQRModal] = useState(false);
+  const [qrCode, setQrCode] = useState<string | null>(null);
 
   // Initial load workshop
   useEffect(() => {
@@ -77,14 +79,15 @@ export const Settings = () => {
   }, [profile]);
 
   const fetchWaStatus = useCallback(async () => {
+    if (!profile?.workshop_id) return;
     try {
-      const res = await fetch(`${WA_API}/status`, { signal: AbortSignal.timeout(3000) });
+      const res = await fetch(`${WA_API}/status/${profile.workshop_id}`, { signal: AbortSignal.timeout(3000) });
       const data = await res.json();
       setWaStatus(data.status as WaStatus);
     } catch {
       setWaStatus('unreachable');
     }
-  }, []);
+  }, [profile?.workshop_id]);
 
   useEffect(() => {
     fetchWaStatus();
@@ -144,23 +147,46 @@ export const Settings = () => {
   };
 
   const handleConnectWhatsApp = async () => {
+    if (!profile?.workshop_id) return;
     setWaLoading(true);
     try {
-      await fetch(`${WA_API}/connect`, { method: 'POST' });
-      // Usar el plugin de Tauri para abrir el navegador del sistema
-      const { openUrl } = await import('@tauri-apps/plugin-opener');
-      await openUrl('http://localhost:3001/qr-page.html');
+      await fetch(`${WA_API}/connect/${profile.workshop_id}`, { method: 'POST' });
+      setShowQRModal(true);
+      setQrCode(null);
+
+      const pollQR = setInterval(async () => {
+        try {
+          const res = await fetch(`${WA_API}/qr/${profile.workshop_id}`);
+          const data = await res.json();
+          if (data.qr) setQrCode(data.qr);
+          if (data.status === 'ready') {
+            clearInterval(pollQR);
+            setShowQRModal(false);
+            setWaStatus('ready');
+          }
+        } catch (e) {
+          console.error('Error polling QR:', e);
+        }
+      }, 2000);
+
+      (window as any).settingsQrInterval = pollQR;
     } catch (err) {
-      console.error('Error opening QR page:', err);
+      console.error('Error connecting WhatsApp:', err);
     } finally {
       setWaLoading(false);
     }
   };
 
+  const closeQRModal = () => {
+    setShowQRModal(false);
+    if ((window as any).settingsQrInterval) clearInterval((window as any).settingsQrInterval);
+  };
+
   const handleDisconnectWhatsApp = async () => {
+    if (!profile?.workshop_id) return;
     setWaLoading(true);
     try {
-      await fetch(`${WA_API}/disconnect`, { method: 'POST' });
+      await fetch(`${WA_API}/disconnect/${profile.workshop_id}`, { method: 'POST' });
       setWaStatus('disconnected');
     } catch {
       setWaStatus('unreachable');
@@ -274,6 +300,27 @@ export const Settings = () => {
           </div>
         </div>
       </div>
+
+      {showQRModal && (
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.7)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1000 }}>
+          <div style={{ background: 'var(--color-surface)', padding: '2rem', borderRadius: '1rem', maxWidth: '400px', width: '90%', textAlign: 'center', position: 'relative' }}>
+            <button onClick={closeQRModal} style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--color-on-surface)' }}>
+              <Icon name="close" />
+            </button>
+            <h2 style={{ marginTop: 0 }}>Escanear Código QR</h2>
+            <p style={{ color: 'var(--color-on-surface-variant)', marginBottom: '1.5rem' }}>Abre WhatsApp en tu teléfono, ve a Dispositivos Vinculados y escanea el código para conectar el bot.</p>
+            
+            {qrCode ? (
+              <img src={qrCode} alt="WhatsApp QR Code" style={{ width: '250px', height: '250px', margin: '0 auto', display: 'block', borderRadius: '0.5rem' }} />
+            ) : (
+              <div style={{ width: '250px', height: '250px', margin: '0 auto', display: 'flex', justifyContent: 'center', alignItems: 'center', border: '2px dashed var(--color-outline)', borderRadius: '0.5rem', color: 'var(--color-on-surface-variant)' }}>
+                <Icon name="sync" className="spin" style={{ fontSize: '2rem' }} />
+                <span style={{ marginLeft: '0.5rem' }}>Generando QR...</span>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

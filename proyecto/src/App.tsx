@@ -1,5 +1,4 @@
-
-import { Routes, Route, Navigate } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import { MainLayout } from "./layouts/MainLayout/MainLayout";
 import { AuthLayout } from "./layouts/AuthLayout/AuthLayout";
 import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
@@ -15,40 +14,44 @@ import { FinanceDashboard } from "./features/finance/FinanceDashboard/FinanceDas
 import { Customization } from "./features/customization/Customization/Customization";
 import { Settings } from "./features/settings/Settings/Settings";
 
-// Placeholder Pages
+const router = createBrowserRouter([
+  {
+    element: <AuthLayout />,
+    children: [
+      { path: "/login", element: <Login /> },
+      { path: "/register", element: <Register /> },
+    ],
+  },
+  {
+    element: <ProtectedRoute />,
+    children: [
+      { path: "/onboarding", element: <SetupWorkshop /> },
+    ],
+  },
+  {
+    element: <OnboardingGuard />,
+    children: [
+      {
+        path: "/",
+        element: <MainLayout />,
+        children: [
+          { index: true, element: <Navigate to="/agenda" replace /> },
+          { path: "agenda", element: <Agenda /> },
+          { path: "clients", element: <ClientList /> },
+          { path: "vehicles", element: <VehicleList /> },
+          { path: "inventory", element: <InventoryList /> },
+          { path: "finance", element: <FinanceDashboard /> },
+          { path: "customization", element: <Customization /> },
+          { path: "settings", element: <Settings /> },
+        ],
+      },
+    ],
+  },
+  { path: "*", element: <Navigate to="/" replace /> },
+]);
 
 function App() {
-  return (
-    <Routes>
-      {/* Public Auth Routes */}
-      <Route element={<AuthLayout />}>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Route>
-
-      {/* Protected Setup Route (Needs session, but not workshop) */}
-      <Route element={<ProtectedRoute />}>
-        <Route path="/onboarding" element={<SetupWorkshop />} />
-      </Route>
-
-      {/* Main App Routes (Needs session AND workshop) */}
-      <Route element={<OnboardingGuard />}>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<Navigate to="/agenda" replace />} />
-          <Route path="agenda" element={<Agenda />} />
-          <Route path="clients" element={<ClientList />} />
-          <Route path="vehicles" element={<VehicleList />} />
-          <Route path="inventory" element={<InventoryList />} />
-          <Route path="finance" element={<FinanceDashboard />} />
-          <Route path="customization" element={<Customization />} />
-          <Route path="settings" element={<Settings />} />
-        </Route>
-      </Route>
-
-      {/* Fallback */}
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
