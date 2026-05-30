@@ -1,4 +1,4 @@
-package com.lenovo_thinkpad_x13.tauri_app
+package com.autotech.app
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

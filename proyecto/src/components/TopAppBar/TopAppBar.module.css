@@ -126,6 +126,14 @@
   animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+@media (max-width: 768px) {
+  .dropdownMenu {
+    right: 1rem;
+    width: calc(100vw - 2rem);
+    max-width: 360px;
+  }
+}
+
 @keyframes slideIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }

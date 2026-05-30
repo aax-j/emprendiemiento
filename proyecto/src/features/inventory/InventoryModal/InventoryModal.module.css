@@ -167,3 +167,41 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+@media (max-width: 600px) {
+  .overlay {
+    padding: 0;
+    align-items: flex-end;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .modal {
+    max-width: 100%;
+    max-height: calc(96dvh - env(safe-area-inset-top));
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  }
+
+  .body {
+    padding: 1.25rem;
+    max-height: calc(80dvh - env(safe-area-inset-top) - 100px);
+    overflow-y: auto;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .header {
+    padding: 1.25rem;
+  }
+
+  .footer {
+    padding: 1rem 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .footer > button {
+    flex: 1;
+  }
+}

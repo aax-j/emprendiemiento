@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getBotApiUrl } from '../../../lib/api/bot';
 import { useAuth } from '../../../contexts/AuthContext';
 import { createClient } from '../../../lib/api/clients';
 import { supabase } from '../../../lib/supabase';
@@ -70,7 +71,7 @@ export const AddClientModal: React.FC<AddClientModalProps> = ({ isOpen, onClose,
       // Enviar bienvenida vía Bot
       if (fullPhone && newClient?.id) {
         try {
-          await fetch('http://127.0.0.1:3001/api/send-welcome', {
+          await fetch(`${getBotApiUrl()}/api/send-welcome`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

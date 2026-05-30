@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  overflow-x: hidden; /* evita corte horizontal en mobile */
 }
 
 .header {
@@ -31,6 +32,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  overflow: hidden; /* evita desbordamiento de contenido interno */
+  min-width: 0;    /* fix para contenido largo en flex */
 }
 
 .sectionTitle {
@@ -290,9 +293,37 @@
 @media (max-width: 768px) {
   .page {
     padding: 1rem;
+    gap: 1.25rem;
+  }
+
+  .section {
+    padding: 1rem;
   }
   
   .themeCard {
     width: 100%;
+    max-width: 100%;
+  }
+
+  .themeGrid {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 0.75rem;
+    gap: 1rem;
+  }
+
+  .section {
+    padding: 0.875rem;
+    border-radius: 0.75rem;
+  }
+
+  .switchRow {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

@@ -3,8 +3,24 @@ const cors = require('cors');
 const qrcode = require('qrcode');
 const { Client, LocalAuth } = require('whatsapp-web.js');
 const path = require('path');
+const os = require('os');
 const fs = require('fs');
 const cron = require('node-cron');
+
+// --- Detectar Chrome instalado por Puppeteer ---
+function findChrome() {
+  const cacheDir = path.join(os.homedir(), '.cache', 'puppeteer', 'chrome');
+  if (!fs.existsSync(cacheDir)) return undefined;
+  const versions = fs.readdirSync(cacheDir).filter(d => d.startsWith('win64-'));
+  if (versions.length === 0) return undefined;
+  // Preferir v146, luego cualquier otra
+  const preferred = versions.find(v => v.includes('146')) || versions[0];
+  const chromePath = path.join(cacheDir, preferred, 'chrome-win64', 'chrome.exe');
+  return fs.existsSync(chromePath) ? chromePath : undefined;
+}
+const CHROME_EXECUTABLE = findChrome();
+if (CHROME_EXECUTABLE) console.log(`[AutoTech Bot] 🌐 Usando Chrome: ${CHROME_EXECUTABLE}`);
+else console.warn('[AutoTech Bot] ⚠️ Chrome no encontrado en caché. Instala con: npx puppeteer browsers install chrome');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 const { createClient } = require('@supabase/supabase-js');
 
@@ -63,10 +79,11 @@ function createClientInstance(workshopId) {
   session.whatsappClient = new Client({
     authStrategy: new LocalAuth({ 
       clientId: `bot-${workshopId}`, 
-      dataPath: path.join(require('os').tmpdir(), '.autotech_wwebjs_auth') 
+      dataPath: path.join(os.tmpdir(), '.autotech_wwebjs_auth') 
     }),
     puppeteer: { 
       headless: true,
+      executablePath: CHROME_EXECUTABLE,
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',

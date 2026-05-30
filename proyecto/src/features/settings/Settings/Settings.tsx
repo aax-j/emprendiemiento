@@ -2,9 +2,8 @@ import { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '../../../contexts/AuthContext';
 import { supabase } from '../../../lib/supabase';
 import { Icon } from '../../../components/Icon/Icon';
+import { getBotApiUrl, setBotApiUrl } from '../../../lib/api/bot';
 import styles from './Settings.module.css';
-
-const WA_API = 'http://127.0.0.1:3001/api';
 
 type WaStatus = 'disconnected' | 'initializing' | 'qr' | 'ready' | 'unreachable';
 
@@ -43,6 +42,13 @@ export const Settings = () => {
   const [waLoading, setWaLoading] = useState(false);
   const [showQRModal, setShowQRModal] = useState(false);
   const [qrCode, setQrCode] = useState<string | null>(null);
+  const [waConnectError, setWaConnectError] = useState<string | null>(null);
+  const [qrError, setQrError] = useState<string | null>(null);
+
+  // Network / API
+  const [botUrlInput, setBotUrlInput] = useState(getBotApiUrl());
+  const [savingBotUrl, setSavingBotUrl] = useState(false);
+  const [botUrlSuccess, setBotUrlSuccess] = useState(false);
 
   // Initial load workshop
   useEffect(() => {
@@ -81,7 +87,7 @@ export const Settings = () => {
   const fetchWaStatus = useCallback(async () => {
     if (!profile?.workshop_id) return;
     try {
-      const res = await fetch(`${WA_API}/status/${profile.workshop_id}`, { signal: AbortSignal.timeout(3000) });
+      const res = await fetch(`${getBotApiUrl()}/api/status/${profile.workshop_id}`, { signal: AbortSignal.timeout(3000) });
       const data = await res.json();
       setWaStatus(data.status as WaStatus);
     } catch {
@@ -146,32 +152,64 @@ export const Settings = () => {
     }
   };
 
+  const handleSaveBotUrl = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSavingBotUrl(true);
+    setBotApiUrl(botUrlInput);
+    setBotUrlSuccess(true);
+    // Refresh status after changing URL
+    fetchWaStatus();
+    setTimeout(() => {
+      setBotUrlSuccess(false);
+      setSavingBotUrl(false);
+    }, 2000);
+  };
+
   const handleConnectWhatsApp = async () => {
     if (!profile?.workshop_id) return;
     setWaLoading(true);
+    setWaConnectError(null);
+    setQrError(null);
     try {
-      await fetch(`${WA_API}/connect/${profile.workshop_id}`, { method: 'POST' });
+      const res = await fetch(`${getBotApiUrl()}/api/connect/${profile.workshop_id}`, {
+        method: 'POST',
+        signal: AbortSignal.timeout(5000)
+      });
+      if (!res.ok) throw new Error(`Error del servidor: ${res.status}`);
       setShowQRModal(true);
       setQrCode(null);
 
+      let errorStreak = 0;
       const pollQR = setInterval(async () => {
         try {
-          const res = await fetch(`${WA_API}/qr/${profile.workshop_id}`);
-          const data = await res.json();
+          const qrRes = await fetch(`${getBotApiUrl()}/api/qr/${profile.workshop_id}`, {
+            signal: AbortSignal.timeout(3000)
+          });
+          const data = await qrRes.json();
+          errorStreak = 0;
+          setQrError(null);
           if (data.qr) setQrCode(data.qr);
           if (data.status === 'ready') {
             clearInterval(pollQR);
             setShowQRModal(false);
             setWaStatus('ready');
           }
-        } catch (e) {
-          console.error('Error polling QR:', e);
+        } catch {
+          errorStreak++;
+          if (errorStreak >= 3) {
+            setQrError(`No se puede comunicar con el servidor del bot. Verifica que esté corriendo en: ${getBotApiUrl()}`);
+          }
         }
       }, 2000);
 
       (window as any).settingsQrInterval = pollQR;
-    } catch (err) {
-      console.error('Error connecting WhatsApp:', err);
+    } catch (err: any) {
+      const isNetworkErr = err?.message?.includes('fetch') || err?.name === 'TimeoutError';
+      setWaConnectError(
+        isNetworkErr
+          ? 'No se pudo conectar con el servidor del bot. Asegúrate de que esté corriendo con: node server.js (en la carpeta whatsapp-bot)'
+          : (err?.message || 'Error desconocido al conectar')
+      );
     } finally {
       setWaLoading(false);
     }
@@ -186,7 +224,7 @@ export const Settings = () => {
     if (!profile?.workshop_id) return;
     setWaLoading(true);
     try {
-      await fetch(`${WA_API}/disconnect/${profile.workshop_id}`, { method: 'POST' });
+      await fetch(`${getBotApiUrl()}/api/disconnect/${profile.workshop_id}`, { method: 'POST' });
       setWaStatus('disconnected');
     } catch {
       setWaStatus('unreachable');
@@ -283,6 +321,39 @@ export const Settings = () => {
         </form>
       </div>
 
+      {/* Configuración de Red */}
+      <div className={styles.card}>
+        <div className={styles.cardHeader}>
+          <div className={styles.cardIconBox} style={{ background: 'rgba(99, 102, 241, 0.1)', color: 'var(--color-primary)' }}>
+            <Icon name="router" />
+          </div>
+          <div><h2 className={styles.cardTitle}>Configuración de Red del Bot</h2></div>
+        </div>
+        <form onSubmit={handleSaveBotUrl} className={styles.form}>
+          <div className={styles.inputGroup}>
+            <label className={styles.label}>URL del Servidor del Bot</label>
+            <input 
+              type="url" 
+              className={styles.input} 
+              value={botUrlInput} 
+              onChange={e => setBotUrlInput(e.target.value)} 
+              placeholder="Ej: http://192.168.1.15:3001"
+              required 
+            />
+            <p style={{ fontSize: '0.8rem', color: 'var(--color-on-surface-variant)', marginTop: '0.5rem' }}>
+              Para conectar tu teléfono al servidor de tu PC, usa la IP local de tu computadora en lugar de 127.0.0.1.
+            </p>
+          </div>
+          {botUrlSuccess && <div className={styles.successBox}>URL actualizada exitosamente</div>}
+          <div className={styles.formFooter}>
+            <button type="submit" className={styles.primaryBtn} disabled={savingBotUrl || !botUrlInput}>
+              <Icon name={savingBotUrl ? 'sync' : 'save'} className={savingBotUrl ? 'spin' : ''} />
+              {savingBotUrl ? 'Actualizando...' : 'Actualizar URL'}
+            </button>
+          </div>
+        </form>
+      </div>
+
       {/* WhatsApp Integration */}
       <div className={styles.card}>
         <div className={styles.cardHeader}>
@@ -294,28 +365,119 @@ export const Settings = () => {
             <span>Estado de conexión</span>
             <span className={`${styles.waBadge} ${styles[`waBadge_${waStatus}`]}`}>{waLabel[waStatus]}</span>
           </div>
+
+          {waStatus === 'unreachable' && (
+            <div style={{
+              background: 'rgba(239,68,68,0.08)',
+              border: '1px solid rgba(239,68,68,0.3)',
+              borderRadius: '0.75rem',
+              padding: '1rem 1.25rem',
+              display: 'flex',
+              gap: '0.75rem',
+              alignItems: 'flex-start',
+              marginTop: '0.75rem'
+            }}>
+              <Icon name="warning" style={{ color: '#ef4444', flexShrink: 0, marginTop: '2px' }} />
+              <div>
+                <p style={{ margin: 0, fontWeight: 600, color: '#ef4444', fontSize: '0.9rem' }}>Servidor inactivo</p>
+                <p style={{ margin: '0.25rem 0 0', color: 'var(--color-on-surface-variant)', fontSize: '0.82rem', lineHeight: 1.5 }}>
+                  El bot no está corriendo. Abre una terminal en la carpeta <code style={{ background: 'var(--color-surface-variant)', padding: '0 4px', borderRadius: '4px' }}>whatsapp-bot</code> y ejecuta: <br />
+                  <code style={{ background: 'var(--color-surface-variant)', padding: '2px 6px', borderRadius: '4px', fontWeight: 700 }}>node server.js</code>
+                </p>
+              </div>
+            </div>
+          )}
+
+          {waConnectError && (
+            <div style={{
+              background: 'rgba(239,68,68,0.08)',
+              border: '1px solid rgba(239,68,68,0.3)',
+              borderRadius: '0.75rem',
+              padding: '1rem 1.25rem',
+              display: 'flex',
+              gap: '0.75rem',
+              alignItems: 'flex-start',
+              marginTop: '0.75rem'
+            }}>
+              <Icon name="error" style={{ color: '#ef4444', flexShrink: 0 }} />
+              <p style={{ margin: 0, color: 'var(--color-on-surface-variant)', fontSize: '0.85rem', lineHeight: 1.5 }}>{waConnectError}</p>
+            </div>
+          )}
+
           <div className={styles.waActions}>
-            <button className={styles.whatsappBtn} onClick={handleConnectWhatsApp} disabled={waLoading}>{waStatus === 'qr' ? 'Ver QR' : 'Conectar WhatsApp'}</button>
+            <button
+              className={styles.whatsappBtn}
+              onClick={handleConnectWhatsApp}
+              disabled={waLoading || waStatus === 'unreachable'}
+              title={waStatus === 'unreachable' ? 'Inicia el servidor primero' : ''}
+            >
+              {waLoading
+                ? <><Icon name="sync" className="spin" /> Conectando...</>
+                : waStatus === 'qr' ? 'Ver QR' : 'Conectar WhatsApp'
+              }
+            </button>
             {waStatus === 'ready' && <button className={`${styles.primaryBtn} ${styles.dangerBtn}`} onClick={handleDisconnectWhatsApp}>Desconectar</button>}
           </div>
         </div>
       </div>
 
       {showQRModal && (
-        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.7)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1000 }}>
-          <div style={{ background: 'var(--color-surface)', padding: '2rem', borderRadius: '1rem', maxWidth: '400px', width: '90%', textAlign: 'center', position: 'relative' }}>
-            <button onClick={closeQRModal} style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--color-on-surface)' }}>
-              <Icon name="close" />
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(6px)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1000, padding: '1rem', paddingTop: 'max(1rem, env(safe-area-inset-top))', paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}>
+          <div style={{ background: 'var(--color-surface)', padding: '2rem', borderRadius: '1.25rem', maxWidth: '420px', width: '100%', textAlign: 'center', position: 'relative', boxShadow: '0 20px 40px rgba(0,0,0,0.3)', maxHeight: 'calc(95dvh - env(safe-area-inset-top))', overflowY: 'auto' }}>
+            <button onClick={closeQRModal} style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'var(--color-surface-variant)', border: 'none', cursor: 'pointer', color: 'var(--color-on-surface)', width: '32px', height: '32px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Icon name="close" style={{ fontSize: '1.1rem' }} />
             </button>
-            <h2 style={{ marginTop: 0 }}>Escanear Código QR</h2>
-            <p style={{ color: 'var(--color-on-surface-variant)', marginBottom: '1.5rem' }}>Abre WhatsApp en tu teléfono, ve a Dispositivos Vinculados y escanea el código para conectar el bot.</p>
-            
-            {qrCode ? (
-              <img src={qrCode} alt="WhatsApp QR Code" style={{ width: '250px', height: '250px', margin: '0 auto', display: 'block', borderRadius: '0.5rem' }} />
+            <h2 style={{ marginTop: 0, marginBottom: '0.5rem', fontSize: '1.2rem' }}>Escanear Código QR</h2>
+
+            {/* Step-by-step instructions */}
+            <div style={{ background: 'var(--color-surface-variant)', borderRadius: '0.75rem', padding: '0.875rem', marginBottom: '1.25rem', textAlign: 'left' }}>
+              <p style={{ margin: '0 0 0.5rem', fontSize: '0.78rem', fontWeight: 700, color: 'var(--color-on-surface)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Cómo conectar desde tu celular:</p>
+              <ol style={{ margin: 0, paddingLeft: '1.2rem', fontSize: '0.8rem', color: 'var(--color-on-surface-variant)', lineHeight: 1.6 }}>
+                <li>Toca <strong>Descargar QR</strong> abajo para guardarlo en tu galería</li>
+                <li>Abre <strong>WhatsApp</strong> en tu celular</li>
+                <li>Ve a <strong>Dispositivos vinculados → Vincular dispositivo</strong></li>
+                <li>Toca el ícono de <strong>galería/imagen</strong> y selecciona el QR descargado</li>
+              </ol>
+            </div>
+
+            {qrError ? (
+              <div style={{ width: '250px', height: '180px', margin: '0 auto', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '1rem', border: '2px dashed #ef4444', borderRadius: '0.75rem', padding: '1.5rem', background: 'rgba(239,68,68,0.05)' }}>
+                <Icon name="cloud_off" style={{ fontSize: '2.5rem', color: '#ef4444' }} />
+                <p style={{ margin: 0, color: '#ef4444', fontSize: '0.82rem', lineHeight: 1.5 }}>{qrError}</p>
+                <button
+                  onClick={() => setQrError(null)}
+                  style={{ background: 'var(--color-primary)', color: 'white', border: 'none', padding: '0.4rem 1rem', borderRadius: '0.5rem', cursor: 'pointer', fontSize: '0.85rem' }}
+                >
+                  Reintentar
+                </button>
+              </div>
+            ) : qrCode ? (
+              <>
+                <img src={qrCode} alt="WhatsApp QR Code" style={{ width: '220px', height: '220px', margin: '0 auto', display: 'block', borderRadius: '0.75rem', border: '4px solid var(--color-surface-variant)' }} />
+                <p style={{ marginTop: '0.75rem', fontSize: '0.78rem', color: 'var(--color-on-surface-variant)', lineHeight: 1.4 }}>
+                  El código se actualiza automáticamente si expira.
+                </p>
+                {/* Download button */}
+                <a
+                  href={qrCode}
+                  download="autotech-whatsapp-qr.png"
+                  style={{
+                    display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                    marginTop: '1rem', padding: '0.65rem 1.5rem',
+                    background: 'var(--color-primary)', color: 'var(--color-on-primary)',
+                    borderRadius: '0.6rem', fontWeight: 700, fontSize: '0.9rem',
+                    textDecoration: 'none', cursor: 'pointer',
+                  }}
+                >
+                  <Icon name="download" style={{ fontSize: '1.1rem' }} />
+                  Descargar QR como imagen
+                </a>
+              </>
             ) : (
-              <div style={{ width: '250px', height: '250px', margin: '0 auto', display: 'flex', justifyContent: 'center', alignItems: 'center', border: '2px dashed var(--color-outline)', borderRadius: '0.5rem', color: 'var(--color-on-surface-variant)' }}>
-                <Icon name="sync" className="spin" style={{ fontSize: '2rem' }} />
-                <span style={{ marginLeft: '0.5rem' }}>Generando QR...</span>
+              <div style={{ width: '220px', height: '220px', margin: '0 auto', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '0.75rem', border: '2px dashed var(--color-outline)', borderRadius: '0.75rem', color: 'var(--color-on-surface-variant)' }}>
+                <Icon name="sync" className="spin" style={{ fontSize: '2.5rem' }} />
+                <span style={{ fontSize: '0.9rem' }}>Generando código QR...</span>
+                <span style={{ fontSize: '0.78rem', opacity: 0.7 }}>Esto puede tomar unos segundos</span>
               </div>
             )}
           </div>

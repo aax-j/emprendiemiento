@@ -15,6 +15,7 @@ export const WorkOrderDetailModal: React.FC<WorkOrderDetailModalProps> = ({
 }) => {
   const [status, setStatus] = useState(event.status);
   const [loading, setLoading] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
   const handleStatusChange = async (newStatus: RepairHistory['status']) => {
     setLoading(true);
@@ -24,14 +25,12 @@ export const WorkOrderDetailModal: React.FC<WorkOrderDetailModalProps> = ({
       onRefresh();
     } catch (err) {
       console.error(err);
-      alert('Error al actualizar el estado');
     } finally {
       setLoading(false);
     }
   };
 
   const handleDelete = async () => {
-    if (!confirm('¿Estás seguro de eliminar este registro?')) return;
     setLoading(true);
     try {
       await deleteRepair(event.id);
@@ -39,7 +38,6 @@ export const WorkOrderDetailModal: React.FC<WorkOrderDetailModalProps> = ({
       onClose();
     } catch (err) {
       console.error(err);
-      alert('Error al eliminar');
     } finally {
       setLoading(false);
     }
@@ -110,7 +108,7 @@ export const WorkOrderDetailModal: React.FC<WorkOrderDetailModalProps> = ({
         </div>
 
         <div className={styles.footer}>
-          <button className={styles.dangerBtn} onClick={handleDelete} disabled={loading}>
+          <button className={styles.dangerBtn} onClick={() => setShowDeleteConfirm(true)} disabled={loading}>
             <Icon name="delete" />
             Eliminar
           </button>
@@ -127,6 +125,68 @@ export const WorkOrderDetailModal: React.FC<WorkOrderDetailModalProps> = ({
           </button>
         </div>
       </div>
+
+      {/* Delete Confirmation Dialog */}
+      {showDeleteConfirm && (
+        <div
+          style={{
+            position: 'fixed', inset: 0, display: 'flex', alignItems: 'center',
+            justifyContent: 'center', zIndex: 1100, padding: '1rem',
+          }}
+          onClick={e => e.stopPropagation()}
+        >
+          <div style={{
+            background: 'var(--color-surface)',
+            borderRadius: '1rem',
+            padding: '2rem',
+            maxWidth: '360px',
+            width: '100%',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+            textAlign: 'center',
+          }}>
+            <div style={{
+              width: '56px', height: '56px', borderRadius: '50%',
+              background: 'rgba(239,68,68,0.1)', color: '#ef4444',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              margin: '0 auto 1.25rem',
+            }}>
+              <Icon name="delete" style={{ fontSize: '1.75rem' }} />
+            </div>
+            <h3 style={{ margin: '0 0 0.75rem', color: 'var(--color-on-surface)', fontSize: '1.1rem', fontWeight: 700 }}>
+              ¿Eliminar esta cita?
+            </h3>
+            <p style={{ margin: '0 0 1.75rem', color: 'var(--color-on-surface-variant)', fontSize: '0.9rem', lineHeight: 1.5 }}>
+              Esta acción no se puede deshacer. Se eliminará el registro de{' '}
+              <strong>{event.vehicles?.plate}</strong> permanentemente.
+            </p>
+            <div style={{ display: 'flex', gap: '0.75rem' }}>
+              <button
+                onClick={() => setShowDeleteConfirm(false)}
+                style={{
+                  flex: 1, padding: '0.75rem', borderRadius: '0.6rem',
+                  border: '1px solid var(--color-outline-variant)',
+                  background: 'transparent', color: 'var(--color-on-surface)',
+                  fontWeight: 600, cursor: 'pointer', fontSize: '0.9rem',
+                }}
+              >
+                Cancelar
+              </button>
+              <button
+                onClick={handleDelete}
+                disabled={loading}
+                style={{
+                  flex: 1, padding: '0.75rem', borderRadius: '0.6rem',
+                  border: 'none', background: '#ef4444', color: 'white',
+                  fontWeight: 700, cursor: 'pointer', fontSize: '0.9rem',
+                  opacity: loading ? 0.7 : 1,
+                }}
+              >
+                {loading ? 'Eliminando...' : 'Sí, eliminar'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

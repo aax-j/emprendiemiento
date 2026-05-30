@@ -7,10 +7,16 @@
     "opener:default",
     "dialog:default",
     "fs:default",
-    "http:default",
     "fs:allow-appdata-read",
     "fs:allow-appdata-write",
     "fs:allow-appdata-meta",
+    {
+      "identifier": "http:allow-fetch",
+      "allow": [
+        { "url": "http://127.0.0.1:3001/**" },
+        { "url": "https://*.supabase.co/**" }
+      ]
+    },
     {
       "identifier": "shell:allow-spawn",
       "allow": [

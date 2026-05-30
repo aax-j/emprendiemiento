@@ -1,0 +1,8 @@
+# Root GitIgnore for the entire project
+node_modules/
+*.log
+.DS_Store
+
+# Whatsapp Bot ignores
+whatsapp-bot/.wwebjs_cache/
+whatsapp-bot/bot_log.txt

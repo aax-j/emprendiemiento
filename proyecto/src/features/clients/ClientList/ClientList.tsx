@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getBotApiUrl } from '../../../lib/api/bot';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../contexts/AuthContext';
 import { supabase } from '../../../lib/supabase';
@@ -86,7 +87,7 @@ const ClientModal: React.FC<ClientModalProps> = ({ mode, client, workshopId, onC
             // Obtener nombre del taller
             const { data: ws } = await supabase.from('workshops').select('name').eq('id', workshopId).single();
             
-            const response = await fetch('http://127.0.0.1:3001/api/send-welcome', {
+            const response = await fetch(`${getBotApiUrl()}/api/send-welcome`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({

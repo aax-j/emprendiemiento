@@ -901,3 +901,827 @@
 [2026-05-03T05:25:43.001Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: c34c1b14-be77-4329-bf37-1d690d023376
 [2026-05-03T05:25:43.017Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: f05e363c-855a-45fc-b8fc-2eae4999f074
 [2026-05-03T05:25:43.574Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 40f98cbf-2571-4b72-969f-4b16025fae4d
+[2026-05-03T17:20:26.478Z] ERR: (node:18380) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T17:20:26.482Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T17:20:28.494Z] LOG: [AutoTech Bot] 🔄 Buscando talleres activos para reconexión escalonada...
+[2026-05-03T17:20:30.185Z] LOG: [AutoTech Bot] ⚡ Detectados 0 talleres con sesiones locales.
+[2026-05-03T17:26:20.647Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:26:20.655Z] ERR: [AutoTech Bot] ❌ Error inicializando para workshop 12f3aa37-7b7f-4504-8c32-6e41d376bc95: Could not find Chrome (ver. 146.0.7680.31). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Lenovo ThinkPad X13\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+[2026-05-03T17:29:30.590Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:29:30.593Z] ERR: [AutoTech Bot] ❌ Error inicializando para workshop 12f3aa37-7b7f-4504-8c32-6e41d376bc95: Could not find Chrome (ver. 146.0.7680.31). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Lenovo ThinkPad X13\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+[2026-05-03T17:35:57.818Z] ERR: (node:19600) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T17:35:57.824Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T17:35:59.832Z] LOG: [AutoTech Bot] 🔄 Buscando talleres activos para reconexión escalonada...
+[2026-05-03T17:36:00.236Z] LOG: [AutoTech Bot] ⚡ Detectados 1 talleres con sesiones locales.
+[2026-05-03T17:36:00.236Z] LOG: [AutoTech Bot] 🤖 Reconectando taller: 12f3aa37-7b7f-4504-8c32-6e41d376bc95 ...
+[2026-05-03T17:36:00.236Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:36:00.238Z] ERR: [AutoTech Bot] ❌ Error inicializando para workshop 12f3aa37-7b7f-4504-8c32-6e41d376bc95: Could not find Chrome (ver. 146.0.7680.31). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Lenovo ThinkPad X13\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+[2026-05-03T17:36:24.416Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:36:24.418Z] ERR: [AutoTech Bot] ❌ Error inicializando para workshop 12f3aa37-7b7f-4504-8c32-6e41d376bc95: Could not find Chrome (ver. 146.0.7680.31). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Lenovo ThinkPad X13\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+[2026-05-03T17:42:00.441Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:42:00.443Z] ERR: [AutoTech Bot] ❌ Error inicializando para workshop 12f3aa37-7b7f-4504-8c32-6e41d376bc95: Could not find Chrome (ver. 146.0.7680.31). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Lenovo ThinkPad X13\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+[2026-05-03T17:42:33.735Z] ERR: (node:18720) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T17:42:33.741Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T17:42:35.742Z] LOG: [AutoTech Bot] 🔄 Buscando talleres activos para reconexión escalonada...
+[2026-05-03T17:42:36.080Z] LOG: [AutoTech Bot] ⚡ Detectados 1 talleres con sesiones locales.
+[2026-05-03T17:42:36.080Z] LOG: [AutoTech Bot] 🤖 Reconectando taller: 12f3aa37-7b7f-4504-8c32-6e41d376bc95 ...
+[2026-05-03T17:42:36.080Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:42:36.082Z] ERR: [AutoTech Bot] ❌ Error inicializando para workshop 12f3aa37-7b7f-4504-8c32-6e41d376bc95: Could not find Chrome (ver. 146.0.7680.31). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Lenovo ThinkPad X13\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+[2026-05-03T17:43:11.972Z] ERR: (node:25560) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T17:43:11.977Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T17:43:13.992Z] LOG: [AutoTech Bot] 🔄 Buscando talleres activos para reconexión escalonada...
+[2026-05-03T17:43:14.300Z] LOG: [AutoTech Bot] ⚡ Detectados 1 talleres con sesiones locales.
+[2026-05-03T17:43:14.300Z] LOG: [AutoTech Bot] 🤖 Reconectando taller: 12f3aa37-7b7f-4504-8c32-6e41d376bc95 ...
+[2026-05-03T17:43:14.300Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:43:14.304Z] ERR: [AutoTech Bot] ❌ Error inicializando para workshop 12f3aa37-7b7f-4504-8c32-6e41d376bc95: Could not find Chrome (ver. 146.0.7680.31). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Lenovo ThinkPad X13\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+[2026-05-03T17:46:14.341Z] ERR: (node:10428) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-03T17:46:14.346Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-03T17:46:16.348Z] LOG: [AutoTech Bot] 🔄 Buscando talleres activos para reconexión escalonada...
+[2026-05-03T17:46:16.645Z] LOG: [AutoTech Bot] ⚡ Detectados 1 talleres con sesiones locales.
+[2026-05-03T17:46:16.645Z] LOG: [AutoTech Bot] 🤖 Reconectando taller: 12f3aa37-7b7f-4504-8c32-6e41d376bc95 ...
+[2026-05-03T17:46:16.646Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:46:19.593Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:47:19.499Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:47:39.505Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:47:59.510Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:48:19.516Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:48:39.525Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:49:50.248Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:50:50.254Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:51:10.265Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:51:30.274Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:51:50.285Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:52:10.296Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:53:20.967Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:54:20.968Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:54:40.980Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:55:00.981Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:55:20.991Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:55:40.992Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:56:51.906Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:57:51.922Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:58:11.928Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:58:31.928Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:58:51.936Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T17:59:11.939Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:00:22.864Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:01:22.876Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:01:42.887Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:02:02.891Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:02:22.900Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:02:42.910Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:03:53.550Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:04:53.562Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:05:13.569Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:05:33.575Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:05:53.576Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:06:13.581Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:07:24.270Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:08:24.273Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:08:44.278Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:09:04.287Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:09:24.288Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:09:44.295Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:10:54.429Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:11:54.431Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:12:14.443Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:12:34.456Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:12:54.466Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:13:14.477Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:14:25.120Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:15:25.135Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:15:45.151Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:16:05.153Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:16:25.164Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:16:45.171Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:17:55.852Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:18:55.854Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:19:15.856Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:19:35.861Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:19:55.874Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:20:15.881Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:21:26.566Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:22:26.571Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:22:46.602Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:23:06.616Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:23:26.619Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:23:46.599Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:24:57.266Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:25:57.267Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:26:17.281Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:26:37.290Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:26:57.297Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:27:17.305Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:28:28.076Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:29:28.091Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:29:48.102Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:30:08.103Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:30:28.111Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:30:48.118Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:31:58.824Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:32:58.840Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:33:18.855Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:33:38.863Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:33:58.879Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:34:18.894Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:35:29.652Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:36:29.668Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:36:49.678Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:37:09.689Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:37:29.705Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:37:49.714Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:39:00.495Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:40:00.512Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:40:20.517Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:40:40.519Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:41:00.532Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:41:20.547Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:42:31.406Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:43:31.411Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:43:51.420Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:44:11.422Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:44:31.426Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:44:51.437Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:46:02.164Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:47:02.174Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:47:22.188Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:47:42.190Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:48:02.205Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:48:22.218Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:49:33.072Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:50:33.086Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:50:53.098Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:51:13.108Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:51:33.123Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:51:53.136Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:53:03.766Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:54:03.780Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:54:23.792Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:54:43.795Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:55:03.809Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:55:23.817Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:56:34.478Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:57:34.492Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:57:54.508Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:58:14.512Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:58:34.518Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T18:58:54.533Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:00:05.269Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:01:05.276Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:01:25.285Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:01:45.297Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:02:05.302Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:02:25.305Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:03:36.251Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:04:36.265Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:04:56.273Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:05:16.280Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:05:36.293Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:05:56.299Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:07:06.917Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:08:06.928Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:08:26.932Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:08:46.932Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:09:06.938Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:09:26.941Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:10:37.811Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:11:37.827Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:11:57.818Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:12:17.818Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:12:37.832Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:12:57.824Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:14:08.785Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:15:08.780Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:15:28.769Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:15:48.781Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:16:08.813Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:16:28.797Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:17:39.500Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:18:39.503Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:18:59.590Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:19:19.532Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:19:39.526Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:19:59.544Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:21:10.645Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:22:10.647Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:22:30.661Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:22:50.673Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:23:10.679Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:23:30.692Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:24:41.465Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:25:41.466Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:26:01.470Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:26:21.482Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:26:41.486Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:27:01.497Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:28:12.378Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:29:12.380Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:29:32.393Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:29:52.396Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:30:12.397Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:30:32.404Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:31:43.077Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:32:43.083Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:33:03.088Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:33:23.096Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:33:43.108Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:34:03.112Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:35:13.931Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:36:13.941Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:36:33.945Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:36:53.955Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:37:13.965Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:37:33.973Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:38:44.668Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:39:44.675Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:40:04.679Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:40:24.682Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:40:44.684Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:41:04.698Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:42:15.308Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:43:15.323Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:43:35.330Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:43:55.346Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:44:15.360Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:44:35.362Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:45:46.019Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:46:46.033Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:47:06.038Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:47:26.043Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:47:46.047Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:48:06.054Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:49:16.506Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:50:16.516Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:50:36.530Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:50:56.536Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:51:16.545Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:51:36.547Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:52:47.119Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:53:47.122Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:54:07.136Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:54:27.141Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:54:47.154Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:55:07.158Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:56:18.055Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:57:18.058Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:57:38.070Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:57:58.071Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:58:18.084Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:58:38.092Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T19:59:48.735Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:00:48.748Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:01:08.756Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:01:28.768Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:01:48.774Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:02:08.787Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:03:19.440Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:04:19.447Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:04:39.451Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:04:59.466Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:05:19.482Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:05:39.487Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:06:50.232Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:07:50.238Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:08:10.240Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:08:30.244Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:08:50.248Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:09:10.264Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:10:21.244Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:11:21.246Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:11:41.249Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:12:01.254Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:12:21.260Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:12:41.264Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:13:52.089Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:14:52.102Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:15:12.113Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:15:32.124Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:15:52.139Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:16:12.141Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:17:23.079Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:18:23.092Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:18:43.098Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:19:03.106Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:19:23.108Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:19:43.122Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:20:53.982Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:21:53.983Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:22:13.993Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:22:33.995Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:22:54.003Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:23:14.008Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:24:24.904Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:25:24.913Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:25:44.927Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:26:04.932Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:26:24.939Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:26:44.956Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:27:55.786Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:28:55.790Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:29:15.798Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:29:35.802Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:29:55.803Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:30:15.813Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:31:26.579Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:32:26.593Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:32:46.598Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:33:06.600Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:33:26.613Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:33:46.619Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:34:57.387Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:35:57.402Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:36:17.414Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:36:37.426Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:36:57.431Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:37:17.446Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:38:28.218Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:39:28.221Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:39:48.230Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:40:08.242Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:40:28.257Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:40:48.272Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:41:58.923Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:42:58.942Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:43:18.940Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:43:38.955Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:43:58.957Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:44:18.958Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:45:29.813Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:46:29.826Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:46:49.829Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:47:09.836Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:47:29.849Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:47:49.863Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:49:00.820Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:50:00.835Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:50:20.838Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:50:40.850Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:51:00.852Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:51:20.866Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:52:31.984Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:53:31.993Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:53:51.995Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:54:12.001Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:54:32.009Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:54:52.023Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:56:02.812Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:57:02.828Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:57:22.834Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:57:42.840Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:58:02.854Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:58:22.855Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T20:59:33.741Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:00:33.756Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:00:53.762Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:01:13.768Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:01:33.769Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:01:53.774Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:03:04.627Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:04:04.636Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:04:24.643Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:04:44.650Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:05:04.662Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:05:24.663Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:06:35.270Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:07:35.286Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:07:55.293Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:08:15.302Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:08:35.312Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:08:55.314Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:10:06.190Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:11:06.197Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:11:26.213Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:11:46.215Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:12:06.224Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:12:26.231Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:13:36.975Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:14:36.977Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:14:56.979Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:15:16.992Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:15:37.000Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:15:57.015Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:17:07.709Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:18:07.718Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:18:27.721Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:18:47.736Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:19:07.744Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:19:27.749Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:20:38.524Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:21:38.539Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:21:58.550Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:22:18.557Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:22:38.570Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:22:58.580Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:24:09.482Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:25:09.492Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:25:29.506Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:25:49.508Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:26:09.514Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:26:29.523Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:27:40.255Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:28:40.271Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:29:00.285Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:29:20.299Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:29:40.303Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:30:00.308Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:31:10.993Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:32:10.996Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:32:31.004Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:32:51.010Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:33:11.018Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:33:31.022Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:34:41.744Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:35:41.750Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:36:01.759Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:36:21.769Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:36:41.772Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:37:01.785Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:38:12.706Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:39:12.717Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:39:32.718Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:39:52.733Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:40:12.736Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:40:32.742Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:41:43.406Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:42:43.413Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:43:03.422Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:43:23.431Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:43:43.442Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-03T21:44:03.449Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:13:05.024Z] ERR: (node:23884) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-04T12:13:05.032Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-04T12:13:07.040Z] LOG: [AutoTech Bot] 🔄 Buscando talleres activos para reconexión escalonada...
+[2026-05-04T12:13:09.914Z] LOG: [AutoTech Bot] ⚡ Detectados 1 talleres con sesiones locales.
+[2026-05-04T12:13:09.914Z] LOG: [AutoTech Bot] 🤖 Reconectando taller: 12f3aa37-7b7f-4504-8c32-6e41d376bc95 ...
+[2026-05-04T12:13:09.916Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:13:45.694Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:14:45.447Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:15:05.455Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:15:25.466Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:15:45.482Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:16:05.497Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:17:16.857Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:18:16.862Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:22:17.491Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:23:17.501Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:23:37.518Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:23:57.532Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:24:17.541Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:24:37.553Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:25:48.411Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:26:48.416Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:27:08.432Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:27:28.435Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:27:48.443Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:28:08.449Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:29:19.667Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:30:19.672Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:30:39.692Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:30:59.700Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:31:19.719Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:31:39.734Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:32:52.194Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:33:52.204Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:34:12.207Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:34:32.227Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:34:52.227Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:35:12.237Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:36:23.431Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:36:59.221Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:37:59.236Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:38:19.252Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:38:39.262Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:38:59.268Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:39:19.271Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:40:30.723Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:41:30.734Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:41:50.751Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:42:10.768Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:42:30.773Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:42:50.775Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:44:02.469Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:45:02.472Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:45:22.478Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:45:42.517Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:46:02.511Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:46:22.526Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:50:31.682Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:51:31.689Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:51:41.390Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:52:41.398Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:53:01.400Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:53:18.268Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:54:18.299Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:54:38.303Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:54:58.308Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:55:18.316Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:55:38.323Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:56:49.462Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:57:49.474Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:58:09.481Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:58:29.493Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:58:49.499Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T12:59:09.505Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:00:20.736Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:01:20.751Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:01:40.752Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:02:00.761Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:02:20.771Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:02:40.770Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:03:51.686Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:04:51.694Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:05:11.699Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:05:31.715Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:05:51.722Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:06:11.729Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:07:22.699Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:08:22.708Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:08:42.719Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:09:02.729Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:09:22.737Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:09:42.740Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:10:53.857Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:11:53.862Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:12:13.872Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:12:33.888Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:12:53.904Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:13:13.916Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:14:25.253Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:15:25.261Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:15:45.292Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:16:05.282Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:16:25.296Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:16:45.310Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:17:56.444Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:18:56.450Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:19:16.460Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:19:36.468Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:19:56.475Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:20:16.484Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:21:27.812Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:22:27.816Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:22:47.831Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:23:07.844Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:23:27.848Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:23:47.852Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:24:59.450Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:25:59.466Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:26:19.476Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:26:39.489Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:26:59.492Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:27:19.500Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:28:31.002Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:29:31.011Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:29:51.024Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:30:11.037Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:30:31.042Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:30:51.058Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:32:02.008Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:33:02.014Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:33:22.031Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:33:42.045Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:34:02.054Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:34:22.083Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:35:31.972Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:36:31.983Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:36:51.996Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:37:11.997Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:37:32.004Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:37:52.002Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:39:02.734Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:40:02.750Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:40:22.762Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:40:42.764Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:41:02.769Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:41:22.773Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:42:34.419Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:43:34.422Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:43:54.431Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:44:14.436Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:44:34.441Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:44:54.449Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:46:05.656Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:47:05.663Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:47:25.678Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:47:45.690Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:48:05.701Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:48:25.707Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:49:37.011Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:50:37.023Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:50:57.039Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:51:17.044Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:51:37.047Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:51:57.056Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:53:09.460Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:54:09.464Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:54:29.469Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:54:49.481Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:55:09.483Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:55:29.485Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:56:40.804Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:57:40.810Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:58:00.812Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:58:20.820Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:58:40.831Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T13:59:00.843Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:00:11.651Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:01:11.660Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:01:31.671Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:01:51.684Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:02:11.686Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:02:31.692Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:03:43.019Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:04:43.023Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:05:03.037Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:05:23.045Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:05:43.059Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:06:03.064Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:07:13.785Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:08:13.791Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:08:33.791Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:08:53.805Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:09:13.810Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:09:33.811Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:10:45.224Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:11:45.225Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:12:05.239Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:12:25.242Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:12:45.250Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:13:05.258Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:14:16.683Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:15:16.699Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:15:36.708Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:15:56.725Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:16:16.735Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:16:36.746Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:17:48.058Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:18:48.063Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:19:08.073Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:19:28.079Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:19:48.094Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:20:08.100Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:21:19.091Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:22:19.100Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:22:39.105Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:22:59.115Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:23:19.116Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:23:39.129Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:24:50.646Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:25:50.648Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:26:10.662Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:26:30.672Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:26:50.674Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:27:10.680Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:28:22.218Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:29:22.225Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:29:42.231Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:30:02.235Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:30:22.240Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:30:42.241Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:31:53.447Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:32:53.459Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:33:13.464Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:33:33.472Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:33:53.479Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:34:13.482Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:35:24.730Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:36:24.744Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:36:44.748Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:37:04.751Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:37:24.764Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:37:44.773Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:38:55.849Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:39:55.852Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:40:15.855Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:40:35.859Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:40:55.866Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:41:15.876Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:42:26.056Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:43:26.071Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:43:46.074Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:44:06.083Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:44:26.090Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:44:46.098Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:45:57.391Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:46:57.402Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:47:17.412Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:47:37.422Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:47:57.435Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:48:17.449Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:49:29.467Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:50:29.473Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:50:49.479Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:51:09.482Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:51:29.492Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:51:49.495Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:53:00.130Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:54:00.144Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:54:20.152Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:54:40.166Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:55:00.168Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:55:20.173Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:56:31.101Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:57:31.118Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:57:51.134Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:58:11.141Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:58:31.153Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T14:58:51.157Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:00:02.256Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:01:02.270Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:01:22.282Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:01:42.298Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:02:02.311Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:02:22.312Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:03:33.272Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:04:33.273Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:04:53.283Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:05:13.290Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:05:33.302Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:05:53.303Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:07:04.684Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:08:04.696Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:08:24.700Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:08:44.710Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:09:04.717Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-04T15:09:24.734Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-05T05:00:00.038Z] LOG: 🧹 Iniciando limpieza diaria de sesiones completadas...
+[2026-05-05T05:00:01.904Z] LOG: ✅ Limpieza completada.
+[2026-05-14T20:06:40.557Z] ERR: (node:10508) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-14T20:06:40.566Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-14T20:06:42.579Z] LOG: [AutoTech Bot] 🔄 Buscando talleres activos para reconexión escalonada...
+[2026-05-14T20:06:45.440Z] LOG: [AutoTech Bot] ⚡ Detectados 1 talleres con sesiones locales.
+[2026-05-14T20:06:45.440Z] LOG: [AutoTech Bot] 🤖 Reconectando taller: 12f3aa37-7b7f-4504-8c32-6e41d376bc95 ...
+[2026-05-14T20:06:45.441Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-14T20:07:38.763Z] LOG: [AutoTech Bot] 📱 QR generado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-14T20:09:05.219Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-14T20:10:29.896Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de status@broadcast. Autor: 131804006711439@lid. NotifyName: Nico :). Body: JAJAJAJAJJAJAJAJAJAJAJAJJ por ahí unas que conozco
+[2026-05-14T20:10:29.897Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: status@broadcast
+[2026-05-14T20:13:17.839Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 120363180970451223@g.us. Autor: 153502231842889@lid. NotifyName: Chuya. Body: Cancelen emprendimiento
+[2026-05-14T20:13:17.839Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: 120363180970451223@g.us
+[2026-05-14T20:13:40.940Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 191624931979313@lid. Autor: undefined. NotifyName: undefined. Body: 
+[2026-05-14T20:13:41.164Z] LOG: [AutoTech Bot] 📱 Mensaje de: 191624931979313 (ID: 191624931979313@lid)
+[2026-05-14T20:14:15.365Z] LOG: [AutoTech Bot] ✅ WhatsApp conectado para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-14T20:15:33.496Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 120363045751196011@g.us. Autor: undefined. NotifyName: undefined. Body: 593979674096@c.us
+[2026-05-14T20:15:33.497Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: 120363045751196011@g.us
+[2026-05-14T20:15:56.155Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 120363045751196011@g.us. Autor: undefined. NotifyName: undefined. Body: 593992352569@c.us
+[2026-05-14T20:15:56.155Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: 120363045751196011@g.us
+[2026-05-14T20:16:39.300Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 120363041950326314@g.us. Autor: undefined. NotifyName: undefined. Body: 593991586151@c.us
+[2026-05-14T20:16:39.300Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: 120363041950326314@g.us
+[2026-05-14T20:16:39.308Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 120363045751196011@g.us. Autor: undefined. NotifyName: undefined. Body: 593990871618@c.us
+[2026-05-14T20:16:39.309Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: 120363045751196011@g.us
+[2026-05-14T20:18:47.045Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 120363180970451223@g.us. Autor: 98801595465787@lid. NotifyName: Daniela ❤️‍🔥. Body: YA VAMONOOS
+[2026-05-14T20:18:47.045Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: 120363180970451223@g.us
+[2026-05-14T20:19:46.506Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 120363196268786853@newsletter. Autor: undefined. NotifyName: undefined. Body: KKKKKKKK
+[2026-05-14T20:19:46.506Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: 120363196268786853@newsletter
+[2026-05-14T20:35:28.575Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 120363180970451223@g.us. Autor: 125589222625462@lid. NotifyName: Nitro. Body: 
+[2026-05-14T20:35:28.576Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: 120363180970451223@g.us
+[2026-05-14T20:38:04.201Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 120363408709795757@g.us. Autor: undefined. NotifyName: undefined. Body: 45857516843185@lid
+[2026-05-14T20:38:04.202Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: 120363408709795757@g.us
+[2026-05-14T20:39:48.816Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 120363314177980574@newsletter. Autor: undefined. NotifyName: undefined. Body: 🔴 *Atención* 🔴
+
+Henry Dueñas Buraye, de 31 años, fue despedido por sus seres queridos la tarde de este miércoles 13 de mayo.
+
+
+En compañía de seres queridos y allegados, en el cementerio Jardines de Esperanza se cumplió el velorio y sepultura del hijo del comunicador Henry Dueñas, quien laboró por más de 30 años en Ecuavisa.
+
+
+👉https://ow.ly/ow5h50YZP4N
+
+Para más información visita  www.eluniverso.com
+[2026-05-14T20:39:48.816Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: 120363314177980574@newsletter
+[2026-05-14T20:42:09.681Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de status@broadcast. Autor: 188888618410112@lid. NotifyName: Ani🩵. Body: 
+[2026-05-14T20:42:09.681Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: status@broadcast
+[2026-05-14T20:43:16.861Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de 120363180970451223@g.us. Autor: 125589222625462@lid. NotifyName: Nitro. Body: 
+[2026-05-14T20:43:16.861Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: 120363180970451223@g.us
+[2026-05-14T20:53:21.891Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de status@broadcast. Autor: 231563279224918@lid. NotifyName: Floristería MONIK. Body: 
+[2026-05-14T20:53:21.891Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: status@broadcast
+[2026-05-14T20:53:31.405Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de status@broadcast. Autor: 231563279224918@lid. NotifyName: Floristería MONIK. Body: 
+[2026-05-14T20:53:31.405Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: status@broadcast

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getBotApiUrl } from '../../../lib/api/bot';
 import { supabase } from '../../../lib/supabase';
 import { useSearchParams } from 'react-router-dom';
 import { useAuth } from '../../../contexts/AuthContext';
@@ -60,7 +61,7 @@ const VehicleModal: React.FC<VehicleModalProps> = ({
         // Disparar mensaje del Bot
         const client = clients.find(c => c.id === clientId);
         if (client?.phone) {
-          fetch('http://127.0.0.1:3001/api/send-vehicle-welcome', {
+          fetch(`${getBotApiUrl()}/api/send-vehicle-welcome`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

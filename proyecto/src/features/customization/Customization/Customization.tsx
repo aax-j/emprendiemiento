@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getBotApiUrl } from '../../../lib/api/bot';
 import { useBlocker } from 'react-router-dom';
 import { writeTextFile, readTextFile, BaseDirectory, mkdir } from '@tauri-apps/plugin-fs';
 import { useTheme } from '../../../contexts/ThemeContext';
@@ -93,77 +94,9 @@ export const Customization = () => {
     sun: { start: '08:00', end: '13:00', enabled: false }
   });
   const [location, setLocation] = useState('Riobamba, Ecuador');
-  const [botStatus, setBotStatus] = useState<'connected' | 'disconnected' | 'loading'>('loading');
-  const [confirmDialog, setConfirmDialog] = useState<{ show: boolean; title: string; message: string; onConfirm: () => void; isAlert?: boolean } | null>(null);
+  const [confirmDialog, setConfirmDialog] = useState<{ show: boolean; title: string; message: string; onConfirm: () => void; onCancel?: () => void; onStay?: () => void; isAlert?: boolean } | null>(null);
 
-  // Polling para el estado del bot
-  useEffect(() => {
-    const checkStatus = async () => {
-      if (!profile?.workshop_id) return;
-      try {
-        const res = await fetch(`http://127.0.0.1:3001/api/status/${profile.workshop_id}`);
-        const data = await res.json();
-        setBotStatus(data.status === 'ready' ? 'connected' : 'disconnected');
-      } catch (e) {
-        setBotStatus('disconnected');
-      }
-    };
-    checkStatus();
-    const interval = setInterval(checkStatus, 5000);
-    return () => clearInterval(interval);
-  }, [profile?.workshop_id]);
 
-  const [showQRModal, setShowQRModal] = useState(false);
-  const [qrCode, setQrCode] = useState<string | null>(null);
-
-  const handleConnect = async () => {
-    if (!profile?.workshop_id) return;
-    try {
-      await fetch(`http://127.0.0.1:3001/api/connect/${profile.workshop_id}`, { method: 'POST' });
-      setShowQRModal(true);
-      setQrCode(null);
-      
-      const pollQR = setInterval(async () => {
-        try {
-          const res = await fetch(`http://127.0.0.1:3001/api/qr/${profile.workshop_id}`);
-          const data = await res.json();
-          if (data.qr) setQrCode(data.qr);
-          if (data.status === 'ready') {
-            clearInterval(pollQR);
-            setShowQRModal(false);
-            setBotStatus('connected');
-          }
-        } catch(e) {}
-      }, 2000);
-      
-      (window as any).qrInterval = pollQR;
-    } catch (e) {
-      setConfirmDialog({ show: true, title: 'Error', message: 'No se pudo conectar con el servidor.', onConfirm: () => setConfirmDialog(null), isAlert: true });
-    }
-  };
-
-  const closeQRModal = () => {
-    setShowQRModal(false);
-    if ((window as any).qrInterval) clearInterval((window as any).qrInterval);
-  };
-
-  const handleDisconnect = async () => {
-    if (!profile?.workshop_id) return;
-    setConfirmDialog({
-      show: true,
-      title: 'Desconectar WhatsApp',
-      message: '¿Estás seguro de que quieres desconectar el bot? Tendrás que escanear el código QR nuevamente.',
-      onConfirm: async () => {
-        try {
-          await fetch(`http://127.0.0.1:3001/api/disconnect/${profile.workshop_id}`, { method: 'POST' });
-          setBotStatus('disconnected');
-          setConfirmDialog(null);
-        } catch (e) {
-          setConfirmDialog({ show: true, title: 'Error', message: 'No se pudo desconectar.', onConfirm: () => setConfirmDialog(null), isAlert: true });
-        }
-      }
-    });
-  };
 
   const resetToDefaults = () => {
     setConfirmDialog({
@@ -261,7 +194,7 @@ export const Customization = () => {
 
     try {
       if (profile?.workshop_id) {
-        await fetch(`http://127.0.0.1:3001/api/config/${profile.workshop_id}`, {
+        await fetch(`${getBotApiUrl()}/api/config/${profile.workshop_id}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(config)
@@ -348,7 +281,7 @@ export const Customization = () => {
           blocker.reset();
           setConfirmDialog(null);
         }
-      } as any);
+      });
     }
   }, [blocker.state]);
 
@@ -505,21 +438,34 @@ export const Customization = () => {
                         
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                           {res.steps.map((s, sIdx) => (
-                            <div key={sIdx} style={{ display: 'grid', gridTemplateColumns: '1fr 200px 40px', gap: '1rem', alignItems: 'start', padding: '1rem', background: 'var(--color-surface-container-low)', borderRadius: '0.5rem', borderLeft: '4px solid var(--color-primary)' }}>
-                              <div className={styles.inputGroup} style={{ marginBottom: 0 }}>
+                            <div key={sIdx} style={{
+                              display: 'grid',
+                              gridTemplateColumns: '1fr auto',
+                              gridTemplateRows: 'auto auto',
+                              gap: '0.75rem',
+                              padding: '1rem',
+                              background: 'var(--color-surface-container-low)',
+                              borderRadius: '0.5rem',
+                              borderLeft: '4px solid var(--color-primary)',
+                              minWidth: 0,
+                              overflow: 'hidden',
+                            }}>
+                              {/* Mensaje — ocupa toda la fila en mobile */}
+                              <div className={styles.inputGroup} style={{ marginBottom: 0, gridColumn: '1 / -1' }}>
                                 <label className={styles.label} style={{ fontSize: '0.75rem' }}>Mensaje {sIdx + 1}</label>
                                 {(s.action === 'NONE' && ['default-status', 'default-location', 'default-oil', 'default-history'].includes(res.id)) ? (
                                    <div style={{ background: 'var(--color-surface-container-high)', padding: '0.75rem', borderRadius: '0.5rem', border: '1px dashed var(--color-outline)', color: 'var(--color-on-surface-variant)', fontSize: '0.85rem', fontStyle: 'italic', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                                     <Icon name="auto_awesome" style={{ fontSize: '1.1rem' }} />
+                                     <Icon name="auto_awesome" style={{ fontSize: '1.1rem', flexShrink: 0 }} />
                                      <span>Este mensaje es dinámico y lo genera el sistema automáticamente.</span>
                                    </div>
                                 ) : (
-                                   <textarea className={styles.input} value={s.response} onChange={e => updateStep(idx, sIdx, 'response', e.target.value)} rows={2} style={{ fontSize: '0.9rem' }} />
+                                   <textarea className={styles.input} value={s.response} onChange={e => updateStep(idx, sIdx, 'response', e.target.value)} rows={2} style={{ fontSize: '0.9rem', width: '100%', boxSizing: 'border-box' }} />
                                 )}
                               </div>
-                              <div className={styles.inputGroup} style={{ marginBottom: 0 }}>
+                              {/* Acción — segunda fila, flex */}
+                              <div className={styles.inputGroup} style={{ marginBottom: 0, minWidth: 0 }}>
                                 <label className={styles.label} style={{ fontSize: '0.75rem' }}>Acción</label>
-                                <select className={styles.input} value={s.action} onChange={e => updateStep(idx, sIdx, 'action', e.target.value)} style={{ fontSize: '0.9rem' }}>
+                                <select className={styles.input} value={s.action} onChange={e => updateStep(idx, sIdx, 'action', e.target.value)} style={{ fontSize: '0.9rem', width: '100%' }}>
                                   <option value="NONE">Solo responder</option>
                                   <option value="READ_PLATE">Leer Placa</option>
                                   <option value="READ_SERVICE">Leer Servicio</option>
@@ -527,7 +473,8 @@ export const Customization = () => {
                                   <option value="READ_TIME">Leer Hora</option>
                                 </select>
                               </div>
-                              <button onClick={() => removeStep(idx, sIdx)} style={{ marginTop: '1.5rem', background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--color-on-surface-variant)' }}><Icon name="close" /></button>
+                              {/* Botón eliminar */}
+                              <button onClick={() => removeStep(idx, sIdx)} style={{ alignSelf: 'center', background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--color-on-surface-variant)', padding: '0.25rem' }}><Icon name="close" /></button>
                             </div>
                           ))}
                           <button onClick={() => addStep(idx)} style={{ alignSelf: 'flex-start', color: 'var(--color-primary)', background: 'transparent', border: 'none', cursor: 'pointer', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
