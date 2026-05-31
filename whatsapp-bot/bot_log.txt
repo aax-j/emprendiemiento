@@ -1725,3 +1725,11 @@ Para más información visita  www.eluniverso.com
 [2026-05-14T20:53:21.891Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: status@broadcast
 [2026-05-14T20:53:31.405Z] LOG: [AutoTech Bot] 📩 Recibido mensaje de status@broadcast. Autor: 231563279224918@lid. NotifyName: Floristería MONIK. Body: 
 [2026-05-14T20:53:31.405Z] LOG: [AutoTech Bot] ⚠️ Ignorado por no ser @c.us ni @lid: status@broadcast
+[2026-05-30T22:58:48.883Z] ERR: (node:27604) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2026-05-30T22:58:48.891Z] LOG: 🚀 Bot API listo en http://127.0.0.1:3001 con soporte Multi-Taller
+[2026-05-30T22:58:50.892Z] LOG: [AutoTech Bot] 🔄 Buscando talleres activos para reconexión escalonada...
+[2026-05-30T22:58:52.186Z] LOG: [AutoTech Bot] ⚡ Detectados 1 talleres con sesiones locales.
+[2026-05-30T22:58:52.186Z] LOG: [AutoTech Bot] 🤖 Reconectando taller: 12f3aa37-7b7f-4504-8c32-6e41d376bc95 ...
+[2026-05-30T22:58:52.187Z] LOG: [AutoTech Bot] 🔄 Iniciando cliente para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95
+[2026-05-30T22:59:04.958Z] LOG: [AutoTech Bot] 🔌 Desconectado (LOGOUT) para workshop: 12f3aa37-7b7f-4504-8c32-6e41d376bc95

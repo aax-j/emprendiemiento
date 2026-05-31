@@ -27,7 +27,7 @@ export const getRepairHistory = async (vehicleId: string): Promise<RepairHistory
 export const getAllRepairs = async (workshopId: string): Promise<any[]> => {
   const { data, error } = await supabase
     .from('repair_history')
-    .select('*, vehicles(id, plate, brand, model, year, color, client_id, clients(id, full_name, phone, email))')
+    .select('*, vehicles(id, plate, brand, model, year, color, client_id, clients:client_id(id, full_name, phone, email))')
     .eq('workshop_id', workshopId)
     .order('created_at', { ascending: false });
 

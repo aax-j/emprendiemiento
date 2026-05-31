@@ -47,7 +47,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({ onClose, onSuccess
     if (clientSearch.length > 1 && !selectedClient) {
       const fetchClients = async () => {
         try {
-          const all = await getClients(profile!.workshop_id);
+          const all = await getClients(profile?.workshop_id || '');
           const filtered = all.filter(c => 
             c.full_name.toLowerCase().includes(clientSearch.toLowerCase()) ||
             c.phone?.includes(clientSearch)
@@ -82,7 +82,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({ onClose, onSuccess
         phone: newClientPhone || null,
         email: null,
         notes: null
-      }, profile!.workshop_id);
+      }, profile?.workshop_id || '');
       setSelectedClient(c);
       setClientSearch(c.full_name);
       setIsAddingClient(false);
@@ -108,7 +108,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({ onClose, onSuccess
         notes: null,
         last_oil_change: null,
         client_id: selectedClient.id,
-      }, profile.workshop_id);
+      }, profile.workshop_id || '');
       
       const updatedVehicles = await getVehiclesByClient(selectedClient.id);
       setVehicles(updatedVehicles);
@@ -134,7 +134,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({ onClose, onSuccess
 
       await createRepair({
         vehicle_id: selectedVehicle,
-        workshop_id: profile.workshop_id,
+        workshop_id: profile.workshop_id || '',
         status: 'pendiente',
         description: formattedDescription,
         cost: null,

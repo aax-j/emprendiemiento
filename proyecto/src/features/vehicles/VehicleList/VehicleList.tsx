@@ -341,7 +341,7 @@ export const VehicleList = () => {
     return (
       <VehicleDetail
         vehicle={selectedVehicle}
-        workshopId={profile!.workshop_id}
+        workshopId={profile?.workshop_id || ''}
         onBack={() => { setUiMode('list'); setSelected(null); }}
         onEdit={() => setShowModal('edit')}
         onDelete={() => setShowDelete(true)}
@@ -350,7 +350,7 @@ export const VehicleList = () => {
           <VehicleModal
             mode="edit"
             vehicle={selectedVehicle}
-            workshopId={profile!.workshop_id}
+            workshopId={profile?.workshop_id || ''}
             workshopName={workshopName}
             clients={clients}
             onClose={() => setShowModal(null)}

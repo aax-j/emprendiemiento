@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { getBotApiUrl } from '../../../lib/api/bot';
 import { useBlocker } from 'react-router-dom';
 import { writeTextFile, readTextFile, BaseDirectory, mkdir } from '@tauri-apps/plugin-fs';
 import { useTheme } from '../../../contexts/ThemeContext';
 import { useAuth } from '../../../contexts/AuthContext';
+import { getWorkshopPublicProfile, upsertWorkshopPublicProfile } from '../../../lib/api/workshop_profiles';
 import { Icon } from '../../../components/Icon/Icon';
 import styles from './Customization.module.css';
 
@@ -82,7 +83,15 @@ export const Customization = () => {
   const { profile } = useAuth();
   const themeContext = useTheme();
 
-  // Chatbot state
+  // --- Public Storefront State ---
+  const [logoUrl, setLogoUrl] = useState('');
+  const [description, setDescription] = useState('');
+  const [address, setAddress] = useState('');
+  const [mapLocation, setMapLocation] = useState<{lat: number, lng: number} | null>(null);
+  const [services, setServices] = useState<Array<{name: string, price: number, description: string}>>([]);
+  const [promotions, setPromotions] = useState<Array<{title: string, description: string, discount: string}>>([]);
+
+  // --- Chatbot State ---
   const [oilReminders, setOilReminders] = useState(false);
   const [oilFrequency, setOilFrequency] = useState(6);
   const [oilUnit, setOilUnit] = useState('meses'); 
@@ -93,27 +102,76 @@ export const Customization = () => {
     sat: { start: '08:00', end: '13:00', enabled: true },
     sun: { start: '08:00', end: '13:00', enabled: false }
   });
-  const [location, setLocation] = useState('Riobamba, Ecuador');
+  
   const [confirmDialog, setConfirmDialog] = useState<{ show: boolean; title: string; message: string; onConfirm: () => void; onCancel?: () => void; onStay?: () => void; isAlert?: boolean } | null>(null);
-
-
-
-  const resetToDefaults = () => {
-    setConfirmDialog({
-      show: true,
-      title: 'Restablecer Valores',
-      message: '¿Estás seguro? Se perderán todos tus cambios personalizados.',
-      onConfirm: () => {
-        setResponses(DEFAULT_RESPONSES);
-        setConfirmDialog(null);
-      }
-    });
-  };
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [success, setSuccess] = useState(false);
   const [originalConfig, setOriginalConfig] = useState<any>(null);
+  const [originalStorefront, setOriginalStorefront] = useState<any>(null);
+
+  const mapRef = useRef<HTMLDivElement>(null);
+  const leafletMapRef = useRef<any>(null);
+  const markerRef = useRef<any>(null);
+
+  // Initialize Map
+  useEffect(() => {
+    if (!loading && mapRef.current && !leafletMapRef.current) {
+      const initMap = () => {
+        const L = (window as any).L;
+        if (!L) {
+          setTimeout(initMap, 500);
+          return;
+        }
+        
+        const center = mapLocation ? [mapLocation.lat, mapLocation.lng] : [-1.6635, -78.6536];
+        const map = L.map(mapRef.current).setView(center, 14);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap',
+          maxZoom: 19,
+        }).addTo(map);
+
+        if (mapLocation) {
+          markerRef.current = L.marker(center).addTo(map);
+        }
+
+        map.on('click', (e: any) => {
+          const { lat, lng } = e.latlng;
+          setMapLocation({ lat, lng });
+          if (markerRef.current) {
+            markerRef.current.setLatLng([lat, lng]);
+          } else {
+            markerRef.current = L.marker([lat, lng]).addTo(map);
+          }
+        });
+
+        leafletMapRef.current = map;
+      };
+
+      if (!(window as any).L) {
+        const script = document.createElement('script');
+        script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+        script.onload = initMap;
+        document.head.appendChild(script);
+
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+        document.head.appendChild(link);
+      } else {
+        initMap();
+      }
+    }
+  }, [loading]);
+
+  useEffect(() => {
+    if (leafletMapRef.current && mapLocation && markerRef.current) {
+      markerRef.current.setLatLng([mapLocation.lat, mapLocation.lng]);
+      leafletMapRef.current.setView([mapLocation.lat, mapLocation.lng]);
+    }
+  }, [mapLocation]);
 
   const isDirty = JSON.stringify({
     oil_change_reminders: oilReminders,
@@ -122,10 +180,11 @@ export const Customization = () => {
     responses,
     default_response: defaultResponse,
     business_hours: businessHours,
-    location,
-  }) !== JSON.stringify(originalConfig);
+  }) !== JSON.stringify(originalConfig) || 
+  JSON.stringify({
+    logoUrl, description, address, mapLocation, services, promotions
+  }) !== JSON.stringify(originalStorefront);
 
-  // Broadcast dirty state to Sidebar
   useEffect(() => {
     window.dispatchEvent(new CustomEvent('customization-dirty', { detail: isDirty }));
     return () => {
@@ -134,7 +193,8 @@ export const Customization = () => {
   }, [isDirty]);
 
   useEffect(() => {
-    const fetchConfig = async () => {
+    const fetchData = async () => {
+      if (!profile?.workshop_id) return;
       setLoading(true);
       try {
         let loadedConfig = null;
@@ -143,45 +203,55 @@ export const Customization = () => {
           loadedConfig = JSON.parse(content);
         } catch (e) {}
 
-        if (loadedConfig) {
-          setOilReminders(loadedConfig.oil_change_reminders ?? false);
-          setOilFrequency(loadedConfig.oil_change_frequency ?? 6);
-          setOilUnit(loadedConfig.oil_change_unit ?? 'meses');
-          setResponses(loadedConfig.responses || DEFAULT_RESPONSES);
-          setDefaultResponse(loadedConfig.default_response || '');
-          if (loadedConfig.business_hours) setBusinessHours(loadedConfig.business_hours);
-          if (loadedConfig.location) setLocation(loadedConfig.location);
+        const parsedConfig = {
+          oil_change_reminders: loadedConfig?.oil_change_reminders ?? false,
+          oil_change_frequency: loadedConfig?.oil_change_frequency ?? 6,
+          oil_change_unit: loadedConfig?.oil_change_unit ?? 'meses',
+          responses: loadedConfig?.responses || DEFAULT_RESPONSES,
+          default_response: loadedConfig?.default_response || 'Lo siento, no entiendo tu pregunta.',
+          business_hours: loadedConfig?.business_hours || businessHours,
+        };
 
-          setOriginalConfig({
-            oil_change_reminders: loadedConfig.oil_change_reminders ?? false,
-            oil_change_frequency: loadedConfig.oil_change_frequency ?? 6,
-            oil_change_unit: loadedConfig.oil_change_unit ?? 'meses',
-            responses: loadedConfig.responses || DEFAULT_RESPONSES,
-            default_response: loadedConfig.default_response || '',
-            business_hours: loadedConfig.business_hours || businessHours,
-            location: loadedConfig.location || location
-          });
-        } else {
-          setOriginalConfig({
-            oil_change_reminders: false,
-            oil_change_frequency: 6,
-            oil_change_unit: 'meses',
-            responses: DEFAULT_RESPONSES,
-            default_response: defaultResponse,
-            business_hours: businessHours,
-            location: location
-          });
-        }
+        setOilReminders(parsedConfig.oil_change_reminders);
+        setOilFrequency(parsedConfig.oil_change_frequency);
+        setOilUnit(parsedConfig.oil_change_unit);
+        setResponses(parsedConfig.responses);
+        setDefaultResponse(parsedConfig.default_response);
+        setBusinessHours(parsedConfig.business_hours);
+        setOriginalConfig(parsedConfig);
+
+        const publicProfile = await getWorkshopPublicProfile(profile.workshop_id);
+        
+        const parsedStorefront = {
+          logoUrl: publicProfile?.logo_url || '',
+          description: publicProfile?.description || '',
+          address: publicProfile?.address || loadedConfig?.location || '',
+          mapLocation: publicProfile?.location || null,
+          services: (publicProfile?.services_catalogue || []).map((s: any) => ({...s, description: s.description || ''})),
+          promotions: (publicProfile?.promotions || []).map((p: any) => ({...p, discount: p.discount || ''}))
+        };
+
+        setLogoUrl(parsedStorefront.logoUrl);
+        setDescription(parsedStorefront.description);
+        setAddress(parsedStorefront.address);
+        setMapLocation(parsedStorefront.mapLocation);
+        setServices(parsedStorefront.services);
+        setPromotions(parsedStorefront.promotions);
+        setOriginalStorefront(parsedStorefront);
+
       } catch (err) {
+        console.error(err);
       } finally {
         setLoading(false);
       }
     };
-    fetchConfig();
+    fetchData();
   }, [profile?.workshop_id]);
 
   const handleSave = async () => {
+    if (!profile?.workshop_id) return;
     setSaving(true);
+    
     const config = {
       oil_change_reminders: oilReminders,
       oil_change_frequency: oilFrequency,
@@ -189,72 +259,50 @@ export const Customization = () => {
       responses,
       default_response: defaultResponse,
       business_hours: businessHours,
-      location,
+      location: address,
+    };
+
+    const storefrontData = {
+      logoUrl, description, address, mapLocation, services, promotions
     };
 
     try {
-      if (profile?.workshop_id) {
-        await fetch(`${getBotApiUrl()}/api/config/${profile.workshop_id}`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(config)
-        });
-      }
+      await fetch(`${getBotApiUrl()}/api/config/${profile.workshop_id}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(config)
+      }).catch(e => console.error("Bot API error:", e));
+
       try {
         await mkdir('', { baseDir: BaseDirectory.AppData, recursive: true });
         await writeTextFile('chatbot-config.json', JSON.stringify(config, null, 2), { baseDir: BaseDirectory.AppData });
       } catch (e) {}
       
-      setOriginalConfig(config);
+      let locationPayload = null;
+      if (mapLocation) {
+        locationPayload = { lat: mapLocation.lat, lng: mapLocation.lng };
+      }
+
+      await upsertWorkshopPublicProfile(profile.workshop_id, {
+        logo_url: logoUrl || null,
+        description: description || null,
+        address: address || null,
+        services_catalogue: services,
+        promotions: promotions,
+        location: locationPayload
+      });
+      
+      setOriginalConfig({ ...config });
+      setOriginalStorefront({ ...storefrontData });
+      
       setSuccess(true);
       setTimeout(() => setSuccess(false), 3000);
     } catch (err) {
+      console.error(err);
       setConfirmDialog({ show: true, title: 'Error', message: 'Error al guardar.', onConfirm: () => setConfirmDialog(null), isAlert: true });
     } finally {
       setSaving(false);
     }
-  };
-
-  const updateResponse = (index: number, field: string, value: any) => {
-    const newResponses = [...responses];
-    newResponses[index] = { ...newResponses[index], [field]: value } as any;
-    setResponses(newResponses);
-  };
-
-  const updateStep = (resIndex: number, stepIndex: number, field: string, value: any) => {
-    const newResponses = [...responses];
-    const newSteps = [...newResponses[resIndex].steps];
-    newSteps[stepIndex] = { ...newSteps[stepIndex], [field]: value } as any;
-    newResponses[resIndex].steps = newSteps;
-    setResponses(newResponses);
-  };
-
-  const addStep = (resIndex: number) => {
-    const newResponses = [...responses];
-    newResponses[resIndex].steps = [...newResponses[resIndex].steps, { response: '', action: 'NONE' }];
-    setResponses(newResponses);
-  };
-
-  const removeStep = (resIndex: number, stepIndex: number) => {
-    const newResponses = [...responses];
-    newResponses[resIndex].steps = newResponses[resIndex].steps.filter((_, i) => i !== stepIndex);
-    setResponses(newResponses);
-  };
-
-  const addResponse = () => {
-    setResponses([{ id: Date.now().toString(), question: 'Nuevo Flujo', keywords: '', steps: [{ response: '', action: 'NONE' }] }, ...responses]);
-  };
-
-  const removeResponse = (index: number) => {
-    setConfirmDialog({
-      show: true,
-      title: 'Eliminar Flujo',
-      message: '¿Estás seguro de eliminar este flujo?',
-      onConfirm: () => {
-        setResponses(responses.filter((_, i) => i !== index));
-        setConfirmDialog(null);
-      }
-    });
   };
 
   const blocker = useBlocker(
@@ -267,7 +315,7 @@ export const Customization = () => {
       setConfirmDialog({
         show: true,
         title: 'Cambios sin guardar',
-        message: 'Tienes cambios pendientes en la personalización. ¿Qué deseas hacer?',
+        message: 'Tienes cambios pendientes. ¿Qué deseas hacer?',
         onConfirm: async () => {
           await handleSave();
           blocker.proceed();
@@ -285,19 +333,36 @@ export const Customization = () => {
     }
   }, [blocker.state]);
 
+  const addService = () => setServices([...services, { name: '', price: 0, description: '' }]);
+  const updateService = (idx: number, field: string, val: any) => {
+    const s = [...services];
+    s[idx] = { ...s[idx], [field]: val };
+    setServices(s);
+  };
+  const removeService = (idx: number) => setServices(services.filter((_, i) => i !== idx));
+
+  const addPromo = () => setPromotions([...promotions, { title: '', description: '', discount: '' }]);
+  const updatePromo = (idx: number, field: string, val: any) => {
+    const p = [...promotions];
+    p[idx] = { ...p[idx], [field]: val };
+    setPromotions(p);
+  };
+  const removePromo = (idx: number) => setPromotions(promotions.filter((_, i) => i !== idx));
+
   return (
     <div className={styles.page}>
       {loading ? (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
-          <Icon name="sync" className="spin" /> <span style={{ marginLeft: '1rem' }}>Cargando...</span>
+          <Icon name="sync" className="spin" /> <span style={{ marginLeft: '1rem' }}>Cargando configuración...</span>
         </div>
       ) : (
         <>
           <div className={styles.header}>
             <h1 className={styles.title}>Personalización</h1>
-            <p className={styles.subtitle}>Configura el comportamiento del taller</p>
+            <p className={styles.subtitle}>Configura tu escaparate comercial y respuestas automáticas</p>
           </div>
 
+          {/* Theme */}
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>Tema de la Aplicación</h2>
             <div className={styles.themeGrid}>
@@ -312,11 +377,88 @@ export const Customization = () => {
             </div>
           </div>
 
-          {/* Horario y Ubicación Section */}
+          {/* Escaparate Comercial (B2C) */}
+          <div className={styles.section}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
+              <div style={{ padding: '0.5rem', background: 'var(--color-primary-container)', color: 'var(--color-primary)', borderRadius: '0.5rem' }}><Icon name="storefront" /></div>
+              <div>
+                <h2 className={styles.sectionTitle} style={{ margin: 0 }}>Escaparate Comercial (Portal Cliente B2C)</h2>
+                <p style={{ margin: '0.25rem 0 0 0', fontSize: '0.8rem', color: 'var(--color-on-surface-variant)' }}>La información que verán los clientes en el directorio AutoTech.</p>
+              </div>
+            </div>
+
+            <div className={styles.form}>
+              <div className={styles.inputGroup}>
+                <label className={styles.label}>URL del Logo</label>
+                <input className={styles.input} value={logoUrl} onChange={e => setLogoUrl(e.target.value)} placeholder="https://ejemplo.com/logo.png" />
+                {logoUrl && (
+                  <div style={{ marginTop: '0.5rem', width: '60px', height: '60px', borderRadius: '8px', overflow: 'hidden', background: '#ccc' }}>
+                    <img src={logoUrl} alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => (e.currentTarget.style.display = 'none')} />
+                  </div>
+                )}
+              </div>
+
+              <div className={styles.inputGroup}>
+                <label className={styles.label}>Descripción del Taller</label>
+                <textarea className={styles.input} value={description} onChange={e => setDescription(e.target.value)} rows={3} placeholder="Cuéntale a tus clientes por qué elegirte..." />
+              </div>
+
+              <div className={styles.inputGroup}>
+                <label className={styles.label}>Dirección Física</label>
+                <input className={styles.input} value={address} onChange={e => setAddress(e.target.value)} placeholder="Av. Principal y Secundaria..." />
+              </div>
+
+              <div className={styles.inputGroup}>
+                <label className={styles.label}>Ubicación en el Mapa (Haz clic para marcar)</label>
+                <div ref={mapRef} style={{ width: '100%', height: '300px', borderRadius: '8px', border: '1px solid var(--color-outline-variant)' }} />
+                {mapLocation && (
+                  <p style={{ fontSize: '0.75rem', color: 'var(--color-primary)', marginTop: '0.5rem' }}>
+                    Marcador fijado en: {mapLocation.lat.toFixed(5)}, {mapLocation.lng.toFixed(5)}
+                  </p>
+                )}
+              </div>
+
+              <div className={styles.inputGroup} style={{ marginTop: '2rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                  <label className={styles.label} style={{ margin: 0 }}>Catálogo de Servicios</label>
+                  <button onClick={addService} style={{ background: 'transparent', border: '1px solid var(--color-primary)', color: 'var(--color-primary)', padding: '0.25rem 0.75rem', borderRadius: '4px', fontSize: '0.8rem', cursor: 'pointer' }}>+ Añadir</button>
+                </div>
+                {services.map((s, idx) => (
+                  <div key={idx} style={{ display: 'grid', gridTemplateColumns: '1fr 100px auto', gap: '0.5rem', marginBottom: '0.5rem', alignItems: 'start' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                      <input className={styles.input} value={s.name} onChange={e => updateService(idx, 'name', e.target.value)} placeholder="Nombre (ej. Cambio de aceite)" />
+                      <input className={styles.input} value={s.description} onChange={e => updateService(idx, 'description', e.target.value)} placeholder="Breve descripción..." style={{ fontSize: '0.8rem' }} />
+                    </div>
+                    <input type="number" className={styles.input} value={s.price} onChange={e => updateService(idx, 'price', Number(e.target.value))} placeholder="Precio $" />
+                    <button onClick={() => removeService(idx)} style={{ padding: '0.5rem', color: '#ef4444', background: 'transparent', border: 'none', cursor: 'pointer' }}><Icon name="delete" /></button>
+                  </div>
+                ))}
+              </div>
+
+              <div className={styles.inputGroup} style={{ marginTop: '2rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                  <label className={styles.label} style={{ margin: 0 }}>Promociones Especiales</label>
+                  <button onClick={addPromo} style={{ background: 'transparent', border: '1px solid var(--color-primary)', color: 'var(--color-primary)', padding: '0.25rem 0.75rem', borderRadius: '4px', fontSize: '0.8rem', cursor: 'pointer' }}>+ Añadir</button>
+                </div>
+                {promotions.map((p, idx) => (
+                  <div key={idx} style={{ display: 'grid', gridTemplateColumns: '1fr 120px auto', gap: '0.5rem', marginBottom: '0.5rem', alignItems: 'start' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                      <input className={styles.input} value={p.title} onChange={e => updatePromo(idx, 'title', e.target.value)} placeholder="Título (ej. Chequeo Gratis)" />
+                      <input className={styles.input} value={p.description} onChange={e => updatePromo(idx, 'description', e.target.value)} placeholder="Descripción..." style={{ fontSize: '0.8rem' }} />
+                    </div>
+                    <input className={styles.input} value={p.discount} onChange={e => updatePromo(idx, 'discount', e.target.value)} placeholder="Badge (ej. 20% OFF)" />
+                    <button onClick={() => removePromo(idx)} style={{ padding: '0.5rem', color: '#ef4444', background: 'transparent', border: 'none', cursor: 'pointer' }}><Icon name="delete" /></button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Horario y Chatbot settings */}
           <div className={styles.section}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
               <div style={{ padding: '0.5rem', background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', borderRadius: '0.5rem' }}><Icon name="schedule" /></div>
-              <h2 className={styles.sectionTitle} style={{ margin: 0 }}>Horario y Ubicación</h2>
+              <h2 className={styles.sectionTitle} style={{ margin: 0 }}>Horario (Escaparate & WhatsApp)</h2>
             </div>
             
             <div className={styles.form}>
@@ -354,88 +496,27 @@ export const Customization = () => {
                   </div>
                 </div>
               </div>
-
-              <div className={styles.inputGroup}>
-                <label className={styles.label}>Ubicación del Taller</label>
-                <input className={styles.input} value={location} onChange={e => setLocation(e.target.value)} placeholder="Dirección o link maps" />
-                <p style={{ fontSize: '0.75rem', color: 'var(--color-on-surface-variant)', marginTop: '0.5rem' }}>
-                  Esta ubicación será enviada automáticamente por el bot.
-                </p>
-              </div>
             </div>
           </div>
 
-          {/* Mantenimiento Section */}
-          <div className={styles.section}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
-              <div style={{ padding: '0.5rem', background: 'rgba(245, 158, 11, 0.1)', color: '#f59e0b', borderRadius: '0.5rem' }}><Icon name="oil_barrel" /></div>
-              <h2 className={styles.sectionTitle} style={{ margin: 0 }}>Mantenimiento</h2>
-            </div>
-            
-            <div className={styles.form}>
-              <div style={{ background: 'var(--color-surface-container-low)', padding: '1.25rem', borderRadius: '0.75rem', border: '1px solid var(--color-outline-variant)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <input type="checkbox" checked={oilReminders} onChange={e => setOilReminders(e.target.checked)} style={{ width: '20px', height: '20px', cursor: 'pointer' }} id="oilCheck" />
-                  <label htmlFor="oilCheck" style={{ cursor: 'pointer' }}>
-                    <span className={styles.label} style={{ margin: 0, fontWeight: '600' }}>Activar Recordatorios de Aceite</span>
-                    <p style={{ margin: '0.25rem 0 0 0', fontSize: '0.8rem', color: 'var(--color-on-surface-variant)' }}>El bot avisará a los clientes según su última visita.</p>
-                  </label>
-                </div>
-                
-                {oilReminders && (
-                  <div style={{ marginTop: '1.5rem', paddingLeft: '2.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <span className={styles.label} style={{ margin: 0 }}>Frecuencia recomendada:</span>
-                    <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                      <input type="number" className={styles.input} value={oilFrequency} onChange={e => setOilFrequency(parseInt(e.target.value))} style={{ width: '80px' }} />
-                      <select className={styles.input} value={oilUnit} onChange={e => setOilUnit(e.target.value)} style={{ width: '110px' }}>
-                        <option value="días">Días</option>
-                        <option value="meses">Meses</option>
-                        <option value="años">Años</option>
-                      </select>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-
-          {/* Chatbot Section */}
+          {/* Chatbot section */}
           <div className={styles.section}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
               <div style={{ padding: '0.5rem', background: 'rgba(37, 211, 102, 0.1)', color: '#25d366', borderRadius: '0.5rem' }}><Icon name="smart_toy" /></div>
-              <h2 className={styles.sectionTitle} style={{ margin: 0 }}>Respuestas del Chatbot</h2>
+              <h2 className={styles.sectionTitle} style={{ margin: 0 }}>Respuestas Automáticas (WhatsApp)</h2>
             </div>
 
             <div className={styles.form}>
-              <div className={styles.inputGroup}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-                  <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--color-on-surface-variant)' }}>Configura los flujos de conversación automáticos.</p>
-                  <div style={{ display: 'flex', gap: '0.75rem' }}>
-                    <button onClick={resetToDefaults} style={{ color: '#ef4444', background: 'transparent', border: '1px solid #ef4444', padding: '0.4rem 0.75rem', borderRadius: '0.5rem', cursor: 'pointer', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                      <Icon name="history" style={{ fontSize: '1.1rem' }} /> Restablecer Valores
-                    </button>
-                    <button onClick={addResponse} className={styles.saveBtn} style={{ padding: '0.4rem 0.75rem', fontSize: '0.85rem' }}>
-                      <Icon name="add" style={{ fontSize: '1.1rem' }} /> Añadir Flujo
-                    </button>
-                  </div>
-                </div>
-
-                <div className={styles.responsesList}>
+              <div className={styles.responsesList}>
                   {responses.map((res, idx) => (
                     <div key={idx} style={{ border: '1px solid var(--color-outline-variant)', borderRadius: '0.75rem', marginBottom: '1.5rem', overflow: 'hidden', background: 'var(--color-surface)' }}>
                       <div style={{ background: 'var(--color-surface-variant)', padding: '0.75rem 1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flex: 1 }}>
                           <Icon name="chat_bubble" style={{ fontSize: '1.2rem', color: 'var(--color-primary)' }} />
-                          <input value={res.question} onChange={e => updateResponse(idx, 'question', e.target.value)} style={{ background: 'transparent', border: 'none', fontWeight: 'bold', fontSize: '1rem', width: '100%', color: 'var(--color-on-surface)' }} />
+                          <span style={{ fontWeight: 'bold', fontSize: '1rem', color: 'var(--color-on-surface)' }}>{res.question}</span>
                         </div>
-                        <button onClick={() => removeResponse(idx)} style={{ color: '#ef4444', background: 'transparent', border: 'none', cursor: 'pointer' }}><Icon name="delete" /></button>
                       </div>
                       <div style={{ padding: '1.25rem' }}>
-                        <div className={styles.inputGroup} style={{ marginBottom: '1.5rem' }}>
-                          <label className={styles.label}>Palabras clave que activan este flujo</label>
-                          <input className={styles.input} value={res.keywords} onChange={e => updateResponse(idx, 'keywords', e.target.value)} placeholder="separadas por comas (ej: agendar, turno...)" />
-                        </div>
-                        
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                           {res.steps.map((s, sIdx) => (
                             <div key={sIdx} style={{
@@ -450,46 +531,27 @@ export const Customization = () => {
                               minWidth: 0,
                               overflow: 'hidden',
                             }}>
-                              {/* Mensaje — ocupa toda la fila en mobile */}
                               <div className={styles.inputGroup} style={{ marginBottom: 0, gridColumn: '1 / -1' }}>
                                 <label className={styles.label} style={{ fontSize: '0.75rem' }}>Mensaje {sIdx + 1}</label>
                                 {(s.action === 'NONE' && ['default-status', 'default-location', 'default-oil', 'default-history'].includes(res.id)) ? (
                                    <div style={{ background: 'var(--color-surface-container-high)', padding: '0.75rem', borderRadius: '0.5rem', border: '1px dashed var(--color-outline)', color: 'var(--color-on-surface-variant)', fontSize: '0.85rem', fontStyle: 'italic', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
                                      <Icon name="auto_awesome" style={{ fontSize: '1.1rem', flexShrink: 0 }} />
-                                     <span>Este mensaje es dinámico y lo genera el sistema automáticamente.</span>
+                                     <span>Este mensaje es dinámico y lo genera el sistema.</span>
                                    </div>
                                 ) : (
-                                   <textarea className={styles.input} value={s.response} onChange={e => updateStep(idx, sIdx, 'response', e.target.value)} rows={2} style={{ fontSize: '0.9rem', width: '100%', boxSizing: 'border-box' }} />
+                                   <textarea className={styles.input} value={s.response} onChange={(e) => {
+                                      const newResponses = [...responses];
+                                      newResponses[idx].steps[sIdx].response = e.target.value;
+                                      setResponses(newResponses);
+                                   }} rows={2} style={{ fontSize: '0.9rem', width: '100%', boxSizing: 'border-box' }} />
                                 )}
                               </div>
-                              {/* Acción — segunda fila, flex */}
-                              <div className={styles.inputGroup} style={{ marginBottom: 0, minWidth: 0 }}>
-                                <label className={styles.label} style={{ fontSize: '0.75rem' }}>Acción</label>
-                                <select className={styles.input} value={s.action} onChange={e => updateStep(idx, sIdx, 'action', e.target.value)} style={{ fontSize: '0.9rem', width: '100%' }}>
-                                  <option value="NONE">Solo responder</option>
-                                  <option value="READ_PLATE">Leer Placa</option>
-                                  <option value="READ_SERVICE">Leer Servicio</option>
-                                  <option value="READ_DATE">Leer Fecha</option>
-                                  <option value="READ_TIME">Leer Hora</option>
-                                </select>
-                              </div>
-                              {/* Botón eliminar */}
-                              <button onClick={() => removeStep(idx, sIdx)} style={{ alignSelf: 'center', background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--color-on-surface-variant)', padding: '0.25rem' }}><Icon name="close" /></button>
                             </div>
                           ))}
-                          <button onClick={() => addStep(idx)} style={{ alignSelf: 'flex-start', color: 'var(--color-primary)', background: 'transparent', border: 'none', cursor: 'pointer', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                            <Icon name="add_circle" style={{ fontSize: '1.1rem' }} /> Añadir paso
-                          </button>
                         </div>
                       </div>
                     </div>
                   ))}
-                </div>
-              </div>
-
-              <div className={styles.inputGroup} style={{ marginTop: '2rem' }}>
-                <label className={styles.label}>Respuesta por Defecto (cuando el bot no entiende)</label>
-                <textarea className={styles.input} value={defaultResponse} onChange={e => setDefaultResponse(e.target.value)} rows={3} style={{ fontSize: '0.95rem' }} />
               </div>
 
               <div className={styles.saveRow} style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--color-outline-variant)' }}>
@@ -512,7 +574,6 @@ export const Customization = () => {
               </div>
             </div>
           </div>
-
 
           {confirmDialog?.show && (
             <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.8)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 2000 }}>

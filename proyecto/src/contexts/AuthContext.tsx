@@ -4,10 +4,14 @@ import { supabase } from '../lib/supabase';
 
 export interface Profile {
   id: string;
-  workshop_id: string;
+  workshop_id?: string | null; // Opcional para clientes B2C globales
   full_name: string;
   role: string;
   phone?: string;
+  role_type?: 'mechanic' | 'client';
+  client_tag?: string | null;
+  privacy_settings?: any;
+  owner_workshop_id?: string | null;
 }
 
 interface AuthContextType {
@@ -85,6 +89,29 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
 
       const newProfile = data as Profile;
+      
+      // Self-healing: Si el trigger de la base de datos no asignó el role_type correcto,
+      // lo reparamos usando la metadata de Auth que viene del formulario de registro.
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user?.user_metadata?.role_type && user.user_metadata.role_type !== newProfile.role_type) {
+        newProfile.role_type = user.user_metadata.role_type;
+        const updates: any = { role_type: user.user_metadata.role_type };
+        
+        // Auto-heal client_tag si el trigger de la base de datos falló
+        if (newProfile.role_type === 'client' && !newProfile.client_tag) {
+           const randomTag = 'AT-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+           updates.client_tag = randomTag;
+           newProfile.client_tag = randomTag;
+        }
+
+        // Actualizamos la base de datos en segundo plano
+        supabase.from('profiles').update(updates).eq('id', newProfile.id)
+          .then(({ error }) => {
+            if (error) console.error('Error auto-healing profile:', error);
+            else console.log('Profile role_type auto-healed');
+          });
+      }
+
       setCachedProfile(newProfile);
       return newProfile;
     } catch (err: any) {

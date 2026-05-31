@@ -25,14 +25,42 @@ export interface VehicleWithClient extends Vehicle {
 }
 
 export const getVehicles = async (workshopId: string): Promise<VehicleWithClient[]> => {
-  const { data, error } = await supabase
+  // 1. Vehículos creados localmente en el taller
+  const { data: wsVehicles, error: err1 } = await supabase
     .from('vehicles')
-    .select('*, clients(full_name, phone, email)')
-    .eq('workshop_id', workshopId)
-    .order('created_at', { ascending: false });
+    .select('*, clients:client_id(full_name, phone, email)')
+    .eq('workshop_id', workshopId);
 
-  if (error) throw error;
-  return data as VehicleWithClient[];
+  if (err1) throw err1;
+
+  // 2. Obtener clientes conectados por Smart Sync
+  const { data: connections, error: err2 } = await supabase
+    .from('workshop_clients')
+    .select('client_id')
+    .eq('workshop_id', workshopId);
+    
+  if (err2) throw err2;
+
+  let allVehicles = wsVehicles || [];
+
+  if (connections && connections.length > 0) {
+    const clientIds = connections.map(c => c.client_id);
+    // 3. Vehículos globales de clientes conectados
+    const { data: clientVehicles, error: err3 } = await supabase
+      .from('vehicles')
+      .select('*, clients:client_id(full_name, phone, email)')
+      .in('client_id', clientIds);
+      
+    if (!err3 && clientVehicles) {
+      const merged = [...allVehicles, ...clientVehicles];
+      const uniqueMap = new Map();
+      merged.forEach(v => uniqueMap.set(v.id, v));
+      allVehicles = Array.from(uniqueMap.values());
+    }
+  }
+
+  allVehicles.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+  return allVehicles as VehicleWithClient[];
 };
 
 export const getVehiclesByClient = async (clientId: string): Promise<Vehicle[]> => {
@@ -49,7 +77,7 @@ export const getVehiclesByClient = async (clientId: string): Promise<Vehicle[]> 
 export const getVehicleById = async (id: string): Promise<VehicleWithClient> => {
   const { data, error } = await supabase
     .from('vehicles')
-    .select('*, clients(full_name, phone, email)')
+    .select('*, clients:client_id(full_name, phone, email)')
     .eq('id', id)
     .single();
 

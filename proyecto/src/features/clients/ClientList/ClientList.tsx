@@ -3,7 +3,10 @@ import { getBotApiUrl } from '../../../lib/api/bot';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../contexts/AuthContext';
 import { supabase } from '../../../lib/supabase';
-import { getClients, createClient, updateClient, deleteClient, Client } from '../../../lib/api/clients';
+import { 
+  getClients, createClient, updateClient, deleteClient, Client,
+  searchClientByTag, sendConnectionInvite, getWorkshopPendingInvites, acceptConnectionInvite, declineConnectionInvite
+} from '../../../lib/api/clients';
 import { getVehiclesByClient, Vehicle } from '../../../lib/api/vehicles';
 import { Icon } from '../../../components/Icon/Icon';
 import styles from './ClientList.module.css';
@@ -29,10 +32,7 @@ const formatPhoneDisplay = (phone: string | null) => {
   return `+${phone}`;
 };
 
-// ─── Types ────────────────────────────────────────────────────────────────────
 type ModalMode = 'add' | 'edit' | 'detail' | null;
-
-// ─── Sub-components ──────────────────────────────────────────────────────────
 
 interface ClientModalProps {
   mode: 'add' | 'edit';
@@ -43,11 +43,20 @@ interface ClientModalProps {
 }
 
 const ClientModal: React.FC<ClientModalProps> = ({ mode, client, workshopId, onClose, onSuccess }) => {
+  // Onboarding Híbrido: manual vs sync (solo en modo 'add')
+  const [tab, setTab] = useState<'manual' | 'sync'>('manual');
+  
+  // Manual state
   const [fullName, setFullName] = useState(client?.full_name ?? '');
   const [countryCode, setCountryCode] = useState('593');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState(client?.email ?? '');
   const [notes, setNotes] = useState(client?.notes ?? '');
+  
+  // Sync state
+  const [searchTag, setSearchTag] = useState('');
+  const [foundClient, setFoundClient] = useState<Client | null>(null);
+  
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -63,14 +72,47 @@ const ClientModal: React.FC<ClientModalProps> = ({ mode, client, workshopId, onC
     }
   }, [client]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSearchTag = async () => {
+    if (!searchTag.trim()) return;
+    setLoading(true);
+    setError(null);
+    try {
+      const c = await searchClientByTag(searchTag);
+      if (c) {
+        setFoundClient(c);
+      } else {
+        setFoundClient(null);
+        setError('No se encontró ningún cliente con ese Tag.');
+      }
+    } catch (e: any) {
+      setError('Error al buscar: ' + e.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSendInvite = async () => {
+    if (!foundClient) return;
+    setLoading(true);
+    setError(null);
+    try {
+      await sendConnectionInvite(workshopId, foundClient.id, 'workshop');
+      onSuccess();
+      onClose();
+    } catch (e: any) {
+      setError('No se pudo enviar la invitación. Es posible que ya exista una solicitud.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSubmitManual = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
     try {
       const cleanNumber = phone.replace(/^0+/, '').replace(/\D/g, '');
       const fullPhone = countryCode + cleanNumber;
-
       const payload = {
         full_name: fullName,
         phone: fullPhone || null,
@@ -80,14 +122,10 @@ const ClientModal: React.FC<ClientModalProps> = ({ mode, client, workshopId, onC
 
       if (mode === 'add') {
         const newClient = await createClient(payload, workshopId);
-        
-        // Enviar bienvenida vía Bot si es un cliente nuevo
         if (fullPhone && newClient?.id) {
           try {
-            // Obtener nombre del taller
             const { data: ws } = await supabase.from('workshops').select('name').eq('id', workshopId).single();
-            
-            const response = await fetch(`${getBotApiUrl()}/api/send-welcome`, {
+            await fetch(`${getBotApiUrl()}/api/send-welcome`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
@@ -98,16 +136,8 @@ const ClientModal: React.FC<ClientModalProps> = ({ mode, client, workshopId, onC
                 workshopId: workshopId
               })
             });
-
-            if (response.ok) {
-              console.log('✅ Bot respondió con éxito');
-            } else {
-              const errData = await response.json();
-              alert('⚠️ El bot está conectado pero dio un error: ' + errData.error);
-            }
           } catch (botErr) {
-            console.error('❌ No se pudo contactar con el servidor del bot:', botErr);
-            alert('❌ No se pudo contactar con el bot. Asegúrate de que el servidor (terminal negra) esté encendido.');
+            console.error('Bot err:', botErr);
           }
         }
       } else if (client) {
@@ -134,66 +164,109 @@ const ClientModal: React.FC<ClientModalProps> = ({ mode, client, workshopId, onC
           </button>
         </div>
 
-        <form onSubmit={handleSubmit}>
-          <div className={styles.modalBody}>
-            {error && <div className={styles.errorBox}>{error}</div>}
+        {mode === 'add' && (
+          <div style={{ display: 'flex', gap: '1rem', padding: '0 1.5rem', borderBottom: '1px solid var(--color-ghost-border)' }}>
+            <button
+              type="button"
+              onClick={() => setTab('manual')}
+              style={{ padding: '0.75rem 0', background: 'none', border: 'none', borderBottom: tab === 'manual' ? '2px solid var(--color-primary)' : '2px solid transparent', color: tab === 'manual' ? 'var(--color-primary)' : 'var(--color-on-surface-variant)', fontWeight: 600, cursor: 'pointer' }}
+            >
+              Registro Manual
+            </button>
+            <button
+              type="button"
+              onClick={() => setTab('sync')}
+              style={{ padding: '0.75rem 0', background: 'none', border: 'none', borderBottom: tab === 'sync' ? '2px solid var(--color-primary)' : '2px solid transparent', color: tab === 'sync' ? 'var(--color-primary)' : 'var(--color-on-surface-variant)', fontWeight: 600, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.25rem' }}
+            >
+              <Icon name="handshake" style={{ fontSize: '1rem' }} /> Smart Sync
+            </button>
+          </div>
+        )}
 
-            <div className={styles.inputGroup}>
-              <label className={styles.label}>Nombre Completo *</label>
-              <input
-                type="text"
-                className={styles.input}
-                value={fullName}
-                onChange={e => setFullName(e.target.value)}
-                required
-              />
+        {tab === 'manual' ? (
+          <form onSubmit={handleSubmitManual}>
+            <div className={styles.modalBody}>
+              {error && <div className={styles.errorBox}>{error}</div>}
+
+              <div className={styles.inputGroup}>
+                <label className={styles.label}>Nombre Completo *</label>
+                <input type="text" className={styles.input} value={fullName} onChange={e => setFullName(e.target.value)} required />
+              </div>
+
+              <div className={styles.inputGroup}>
+                <label className={styles.label}>Teléfono WhatsApp</label>
+                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                  <select value={countryCode} onChange={e => setCountryCode(e.target.value)} className={styles.input} style={{ width: '100px' }}>
+                    {COUNTRY_CODES.map(c => <option key={c.code} value={c.code}>{c.flag} +{c.code}</option>)}
+                  </select>
+                  <input type="tel" className={styles.input} value={phone} onChange={e => setPhone(e.target.value)} placeholder="990715214" style={{ flex: 1 }} />
+                </div>
+              </div>
+
+              <div className={styles.inputGroup}>
+                <label className={styles.label}>Correo Electrónico</label>
+                <input type="email" className={styles.input} value={email} onChange={e => setEmail(e.target.value)} />
+              </div>
+
+              <div className={styles.inputGroup}>
+                <label className={styles.label}>Notas</label>
+                <textarea className={`${styles.input} ${styles.textarea}`} value={notes} onChange={e => setNotes(e.target.value)} rows={3} />
+              </div>
             </div>
-
+            <div className={styles.modalFooter}>
+              <button type="button" className={styles.cancelBtn} onClick={onClose}>Cancelar</button>
+              <button type="submit" className={styles.primaryBtn} disabled={loading}>
+                {loading ? 'Guardando...' : 'Guardar Cliente'}
+              </button>
+            </div>
+          </form>
+        ) : (
+          <div className={styles.modalBody}>
+            <p style={{ fontSize: '0.875rem', color: 'var(--color-on-surface-variant)', margin: '0 0 1rem 0' }}>
+              Busca a un usuario registrado en el Portal B2C mediante su <strong>Tag de Cliente</strong> (Ej: AT-1A2B3C) para enviarle una solicitud de conexión.
+            </p>
+            {error && <div className={styles.errorBox}>{error}</div>}
             <div className={styles.inputGroup}>
-              <label className={styles.label}>Teléfono WhatsApp</label>
+              <label className={styles.label}>Tag de Cliente</label>
               <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <select value={countryCode} onChange={e => setCountryCode(e.target.value)} className={styles.input} style={{ width: '100px' }}>
-                  {COUNTRY_CODES.map(c => <option key={c.code} value={c.code}>{c.flag} +{c.code}</option>)}
-                </select>
-                <input
-                  type="tel"
-                  className={styles.input}
-                  value={phone}
-                  onChange={e => setPhone(e.target.value)}
-                  placeholder="990715214"
-                  style={{ flex: 1 }}
+                <input 
+                  type="text" 
+                  className={styles.input} 
+                  placeholder="AT-XXXXXX" 
+                  value={searchTag} 
+                  onChange={e => setSearchTag(e.target.value.toUpperCase())} 
+                  style={{ textTransform: 'uppercase' }}
                 />
+                <button type="button" className={styles.secondaryBtn} onClick={handleSearchTag} disabled={loading || !searchTag}>
+                  <Icon name="search" /> Buscar
+                </button>
               </div>
             </div>
 
-            <div className={styles.inputGroup}>
-              <label className={styles.label}>Correo Electrónico</label>
-              <input
-                type="email"
-                className={styles.input}
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-              />
-            </div>
-
-            <div className={styles.inputGroup}>
-              <label className={styles.label}>Notas</label>
-              <textarea
-                className={`${styles.input} ${styles.textarea}`}
-                value={notes}
-                onChange={e => setNotes(e.target.value)}
-                rows={3}
-              />
+            {foundClient && (
+              <div style={{ marginTop: '1.5rem', padding: '1rem', background: 'var(--color-surface-container-high)', borderRadius: 'var(--radius-md)' }}>
+                <h4 style={{ margin: '0 0 0.5rem 0', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <Icon name="person" /> {foundClient.full_name}
+                </h4>
+                <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--color-on-surface-variant)' }}>
+                  Tag: {foundClient.client_tag}
+                </p>
+                <button 
+                  type="button" 
+                  className={styles.primaryBtn} 
+                  style={{ width: '100%', marginTop: '1rem' }}
+                  onClick={handleSendInvite}
+                  disabled={loading}
+                >
+                  <Icon name="send" /> Enviar Invitación
+                </button>
+              </div>
+            )}
+            <div className={styles.modalFooter} style={{ borderTop: 'none', padding: '1rem 0 0 0' }}>
+              <button type="button" className={styles.cancelBtn} onClick={onClose} style={{ width: '100%' }}>Cancelar</button>
             </div>
           </div>
-
-          <div className={styles.modalFooter}>
-            <button type="button" className={styles.cancelBtn} onClick={onClose}>Cancelar</button>
-            <button type="submit" className={styles.primaryBtn} disabled={loading}>
-              {loading ? 'Guardando...' : 'Guardar Cliente'}
-            </button>
-          </div>
-        </form>
+        )}
       </div>
     </div>
   );
@@ -266,7 +339,11 @@ const ClientDetail: React.FC<ClientDetailProps> = ({ client, onClose, onEdit, on
             <div className={styles.detailAvatar}>{getInitials(client.full_name)}</div>
             <div>
               <h2 className={styles.detailName}>{client.full_name}</h2>
-              <p className={styles.detailMeta}>Cliente de {client.workshop_id}</p>
+              <p className={styles.detailMeta}>
+                {client.sync_status === 'connected' ? 'Cliente B2C Conectado' : 
+                 client.sync_status === 'pending_approval' ? 'Invitación Pendiente' : 
+                 'Registro Local (Taller)'}
+              </p>
             </div>
           </div>
           <div className={styles.detailGrid}>
@@ -311,7 +388,9 @@ const ClientDetail: React.FC<ClientDetailProps> = ({ client, onClose, onEdit, on
           <button className={styles.dangerBtn} onClick={onDelete}>Eliminar</button>
           <div style={{ flex: 1 }} />
           <button className={styles.cancelBtn} onClick={onClose}>Cerrar</button>
-          <button className={styles.primaryBtn} onClick={onEdit}>Editar</button>
+          <button className={styles.primaryBtn} onClick={onEdit} disabled={client.sync_status === 'connected'}>
+            {client.sync_status === 'connected' ? 'Solo lectura' : 'Editar'}
+          </button>
         </div>
       </div>
     </div>
@@ -321,6 +400,7 @@ const ClientDetail: React.FC<ClientDetailProps> = ({ client, onClose, onEdit, on
 export const ClientList = () => {
   const { profile } = useAuth();
   const [clients, setClients] = useState<Client[]>([]);
+  const [pendingInvites, setPendingInvites] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [modalMode, setModalMode] = useState<ModalMode>(null);
@@ -335,8 +415,12 @@ export const ClientList = () => {
     try {
       setLoading(true);
       if (!profile?.workshop_id) return;
-      const data = await getClients(profile.workshop_id);
-      setClients(data);
+      const [data, invites] = await Promise.all([
+        getClients(profile.workshop_id),
+        getWorkshopPendingInvites(profile.workshop_id)
+      ]);
+      setClients(data || []);
+      setPendingInvites(invites || []);
     } catch (error) {
       console.error(error);
     } finally {
@@ -344,10 +428,34 @@ export const ClientList = () => {
     }
   };
 
-  const filteredClients = clients.filter(c =>
-    c.full_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const handleAcceptInvite = async (connectionId: string) => {
+    try {
+      await acceptConnectionInvite(connectionId);
+      fetchClients();
+    } catch (e: any) {
+      alert('Error al aceptar solicitud: ' + e.message);
+    }
+  };
+
+  const handleDeclineInvite = async (connectionId: string) => {
+    try {
+      await declineConnectionInvite(connectionId);
+      fetchClients();
+    } catch (e: any) {
+      alert('Error al declinar solicitud: ' + e.message);
+    }
+  };
+
+  const filteredClients = (clients || []).filter(c =>
+    c.full_name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
     (c.phone && c.phone.includes(searchTerm))
   );
+
+  const getSyncBadge = (status: string | undefined) => {
+    if (status === 'connected') return <span style={{ padding: '0.2rem 0.5rem', background: 'rgba(16,185,129,0.1)', color: '#10b981', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}><Icon name="check_circle" style={{fontSize: '0.8rem'}}/> B2C Sync</span>;
+    if (status === 'pending_approval') return <span style={{ padding: '0.2rem 0.5rem', background: 'rgba(245,158,11,0.1)', color: '#f59e0b', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}><Icon name="schedule" style={{fontSize: '0.8rem'}}/> Pendiente</span>;
+    return <span style={{ padding: '0.2rem 0.5rem', background: 'var(--color-surface-container-high)', color: 'var(--color-on-surface-variant)', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}><Icon name="person" style={{fontSize: '0.8rem'}}/> Local</span>;
+  };
 
   return (
     <div className={styles.page}>
@@ -361,6 +469,28 @@ export const ClientList = () => {
         </button>
       </div>
 
+      {pendingInvites && pendingInvites.length > 0 && (
+        <div style={{ background: 'var(--color-surface-container-high)', borderRadius: 'var(--radius-lg)', padding: '1rem 1.5rem', marginBottom: '1.5rem', border: '1px solid var(--color-ghost-border)' }}>
+          <h3 style={{ margin: '0 0 1rem 0', display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#f59e0b' }}>
+            <Icon name="mark_email_unread" /> Solicitudes de Conexión Entrantes ({pendingInvites.length})
+          </h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            {pendingInvites.map(inv => (
+              <div key={inv.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--color-surface)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-md)' }}>
+                <div>
+                  <div style={{ fontWeight: 600 }}>{inv.client?.full_name}</div>
+                  <div style={{ fontSize: '0.8rem', color: 'var(--color-outline)' }}>Quiere conectarse a tu taller · ID: {inv.client?.client_tag}</div>
+                </div>
+                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                  <button className={styles.secondaryBtn} onClick={() => handleDeclineInvite(inv.id)}>Declinar</button>
+                  <button className={styles.primaryBtn} onClick={() => handleAcceptInvite(inv.id)}>Aceptar</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className={styles.toolbar}>
         <div className={styles.searchBox}>
           <Icon name="search" className={styles.searchIcon} />
@@ -373,9 +503,9 @@ export const ClientList = () => {
           <thead>
             <tr>
               <th className={styles.th}>Cliente</th>
+              <th className={styles.th}>Estado</th>
               <th className={styles.th}>Teléfono</th>
               <th className={styles.th}>Correo</th>
-              <th className={styles.th}>Registrado</th>
               <th className={styles.th} style={{ textAlign: 'right' }}>Acciones</th>
             </tr>
           </thead>
@@ -395,12 +525,13 @@ export const ClientList = () => {
             ) : (
               filteredClients.map(client => (
                 <tr key={client.id} className={styles.tr} onClick={() => { setSelectedClient(client); setModalMode('detail'); }}>
-                  <td className={styles.td}>{client.full_name}</td>
+                  <td className={styles.td}>
+                    <div style={{ fontWeight: 600 }}>{client.full_name}</div>
+                    {client.client_tag && <div style={{ fontSize: '0.7rem', color: 'var(--color-primary)' }}>ID: {client.client_tag}</div>}
+                  </td>
+                  <td className={styles.td}>{getSyncBadge(client.sync_status)}</td>
                   <td className={styles.td}>{formatPhoneDisplay(client.phone) || '—'}</td>
                   <td className={styles.td}>{client.email || '—'}</td>
-                  <td className={styles.td}>
-                    {new Date(client.created_at).toLocaleDateString('es-CO', { day: '2-digit', month: 'short', year: 'numeric' })}
-                  </td>
                   <td className={styles.td} style={{ textAlign: 'right' }}>
                     <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'flex-end' }}>
                       <button 
@@ -414,16 +545,17 @@ export const ClientList = () => {
                         className={styles.actionBtn} 
                         onClick={(e) => { e.stopPropagation(); setSelectedClient(client); setModalMode('edit'); }}
                         title="Editar"
+                        disabled={client.sync_status === 'connected'}
                       >
                         <Icon name="edit" />
                       </button>
                       <button 
                         className={`${styles.actionBtn} ${styles.dangerBtn}`} 
                         onClick={(e) => { e.stopPropagation(); setSelectedClient(client); setShowDeleteConfirm(true); }}
-                        title="Eliminar"
+                        title="Eliminar / Desconectar"
                         style={{ padding: '4px', minWidth: 'auto', height: 'auto' }}
                       >
-                        <Icon name="delete" style={{ fontSize: '1.1rem' }} />
+                        <Icon name={client.sync_status === 'connected' ? 'link_off' : 'delete'} style={{ fontSize: '1.1rem' }} />
                       </button>
                     </div>
                   </td>
@@ -443,8 +575,22 @@ export const ClientList = () => {
       )}
 
       {showDeleteConfirm && selectedClient && (
-        <DeleteConfirm client={selectedClient} onClose={() => setShowDeleteConfirm(false)} onConfirm={async () => { await deleteClient(selectedClient.id); setShowDeleteConfirm(false); setModalMode(null); fetchClients(); }} />
+        <DeleteConfirm 
+          client={selectedClient} 
+          onClose={() => setShowDeleteConfirm(false)} 
+          onConfirm={async () => { 
+            if (selectedClient.sync_status === 'connected' && selectedClient.connection_id) {
+              await supabase.from('workshop_clients').delete().eq('id', selectedClient.connection_id);
+            } else {
+              await deleteClient(selectedClient.id); 
+            }
+            setShowDeleteConfirm(false); 
+            setModalMode(null); 
+            fetchClients(); 
+          }} 
+        />
       )}
     </div>
   );
 };
+

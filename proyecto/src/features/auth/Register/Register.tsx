@@ -11,6 +11,7 @@ export const Register = () => {
   const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');
+  const [roleType, setRoleType] = useState<'mechanic' | 'client'>('mechanic');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -26,6 +27,7 @@ export const Register = () => {
         data: {
           full_name: fullName,
           phone: phone.trim() || null,
+          role_type: roleType,
         }
       }
     });
@@ -44,6 +46,9 @@ export const Register = () => {
 
   // Redirect automatically when session and profile are fully loaded (Auto-login after signup)
   if (session && !authLoading) {
+    if (profile?.role_type === 'client') {
+      return <Navigate to="/client" replace />;
+    }
     if (profile && profile.workshop_id) {
       return <Navigate to="/" replace />;
     } else {
@@ -61,6 +66,32 @@ export const Register = () => {
       {error && <div className={styles.error}>{error}</div>}
 
       <form className={styles.form} onSubmit={handleRegister}>
+        <div className={styles.inputGroup} style={{ marginBottom: '1.5rem' }}>
+          <label className={styles.label}>Tipo de Cuenta</label>
+          <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem' }}>
+            <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontSize: '0.9rem' }}>
+              <input 
+                type="radio" 
+                name="roleType" 
+                value="mechanic" 
+                checked={roleType === 'mechanic'}
+                onChange={() => setRoleType('mechanic')}
+              />
+              Soy Taller Mecánico
+            </label>
+            <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontSize: '0.9rem' }}>
+              <input 
+                type="radio" 
+                name="roleType" 
+                value="client" 
+                checked={roleType === 'client'}
+                onChange={() => setRoleType('client')}
+              />
+              Soy Cliente / Conductor
+            </label>
+          </div>
+        </div>
+
         <div className={styles.inputGroup}>
           <label htmlFor="fullName" className={styles.label}>Nombre Completo</label>
           <input

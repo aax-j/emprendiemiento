@@ -39,6 +39,9 @@ export const Login = () => {
 
   // Redirect automatically when session and profile are fully loaded
   if (session && !authLoading) {
+    if (profile?.role_type === 'client') {
+      return <Navigate to="/client" replace />;
+    }
     if (profile && profile.workshop_id) {
       return <Navigate to="/" replace />;
     } else {
