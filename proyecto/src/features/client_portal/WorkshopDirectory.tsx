@@ -28,16 +28,71 @@ export const WorkshopDirectory = () => {
   const mapRef = useRef<HTMLDivElement>(null);
   const leafletMapRef = useRef<any>(null);
 
+  const getDistance = (lat1: number, lon1: number, lat2: number, lon2: number) => {
+    const R = 6371e3; // metros
+    const p1 = lat1 * Math.PI/180;
+    const p2 = lat2 * Math.PI/180;
+    const dp = (lat2-lat1) * Math.PI/180;
+    const dl = (lon2-lon1) * Math.PI/180;
+    const a = Math.sin(dp/2) * Math.sin(dp/2) +
+              Math.cos(p1) * Math.cos(p2) *
+              Math.sin(dl/2) * Math.sin(dl/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return R * c;
+  };
+
   const loadWorkshops = async (lat: number, lng: number, r: number) => {
     setLoading(true);
+    setLocationError(null);
     try {
-      const data = await getNearbyWorkshops(lat, lng, r);
+      let data = await getNearbyWorkshops(lat, lng, r);
+      
+      // Si no encuentra nada cerca, mostramos todos para que el directorio no quede vacío
+      if (data.length === 0) {
+        setLocationError(`No se encontraron talleres a menos de ${r} km. A continuación se muestran todos los talleres registrados ordenados por distancia.`);
+        data = await searchWorkshopsByName('');
+        
+        // Calcular la distancia para todos los resultados del fallback
+        data = data.map(w => {
+          if (w.location) {
+            let wLng, wLat;
+            if (w.location.coordinates) {
+              wLng = w.location.coordinates[0];
+              wLat = w.location.coordinates[1];
+            } else if (typeof w.location === 'string' && w.location.startsWith('POINT(')) {
+              const match = w.location.match(/POINT\(([^ ]+)\s+([^)]+)\)/);
+              if (match) {
+                wLng = parseFloat(match[1]);
+                wLat = parseFloat(match[2]);
+              }
+            } else if (w.location.lat !== undefined && w.location.lng !== undefined) {
+              wLat = w.location.lat;
+              wLng = w.location.lng;
+            }
+            if (wLng !== undefined && wLat !== undefined) {
+              w.distance_meters = getDistance(lat, lng, wLat, wLng);
+            }
+          }
+          return w;
+        }).sort((a, b) => {
+          if (a.distance_meters === undefined) return 1;
+          if (b.distance_meters === undefined) return -1;
+          return a.distance_meters - b.distance_meters;
+        });
+      }
+
       setWorkshops(data);
       if (leafletMapRef.current && data.length > 0) {
         updateMapMarkers(data);
+        
+        // Si usamos el fallback, centramos el mapa en el primero
+        if (data[0].location) {
+           leafletMapRef.current.setView([data[0].location.lat || data[0].location.coordinates?.[1], data[0].location.lng || data[0].location.coordinates?.[0]], 10);
+        }
       }
     } catch (e) {
       console.error(e);
+      setLocationError('Hubo un error al cargar los talleres.');
     } finally {
       setLoading(false);
     }
@@ -70,11 +125,13 @@ export const WorkshopDirectory = () => {
   }, [search, userCoords, radius]);
 
   const updateMapMarkers = (data: WorkshopEntry[]) => {
-    // Remove previous markers — handled by Leaflet
-    // Map markers are added during initialization or when data changes
     data.forEach((w: any) => {
-      if (w.lat && w.lng && leafletMapRef.current) {
-        (window as any).L?.marker([w.lat, w.lng])
+      // Handle both formats: GeoJSON from searchWorkshopsByName or lat/lng from getNearbyWorkshops RPC
+      const lat = w.lat || (w.location?.coordinates?.[1]);
+      const lng = w.lng || (w.location?.coordinates?.[0]);
+      
+      if (lat && lng && leafletMapRef.current) {
+        (window as any).L?.marker([lat, lng])
           .addTo(leafletMapRef.current)
           .bindPopup(`<b>${w.name}</b><br/>${w.address ?? ''}`);
       }
@@ -119,27 +176,60 @@ export const WorkshopDirectory = () => {
     };
   }, []);
 
-  const requestLocation = () => {
+  const requestLocation = async () => {
     setLocationError(null);
+    setLoading(true);
+
+    const fallbackLocation = (errorMsg: string) => {
+      const riobamba = { lat: -1.6635, lng: -78.6536 };
+      setUserCoords(riobamba);
+      setLocationError(`${errorMsg} Mostrando resultados en Riobamba.`);
+      loadWorkshops(riobamba.lat, riobamba.lng, radius);
+      leafletMapRef.current?.setView([riobamba.lat, riobamba.lng], 13);
+    };
+
+    try {
+      // First try IP-based location, which works more reliably on Tauri desktop apps
+      const res = await fetch('https://ipapi.co/json/');
+      if (res.ok) {
+        const data = await res.json();
+        if (data.latitude && data.longitude) {
+          const coords = { lat: data.latitude, lng: data.longitude };
+          setUserCoords(coords);
+          loadWorkshops(coords.lat, coords.lng, radius);
+          leafletMapRef.current?.setView([coords.lat, coords.lng], 13);
+          return;
+        }
+      }
+    } catch (e) {
+      console.warn('IP location fetch failed, falling back to navigator.geolocation', e);
+    }
+
     if (!navigator.geolocation) {
-      setLocationError('Tu dispositivo no soporta geolocalización.');
+      fallbackLocation('Tu dispositivo no soporta geolocalización nativa.');
       return;
     }
+
+    let timeoutRef: any;
+
     navigator.geolocation.getCurrentPosition(
       (pos) => {
+        if (timeoutRef) clearTimeout(timeoutRef);
         const coords = { lat: pos.coords.latitude, lng: pos.coords.longitude };
         setUserCoords(coords);
         loadWorkshops(coords.lat, coords.lng, radius);
         leafletMapRef.current?.setView([coords.lat, coords.lng], 13);
       },
       () => {
-        // Fallback: usar centro de Riobamba
-        const riobamba = { lat: -1.6635, lng: -78.6536 };
-        setUserCoords(riobamba);
-        setLocationError('No se pudo obtener tu ubicación. Mostrando resultados en Riobamba.');
-        loadWorkshops(riobamba.lat, riobamba.lng, radius);
-      }
+        if (timeoutRef) clearTimeout(timeoutRef);
+        fallbackLocation('No se pudo obtener tu ubicación por GPS.');
+      },
+      { timeout: 5000, maximumAge: 60000 }
     );
+
+    timeoutRef = setTimeout(() => {
+      fallbackLocation('Tiempo de espera agotado para obtener ubicación GPS.');
+    }, 6000);
   };
 
   // El filtrado local ya no es necesario porque la búsqueda hace un fetch global debounced,
@@ -235,11 +325,15 @@ export const WorkshopDirectory = () => {
                 )}
               </div>
             </div>
-            {w.distance_meters !== undefined && (
+            {w.distance_meters !== undefined ? (
               <div className={styles.distanceBadge}>
                 <Icon name="near_me" /> {w.distance_meters < 1000
                   ? `${Math.round(w.distance_meters)} m`
                   : `${(w.distance_meters / 1000).toFixed(1)} km`}
+              </div>
+            ) : (
+              <div className={styles.distanceBadge} style={{ opacity: 0.6, background: 'var(--color-surface-variant)', color: 'var(--color-on-surface-variant)' }}>
+                <Icon name="location_off" /> Sin ubicación
               </div>
             )}
             {w.services_catalogue?.length > 0 && (

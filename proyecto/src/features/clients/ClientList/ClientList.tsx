@@ -9,6 +9,7 @@ import {
 } from '../../../lib/api/clients';
 import { getVehiclesByClient, Vehicle } from '../../../lib/api/vehicles';
 import { Icon } from '../../../components/Icon/Icon';
+import { ConnectionChatModal } from '../../../components/ConnectionChatModal/ConnectionChatModal';
 import styles from './ClientList.module.css';
 
 const COUNTRY_CODES = [
@@ -194,7 +195,7 @@ const ClientModal: React.FC<ClientModalProps> = ({ mode, client, workshopId, onC
               </div>
 
               <div className={styles.inputGroup}>
-                <label className={styles.label}>Teléfono WhatsApp</label>
+                <label className={styles.label}>Teléfono</label>
                 <div style={{ display: 'flex', gap: '0.5rem' }}>
                   <select value={countryCode} onChange={e => setCountryCode(e.target.value)} className={styles.input} style={{ width: '100px' }}>
                     {COUNTRY_CODES.map(c => <option key={c.code} value={c.code}>{c.flag} +{c.code}</option>)}
@@ -406,6 +407,8 @@ export const ClientList = () => {
   const [modalMode, setModalMode] = useState<ModalMode>(null);
   const [selectedClient, setSelectedClient] = useState<Client | null>(null);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [activeChatId, setActiveChatId] = useState<string | null>(null);
+  const [activeChatName, setActiveChatName] = useState<string>('');
 
   useEffect(() => {
     if (profile?.workshop_id) fetchClients();
@@ -541,6 +544,16 @@ export const ClientList = () => {
                       >
                         <Icon name="visibility" />
                       </button>
+                      {client.sync_status === 'connected' && client.connection_id && (
+                        <button 
+                          className={styles.actionBtn} 
+                          onClick={(e) => { e.stopPropagation(); setActiveChatId(client.connection_id!); setActiveChatName(client.full_name); }}
+                          title="Abrir Chat"
+                          style={{ color: 'var(--color-primary)' }}
+                        >
+                          <Icon name="chat" />
+                        </button>
+                      )}
                       <button 
                         className={styles.actionBtn} 
                         onClick={(e) => { e.stopPropagation(); setSelectedClient(client); setModalMode('edit'); }}
@@ -588,6 +601,15 @@ export const ClientList = () => {
             setModalMode(null); 
             fetchClients(); 
           }} 
+        />
+      )}
+
+      {activeChatId && (
+        <ConnectionChatModal
+          connectionId={activeChatId}
+          senderType="workshop"
+          chatTitle={`Chat con ${activeChatName}`}
+          onClose={() => setActiveChatId(null)}
         />
       )}
     </div>

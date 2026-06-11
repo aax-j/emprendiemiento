@@ -17,15 +17,6 @@
         { "url": "https://*.supabase.co/**" }
       ]
     },
-    {
-      "identifier": "shell:allow-spawn",
-      "allow": [
-        {
-          "name": "binaries/whatsapp-bot",
-          "sidecar": true
-        }
-      ]
-    },
     "shell:allow-kill"
   ]
 }

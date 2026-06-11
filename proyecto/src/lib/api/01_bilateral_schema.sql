@@ -186,3 +186,57 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+-- ========================================================
+-- 8. Tabla de Mensajes (Chat B2B/B2C)
+-- ========================================================
+CREATE TABLE IF NOT EXISTS public.connection_messages (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  connection_id UUID NOT NULL REFERENCES public.workshop_clients(id) ON DELETE CASCADE,
+  sender_type VARCHAR(20) NOT NULL CHECK (sender_type IN ('client', 'workshop')),
+  content TEXT NOT NULL,
+  is_read BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc'::text, NOW()) NOT NULL
+);
+
+-- Políticas RLS para mensajes
+ALTER TABLE public.connection_messages ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "Messages are readable by involved parties" ON public.connection_messages;
+CREATE POLICY "Messages are readable by involved parties"
+ON public.connection_messages FOR SELECT USING (
+  EXISTS (
+    SELECT 1 FROM public.workshop_clients wc 
+    WHERE wc.id = connection_messages.connection_id 
+      AND (
+        wc.client_id = auth.uid() -- Es el cliente
+        OR wc.workshop_id IN (SELECT workshop_id FROM public.profiles WHERE id = auth.uid()) -- Es miembro del taller
+      )
+  )
+);
+
+DROP POLICY IF EXISTS "Messages can be inserted by involved parties" ON public.connection_messages;
+CREATE POLICY "Messages can be inserted by involved parties"
+ON public.connection_messages FOR INSERT WITH CHECK (
+  EXISTS (
+    SELECT 1 FROM public.workshop_clients wc 
+    WHERE wc.id = connection_messages.connection_id 
+      AND (
+        wc.client_id = auth.uid() -- Es el cliente
+        OR wc.workshop_id IN (SELECT workshop_id FROM public.profiles WHERE id = auth.uid()) -- Es miembro del taller
+      )
+  )
+);
+
+DROP POLICY IF EXISTS "Messages can be marked as read by receiver" ON public.connection_messages;
+CREATE POLICY "Messages can be marked as read by receiver"
+ON public.connection_messages FOR UPDATE USING (
+  EXISTS (
+    SELECT 1 FROM public.workshop_clients wc 
+    WHERE wc.id = connection_messages.connection_id 
+      AND (
+        (wc.client_id = auth.uid() AND sender_type = 'workshop') -- Cliente lee mensajes del taller
+        OR (wc.workshop_id IN (SELECT workshop_id FROM public.profiles WHERE id = auth.uid()) AND sender_type = 'client') -- Taller lee mensajes del cliente
+      )
+  )
+);
+

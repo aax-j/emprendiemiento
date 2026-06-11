@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { getBotApiUrl } from '../../../lib/api/bot';
 import { supabase } from '../../../lib/supabase';
 import { useSearchParams } from 'react-router-dom';
@@ -14,6 +14,8 @@ import {
 } from '../../../lib/api/vehicles';
 import { Icon } from '../../../components/Icon/Icon';
 import { VehicleDetail } from '../VehicleDetail/VehicleDetail';
+import CameraScanner from '../VehicleRegistration/CameraScanner';
+import { CAR_BRANDS, CAR_BRANDS_AND_MODELS } from '../VehicleRegistration/carData';
 import styles from './VehicleList.module.css';
 
 // ─── Vehicle Modal (Add / Edit) ───────────────────────────────────────────────
@@ -31,8 +33,18 @@ const VehicleModal: React.FC<VehicleModalProps> = ({
   mode, vehicle, workshopId, clients, onClose, onSuccess, workshopName,
 }) => {
   const [plate, setPlate]         = useState(vehicle?.plate ?? '');
-  const [brand, setBrand]         = useState(vehicle?.brand ?? '');
-  const [model, setModel]         = useState(vehicle?.model ?? '');
+  
+  const initialBrand = vehicle?.brand ?? '';
+  const initialBrandIsCustom = initialBrand && !CAR_BRANDS.includes(initialBrand);
+  const [selectedBrand, setSelectedBrand] = useState(initialBrandIsCustom ? 'Otro' : initialBrand);
+  const [customBrand, setCustomBrand]     = useState(initialBrandIsCustom ? initialBrand : '');
+
+  const initialModel = vehicle?.model ?? '';
+  const initialModelList = CAR_BRANDS_AND_MODELS[initialBrandIsCustom ? 'Otro' : initialBrand] || [];
+  const initialModelIsCustom = initialModel && !initialModelList.includes(initialModel);
+  const [selectedModel, setSelectedModel] = useState(initialModelIsCustom ? 'Otro' : initialModel);
+  const [customModel, setCustomModel]     = useState(initialModelIsCustom ? initialModel : '');
+
   const [year, setYear]           = useState(vehicle?.year?.toString() ?? '');
   const [color, setColor]         = useState(vehicle?.color ?? '');
   const [notes, setNotes]         = useState(vehicle?.notes ?? '');
@@ -40,15 +52,20 @@ const VehicleModal: React.FC<VehicleModalProps> = ({
   const [clientId, setClientId]   = useState(vehicle?.client_id ?? '');
   const [loading, setLoading]     = useState(false);
   const [error, setError]         = useState<string | null>(null);
+  const plateInputRef             = useRef<HTMLInputElement>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
     try {
+      const finalBrand = selectedBrand === 'Otro' ? customBrand : selectedBrand;
+      const finalModel = selectedModel === 'Otro' ? customModel : selectedModel;
+
       const payload = {
         plate: plate.toUpperCase().trim(),
-        brand, model,
+        brand: finalBrand,
+        model: finalModel,
         year: year ? parseInt(year) : null,
         color: color || null,
         notes: notes || null,
@@ -68,8 +85,8 @@ const VehicleModal: React.FC<VehicleModalProps> = ({
               phone: client.phone,
               clientName: client.full_name,
               workshopName: workshopName,
-              vehicleBrand: brand,
-              vehicleModel: model,
+              vehicleBrand: finalBrand,
+              vehicleModel: finalModel,
               vehiclePlate: plate.toUpperCase(),
               clientId: clientId,
               workshopId: workshopId,
@@ -80,7 +97,8 @@ const VehicleModal: React.FC<VehicleModalProps> = ({
         }
       } else if (vehicle) {
         await updateVehicle(vehicle.id, { 
-          brand, model, 
+          brand: finalBrand, 
+          model: finalModel, 
           year: year ? parseInt(year) : null, 
           color: color || null, 
           notes: notes || null,
@@ -134,17 +152,26 @@ const VehicleModal: React.FC<VehicleModalProps> = ({
             <div className={styles.plateGroup}>
               <div className={styles.inputGroup}>
                 <label className={styles.label}>Placa / Matrícula *</label>
-                <input
-                  type="text"
-                  className={`${styles.input} ${styles.plateInput}`}
-                  placeholder="ABC-123"
-                  value={plate}
-                  onChange={e => setPlate(e.target.value.toUpperCase())}
-                  required
-                  disabled={mode === 'edit'}
-                  maxLength={10}
-                  autoFocus
-                />
+                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                  <input
+                    ref={plateInputRef}
+                    type="text"
+                    className={`${styles.input} ${styles.plateInput}`}
+                    placeholder="ABC-123"
+                    value={plate}
+                    onChange={e => setPlate(e.target.value.toUpperCase())}
+                    required
+                    disabled={mode === 'edit'}
+                    maxLength={10}
+                    autoFocus
+                  />
+                  {mode === 'add' && (
+                    <CameraScanner
+                      onScanSuccess={(scanned) => setPlate(scanned)}
+                      inputRef={plateInputRef}
+                    />
+                  )}
+                </div>
               </div>
               <div className={styles.inputGroup}>
                 <label className={styles.label}>Año</label>
@@ -161,39 +188,92 @@ const VehicleModal: React.FC<VehicleModalProps> = ({
             </div>
 
             <div className={styles.formRow}>
-              <div className={styles.inputGroup}>
+              <div className={styles.inputGroup} style={{ flex: 1 }}>
                 <label className={styles.label}>Marca *</label>
-                <input
-                  type="text"
+                <select
                   className={styles.input}
-                  placeholder="Toyota, Ford, Chevrolet..."
-                  value={brand}
-                  onChange={e => setBrand(e.target.value)}
+                  value={selectedBrand}
+                  onChange={(e) => {
+                    setSelectedBrand(e.target.value);
+                    if (e.target.value !== 'Otro') setCustomBrand('');
+                    setSelectedModel(''); // Resetear modelo al cambiar marca
+                    setCustomModel('');
+                  }}
                   required
-                />
+                >
+                  <option value="">Selecciona la marca...</option>
+                  {CAR_BRANDS.map(b => (
+                    <option key={b} value={b}>{b}</option>
+                  ))}
+                  <option value="Otro">Otra marca...</option>
+                </select>
+                {selectedBrand === 'Otro' && (
+                  <input 
+                    type="text" 
+                    className={styles.input} 
+                    placeholder="Escribe la marca..." 
+                    value={customBrand}
+                    onChange={e => setCustomBrand(e.target.value)} 
+                    style={{ marginTop: '0.5rem' }}
+                    required
+                  />
+                )}
               </div>
-              <div className={styles.inputGroup}>
+              <div className={styles.inputGroup} style={{ flex: 1 }}>
                 <label className={styles.label}>Modelo *</label>
-                <input
-                  type="text"
+                <select
                   className={styles.input}
-                  placeholder="Corolla, F-150, Spark..."
-                  value={model}
-                  onChange={e => setModel(e.target.value)}
+                  value={selectedModel}
+                  onChange={(e) => {
+                    setSelectedModel(e.target.value);
+                    if (e.target.value !== 'Otro') setCustomModel('');
+                  }}
+                  disabled={!selectedBrand}
                   required
-                />
+                >
+                  <option value="">Selecciona el modelo...</option>
+                  {(CAR_BRANDS_AND_MODELS[selectedBrand === 'Otro' ? 'Otro' : selectedBrand] || []).map(m => (
+                    <option key={m} value={m}>{m}</option>
+                  ))}
+                  <option value="Otro">Otro modelo...</option>
+                </select>
+                {selectedModel === 'Otro' && (
+                  <input 
+                    type="text" 
+                    className={styles.input} 
+                    placeholder="Escribe el modelo..." 
+                    value={customModel}
+                    onChange={e => setCustomModel(e.target.value)} 
+                    style={{ marginTop: '0.5rem' }}
+                    required
+                  />
+                )}
               </div>
             </div>
 
-            <div className={styles.inputGroup}>
-              <label className={styles.label}>Color</label>
-              <input
-                type="text"
-                className={styles.input}
-                placeholder="Rojo, Blanco, Negro..."
-                value={color}
-                onChange={e => setColor(e.target.value)}
-              />
+            <div className={styles.formRow}>
+              <div className={styles.inputGroup}>
+                <label className={styles.label}>Año</label>
+                <input
+                  type="number"
+                  className={styles.input}
+                  placeholder="2022"
+                  value={year}
+                  onChange={e => setYear(e.target.value)}
+                  min="1900"
+                  max={new Date().getFullYear() + 1}
+                />
+              </div>
+              <div className={styles.inputGroup}>
+                <label className={styles.label}>Color</label>
+                <input
+                  type="text"
+                  className={styles.input}
+                  placeholder="Rojo, Blanco, Negro..."
+                  value={color}
+                  onChange={e => setColor(e.target.value)}
+                />
+              </div>
             </div>
 
             <div className={styles.inputGroup}>
@@ -222,7 +302,7 @@ const VehicleModal: React.FC<VehicleModalProps> = ({
             <button type="button" className={styles.cancelBtn} onClick={onClose} disabled={loading}>
               Cancelar
             </button>
-            <button type="submit" className={styles.primaryBtn} disabled={loading || !brand || !model || (mode === 'add' && (!plate || !clientId))}>
+            <button type="submit" className={styles.primaryBtn} disabled={loading || (selectedBrand === 'Otro' && !customBrand) || (selectedModel === 'Otro' && !customModel) || !selectedBrand || !selectedModel || (mode === 'add' && (!plate || !clientId))}>
               <Icon name={mode === 'add' ? 'directions_car' : 'save'} style={{ fontSize: '1.125rem' }} />
               {loading ? 'Guardando...' : mode === 'add' ? 'Registrar Vehículo' : 'Guardar Cambios'}
             </button>

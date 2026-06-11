@@ -121,9 +121,6 @@ export const Register = () => {
         <div className={styles.inputGroup}>
           <label htmlFor="phone" className={styles.label}>
             Número Celular
-            <span style={{ color: 'var(--color-outline)', fontWeight: 400, marginLeft: '0.35rem', fontSize: '0.8rem' }}>
-              (para WhatsApp)
-            </span>
           </label>
           <input
             id="phone"

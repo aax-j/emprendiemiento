@@ -1,7 +1,3 @@
 {
-  "bundle": {
-    "externalBin": [
-      "binaries/whatsapp-bot"
-    ]
-  }
+  "bundle": {}
 }

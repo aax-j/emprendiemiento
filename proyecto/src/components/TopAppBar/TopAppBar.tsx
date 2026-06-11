@@ -7,7 +7,6 @@ import styles from './TopAppBar.module.css';
 
 interface TopAppBarProps {
   onMenuClick?: () => void;
-  botStatus?: 'connected' | 'disconnected' | 'loading';
 }
 
 interface Notification {
@@ -17,14 +16,14 @@ interface Notification {
   client_name?: string;
 }
 
-export const TopAppBar: React.FC<TopAppBarProps> = ({ onMenuClick, botStatus }) => {
+export const TopAppBar: React.FC<TopAppBarProps> = ({ onMenuClick }) => {
   const { profile } = useAuth();
   const navigate = useNavigate();
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const waDisconnected = botStatus === 'disconnected';
+
 
   const getInitials = (name: string) => {
     if (!name) return 'U';
@@ -116,40 +115,14 @@ export const TopAppBar: React.FC<TopAppBarProps> = ({ onMenuClick, botStatus }) 
             onClick={() => setShowDropdown(!showDropdown)}
           >
             <Icon name="notifications" />
-            {(notifications.length > 0 || waDisconnected) && (
-              <span className={styles.badge}>{notifications.length + (waDisconnected ? 1 : 0)}</span>
-            )}
+            {(notifications.length > 0) && (<span className={styles.badge}>{notifications.length}</span>)}
           </button>
 
           {showDropdown && (
             <div className={styles.dropdownMenu}>
               <h4 className={styles.dropdownHeader}>Notificaciones</h4>
 
-              {/* WhatsApp disconnected notification */}
-              {waDisconnected && (
-                <div
-                  className={styles.dropdownItem}
-                  style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '0.5rem', cursor: 'default', borderLeft: '3px solid #f59e0b' }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <Icon name="wifi_off" style={{ color: '#f59e0b', fontSize: '1rem' }} />
-                    <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-on-surface)' }}>
-                      WhatsApp desconectado
-                    </span>
-                  </div>
-                  <p style={{ margin: 0, fontSize: '0.78rem', color: 'var(--color-on-surface-variant)', lineHeight: 1.4 }}>
-                    El bot no está respondiendo a clientes.
-                  </p>
-                  <button
-                    onClick={() => { setShowDropdown(false); navigate('/settings'); }}
-                    style={{ fontSize: '0.78rem', fontWeight: 600, color: '#f59e0b', background: 'transparent', border: '1px solid rgba(245,158,11,0.4)', padding: '0.25rem 0.6rem', borderRadius: '0.4rem', cursor: 'pointer' }}
-                  >
-                    Ir a Configuración
-                  </button>
-                </div>
-              )}
-
-              {notifications.length === 0 && !waDisconnected ? (
+              {notifications.length === 0 ? (
                 <p className={styles.dropdownEmpty}>No hay mensajes nuevos.</p>
               ) : (
                 <ul className={styles.dropdownList}>

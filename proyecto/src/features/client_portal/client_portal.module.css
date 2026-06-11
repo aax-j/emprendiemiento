@@ -1021,6 +1021,31 @@
   color: var(--color-on-surface-variant);
 }
 
+.input {
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--color-ghost-border);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  background-color: var(--color-surface-container-lowest);
+  color: var(--color-on-surface);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-fixed);
+}
+
+.input:disabled {
+  opacity: 0.6;
+  background-color: var(--color-surface-container-low);
+  cursor: not-allowed;
+}
+
 .textarea {
   background: var(--color-surface-container-low);
   border: 1px solid var(--color-ghost-border);
@@ -1048,3 +1073,63 @@
   .vehicleSelectCard { min-width: 160px; }
   .detailHero { flex-direction: column; }
 }
+
+/* ── Assistant Dashboard Banner ────────────────────────────────────────── */
+.assistantBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: var(--color-surface-container-low);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-ambient);
+  flex-wrap: wrap;
+  animation: slideInUp 0.4s ease-out both;
+}
+
+.assistantBannerContent {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex: 1;
+  min-width: 280px;
+}
+
+.assistantBannerIconBox {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-on-primary);
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.assistantBannerText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.assistantBannerTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.assistantBannerDesc {
+  font-size: 0.85rem;
+  color: var(--color-on-surface-variant);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.assistantBannerAction {
+  flex-shrink: 0;
+}
+

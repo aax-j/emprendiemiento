@@ -83,7 +83,6 @@ export const upsertWorkshopPublicProfile = async (
   return data as WorkshopPublicProfile;
 };
 
-// 3. Obtener talleres cercanos ordenados por proximidad (PostGIS RPC) (B2C)
 export const getNearbyWorkshops = async (
   lat: number,
   lng: number,
@@ -97,8 +96,48 @@ export const getNearbyWorkshops = async (
     radius_meters: radiusInMeters
   });
 
-  if (error) throw error;
-  return data || [];
+  if (!error && data) {
+    return data;
+  }
+
+  // Fallback si la función RPC no existe o falla
+  console.warn("RPC get_nearby_workshops falló o no existe. Calculando distancia localmente...", error);
+  const { data: allWorkshops, error: fetchErr } = await supabase
+    .from('workshop_public_profiles')
+    .select('*, workshop:workshop_id(name)');
+    
+  if (fetchErr) throw fetchErr;
+  
+  const getDistance = (lat1: number, lon1: number, lat2: number, lon2: number) => {
+    const R = 6371e3; // metros
+    const p1 = lat1 * Math.PI/180;
+    const p2 = lat2 * Math.PI/180;
+    const dp = (lat2-lat1) * Math.PI/180;
+    const dl = (lon2-lon1) * Math.PI/180;
+    const a = Math.sin(dp/2) * Math.sin(dp/2) +
+              Math.cos(p1) * Math.cos(p2) *
+              Math.sin(dl/2) * Math.sin(dl/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return R * c;
+  };
+
+  const results = [];
+  for (const w of (allWorkshops || [])) {
+    if (w.location && w.location.coordinates) {
+      const wLng = w.location.coordinates[0];
+      const wLat = w.location.coordinates[1];
+      const distance = getDistance(lat, lng, wLat, wLng);
+      if (distance <= radiusInMeters) {
+        results.push({
+          ...w,
+          name: w.workshop?.name,
+          distance_meters: distance
+        });
+      }
+    }
+  }
+  
+  return results.sort((a, b) => a.distance_meters - b.distance_meters);
 };
 
 // 3.5 Obtener talleres globalmente por nombre (sin límite de radio)

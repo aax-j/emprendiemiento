@@ -3,11 +3,14 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { Icon } from '../../components/Icon/Icon';
 import logoBlue from '../../assets/logo-blue.jpg';
+import { ClientAssistantWidget } from '../../features/client_portal/ClientAssistantWidget';
+import { ClientProfileModal } from '../../features/client_portal/ClientProfileModal';
 import styles from './ClientLayout.module.css';
 
 export const ClientLayout = () => {
   const { profile, signOut } = useAuth();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [showProfileModal, setShowProfileModal] = useState(false);
 
   return (
     <div className={styles.layout}>
@@ -62,10 +65,11 @@ export const ClientLayout = () => {
             <Icon name="handshake" className={styles.icon} />
             Mis Conexiones
           </NavLink>
+
         </nav>
 
         <div className={styles.bottomSection}>
-          <div className={styles.profileRow}>
+          <div className={styles.profileRow} onClick={() => setShowProfileModal(true)} style={{ cursor: 'pointer', padding: '0.5rem', borderRadius: '0.5rem', transition: 'background 0.2s' }} onMouseOver={e => e.currentTarget.style.background = 'var(--color-surface-container-highest)'} onMouseOut={e => e.currentTarget.style.background = 'transparent'}>
             <div className={styles.avatarCircle}>
               {profile?.full_name?.charAt(0).toUpperCase() ?? 'U'}
             </div>
@@ -101,6 +105,13 @@ export const ClientLayout = () => {
         <main className={styles.scrollArea}>
           <Outlet />
         </main>
+        
+        
+        {/* Floating AI Assistant Widget */}
+        <ClientAssistantWidget />
+
+        {/* Profile Edit Modal */}
+        <ClientProfileModal isOpen={showProfileModal} onClose={() => setShowProfileModal(false)} />
       </div>
     </div>
   );

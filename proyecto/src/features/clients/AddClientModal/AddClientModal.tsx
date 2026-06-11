@@ -68,24 +68,7 @@ export const AddClientModal: React.FC<AddClientModalProps> = ({ isOpen, onClose,
         notes: null,
       }, profile.workshop_id);
       
-      // Enviar bienvenida vía Bot
-      if (fullPhone && newClient?.id) {
-        try {
-          await fetch(`${getBotApiUrl()}/api/send-welcome`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              phone: fullPhone,
-              clientName: fullName,
-              workshopName: workshopName,
-              clientId: newClient.id,
-              workshopId: profile.workshop_id
-            })
-          });
-        } catch (botErr) {
-          console.error('Bot offline:', botErr);
-        }
-      }
+
 
       onSuccess();
       onClose();
@@ -126,7 +109,7 @@ export const AddClientModal: React.FC<AddClientModalProps> = ({ isOpen, onClose,
             </div>
 
             <div className={styles.inputGroup}>
-              <label className={styles.label}>Teléfono WhatsApp</label>
+              <label className={styles.label}>Teléfono</label>
               <div style={{ display: 'flex', gap: '0.5rem' }}>
                 <select 
                   value={countryCode} 

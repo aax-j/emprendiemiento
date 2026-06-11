@@ -458,7 +458,7 @@ export const Customization = () => {
           <div className={styles.section}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
               <div style={{ padding: '0.5rem', background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', borderRadius: '0.5rem' }}><Icon name="schedule" /></div>
-              <h2 className={styles.sectionTitle} style={{ margin: 0 }}>Horario (Escaparate & WhatsApp)</h2>
+              <h2 className={styles.sectionTitle} style={{ margin: 0 }}>Horario (Escaparate)</h2>
             </div>
             
             <div className={styles.form}>
@@ -499,81 +499,7 @@ export const Customization = () => {
             </div>
           </div>
 
-          {/* Chatbot section */}
-          <div className={styles.section}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
-              <div style={{ padding: '0.5rem', background: 'rgba(37, 211, 102, 0.1)', color: '#25d366', borderRadius: '0.5rem' }}><Icon name="smart_toy" /></div>
-              <h2 className={styles.sectionTitle} style={{ margin: 0 }}>Respuestas Automáticas (WhatsApp)</h2>
-            </div>
 
-            <div className={styles.form}>
-              <div className={styles.responsesList}>
-                  {responses.map((res, idx) => (
-                    <div key={idx} style={{ border: '1px solid var(--color-outline-variant)', borderRadius: '0.75rem', marginBottom: '1.5rem', overflow: 'hidden', background: 'var(--color-surface)' }}>
-                      <div style={{ background: 'var(--color-surface-variant)', padding: '0.75rem 1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flex: 1 }}>
-                          <Icon name="chat_bubble" style={{ fontSize: '1.2rem', color: 'var(--color-primary)' }} />
-                          <span style={{ fontWeight: 'bold', fontSize: '1rem', color: 'var(--color-on-surface)' }}>{res.question}</span>
-                        </div>
-                      </div>
-                      <div style={{ padding: '1.25rem' }}>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                          {res.steps.map((s, sIdx) => (
-                            <div key={sIdx} style={{
-                              display: 'grid',
-                              gridTemplateColumns: '1fr auto',
-                              gridTemplateRows: 'auto auto',
-                              gap: '0.75rem',
-                              padding: '1rem',
-                              background: 'var(--color-surface-container-low)',
-                              borderRadius: '0.5rem',
-                              borderLeft: '4px solid var(--color-primary)',
-                              minWidth: 0,
-                              overflow: 'hidden',
-                            }}>
-                              <div className={styles.inputGroup} style={{ marginBottom: 0, gridColumn: '1 / -1' }}>
-                                <label className={styles.label} style={{ fontSize: '0.75rem' }}>Mensaje {sIdx + 1}</label>
-                                {(s.action === 'NONE' && ['default-status', 'default-location', 'default-oil', 'default-history'].includes(res.id)) ? (
-                                   <div style={{ background: 'var(--color-surface-container-high)', padding: '0.75rem', borderRadius: '0.5rem', border: '1px dashed var(--color-outline)', color: 'var(--color-on-surface-variant)', fontSize: '0.85rem', fontStyle: 'italic', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                                     <Icon name="auto_awesome" style={{ fontSize: '1.1rem', flexShrink: 0 }} />
-                                     <span>Este mensaje es dinámico y lo genera el sistema.</span>
-                                   </div>
-                                ) : (
-                                   <textarea className={styles.input} value={s.response} onChange={(e) => {
-                                      const newResponses = [...responses];
-                                      newResponses[idx].steps[sIdx].response = e.target.value;
-                                      setResponses(newResponses);
-                                   }} rows={2} style={{ fontSize: '0.9rem', width: '100%', boxSizing: 'border-box' }} />
-                                )}
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-              </div>
-
-              <div className={styles.saveRow} style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--color-outline-variant)' }}>
-                {isDirty && !success && (
-                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#f59e0b', fontWeight: '500' }}>
-                     <Icon name="warning" />
-                     <span>Cambios pendientes de guardar</span>
-                   </div>
-                )}
-                {success && (
-                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#22c55e', fontWeight: '500' }}>
-                     <Icon name="check_circle" />
-                     <span>¡Configuración guardada!</span>
-                   </div>
-                )}
-                <button className={styles.saveBtn} onClick={handleSave} disabled={saving} style={{ padding: '0.75rem 2rem', fontSize: '1rem', marginLeft: 'auto' }}>
-                  <Icon name={saving ? 'sync' : 'save'} className={saving ? 'spin' : ''} />
-                  {saving ? 'Guardando...' : 'Guardar Cambios'}
-                </button>
-              </div>
-            </div>
-          </div>
 
           {confirmDialog?.show && (
             <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.8)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 2000 }}>

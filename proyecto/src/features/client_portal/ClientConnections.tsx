@@ -7,6 +7,7 @@ import {
   declineConnectionInvite,
 } from '../../lib/api/clients';
 import { Icon } from '../../components/Icon/Icon';
+import { ConnectionChatModal } from '../../components/ConnectionChatModal/ConnectionChatModal';
 import styles from './client_portal.module.css';
 
 type Tab = 'invites' | 'connected';
@@ -18,6 +19,8 @@ export const ClientConnections = () => {
   const [connected, setConnected] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [actionId, setActionId] = useState<string | null>(null);
+  const [activeChatId, setActiveChatId] = useState<string | null>(null);
+  const [activeChatName, setActiveChatName] = useState<string>('');
 
   const load = async () => {
     if (!profile?.id) return;
@@ -156,18 +159,37 @@ export const ClientConnections = () => {
                     <Icon name="check_circle" /> Smart Sync Activo
                   </div>
                 </div>
-                <button
-                  className={styles.declineBtn}
-                  onClick={() => handleDecline(conn.id)}
-                  disabled={actionId === conn.id}
-                  title="Desconectar"
-                >
-                  <Icon name="link_off" />
-                </button>
+                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                  <button
+                    className={styles.acceptBtn}
+                    onClick={() => { setActiveChatId(conn.id); setActiveChatName(conn.workshop?.name ?? 'Taller'); }}
+                    title="Contactar al Taller"
+                    style={{ background: 'var(--color-primary)', color: 'white' }}
+                  >
+                    <Icon name="chat" /> Contactar
+                  </button>
+                  <button
+                    className={styles.declineBtn}
+                    onClick={() => handleDecline(conn.id)}
+                    disabled={actionId === conn.id}
+                    title="Desconectar"
+                  >
+                    <Icon name="link_off" />
+                  </button>
+                </div>
               </div>
             ))}
           </div>
         )
+      )}
+
+      {activeChatId && (
+        <ConnectionChatModal
+          connectionId={activeChatId}
+          senderType="client"
+          chatTitle={`Chat con ${activeChatName}`}
+          onClose={() => setActiveChatId(null)}
+        />
       )}
     </div>
   );
