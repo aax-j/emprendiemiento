@@ -46,9 +46,12 @@ export const Register = () => {
 
   // Redirect automatically when session and profile are fully loaded (Auto-login after signup)
   if (session && !authLoading) {
-    if (profile?.role_type === 'client') {
+    const role = profile?.role_type || session.user?.user_metadata?.role_type;
+
+    if (role === 'client') {
       return <Navigate to="/client" replace />;
     }
+    
     if (profile && profile.workshop_id) {
       return <Navigate to="/" replace />;
     } else {

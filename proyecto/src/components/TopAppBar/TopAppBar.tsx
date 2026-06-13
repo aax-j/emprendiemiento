@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
-import { useNavigate } from 'react-router-dom';
+
 import { supabase } from '../../lib/supabase';
 import { Icon } from '../Icon/Icon';
 import styles from './TopAppBar.module.css';
@@ -18,7 +18,7 @@ interface Notification {
 
 export const TopAppBar: React.FC<TopAppBarProps> = ({ onMenuClick }) => {
   const { profile } = useAuth();
-  const navigate = useNavigate();
+
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);

@@ -179,19 +179,6 @@
   background-color: rgba(0, 0, 0, 0.02);
 }
 
-.whatsappLink {
-  text-decoration: none;
-  color: #25D366; /* WhatsApp Brand Color */
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.9rem;
-}
-
-.whatsappLink:hover {
-  text-decoration: underline;
-}
 
 .resolveBtn {
   background: linear-gradient(135deg, #34d399 0%, #10b981 100%);

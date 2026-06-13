@@ -106,8 +106,8 @@ export const Customization = () => {
   const [confirmDialog, setConfirmDialog] = useState<{ show: boolean; title: string; message: string; onConfirm: () => void; onCancel?: () => void; onStay?: () => void; isAlert?: boolean } | null>(null);
 
   const [loading, setLoading] = useState(true);
-  const [saving, setSaving] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [, setSaving] = useState(false);
+  const [, setSuccess] = useState(false);
   const [originalConfig, setOriginalConfig] = useState<any>(null);
   const [originalStorefront, setOriginalStorefront] = useState<any>(null);
 

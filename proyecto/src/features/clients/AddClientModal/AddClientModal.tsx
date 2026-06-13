@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getBotApiUrl } from '../../../lib/api/bot';
+
 import { useAuth } from '../../../contexts/AuthContext';
 import { createClient } from '../../../lib/api/clients';
 import { supabase } from '../../../lib/supabase';
@@ -32,7 +32,7 @@ export const AddClientModal: React.FC<AddClientModalProps> = ({ isOpen, onClose,
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const [workshopName, setWorkshopName] = useState<string>('nuestro taller');
+
 
   useEffect(() => {
     if (isOpen && profile?.workshop_id) {
@@ -41,8 +41,8 @@ export const AddClientModal: React.FC<AddClientModalProps> = ({ isOpen, onClose,
         .select('name')
         .eq('id', profile.workshop_id)
         .single()
-        .then(({ data }) => {
-          if (data?.name) setWorkshopName(data.name);
+        .then(() => {
+          // data check removed since workshopName is unused
         });
     }
   }, [isOpen, profile?.workshop_id]);
@@ -61,7 +61,7 @@ export const AddClientModal: React.FC<AddClientModalProps> = ({ isOpen, onClose,
       const cleanPhone = phone.replace(/^0+/, '').replace(/\D/g, '');
       const fullPhone = countryCode + cleanPhone;
 
-      const newClient = await createClient({
+      await createClient({
         full_name: fullName,
         phone: fullPhone || null,
         email: email || null,
