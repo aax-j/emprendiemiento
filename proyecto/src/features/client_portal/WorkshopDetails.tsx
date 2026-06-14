@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
+import { supabase } from '../../lib/supabase';
 import { getWorkshopPublicProfile, getWorkshopReviews, submitReview } from '../../lib/api/workshop_profiles';
 import {
   sendConnectionInvite,
   getClientConnectedWorkshops,
-  getClientPendingInvites,
 } from '../../lib/api/clients';
 import { Icon } from '../../components/Icon/Icon';
 import styles from './client_portal.module.css';
@@ -30,17 +30,32 @@ export const WorkshopDetails = () => {
     if (!workshopId || !profile?.id) return;
     const load = async () => {
       try {
-        const [wp, rev, connected, pending] = await Promise.all([
+        const [wp, rev, connected] = await Promise.all([
           getWorkshopPublicProfile(workshopId),
           getWorkshopReviews(workshopId),
           getClientConnectedWorkshops(profile.id),
-          getClientPendingInvites(profile.id),
         ]);
         setWorkshop(wp);
         setReviews(rev);
+
         const isConnected = connected.some((c: any) => c.workshop_id === workshopId);
-        const isPending = pending.some((p: any) => p.workshop_id === workshopId);
-        setConnectionStatus(isConnected ? 'connected' : isPending ? 'pending' : 'none');
+        if (isConnected) {
+          setConnectionStatus('connected');
+        } else {
+          // Check for any pending invite in either direction
+          const { data: pendingRows } = await supabase
+            .from('workshop_clients')
+            .select('id, status')
+            .eq('workshop_id', workshopId)
+            .eq('client_id', profile.id)
+            .in('status', ['pending_client_approval', 'pending_workshop_approval']);
+
+          if (pendingRows && pendingRows.length > 0) {
+            setConnectionStatus('pending');
+          } else {
+            setConnectionStatus('none');
+          }
+        }
       } catch (e) {
         console.error(e);
       } finally {

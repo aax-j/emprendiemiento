@@ -18,10 +18,12 @@ export const OnboardingGuard: React.FC = () => {
     return <Navigate to="/login" replace />;
   }
 
+  const isClientPortalPath = location.pathname === '/client' || location.pathname.startsWith('/client/');
+
   // Clientes B2C globales (sin owner_workshop_id): van al portal de cliente
   if (profile?.role_type === 'client') {
     // Si intentan entrar a rutas B2B (/), redirigir a /client
-    if (!location.pathname.startsWith('/client')) {
+    if (!isClientPortalPath) {
       return <Navigate to="/client" replace />;
     }
     return <Outlet />;
@@ -33,7 +35,7 @@ export const OnboardingGuard: React.FC = () => {
   }
 
   // Si un mecánico intenta entrar a /client, lo devolvemos a /
-  if (location.pathname.startsWith('/client')) {
+  if (isClientPortalPath) {
     return <Navigate to="/" replace />;
   }
 

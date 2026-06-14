@@ -167,7 +167,6 @@ export const searchWorkshopsByName = async (query: string): Promise<Array<any>> 
   return filtered.map(w => ({
     ...w,
     name: w.workshop?.name,
-    distance_meters: undefined // no hay distancia calculada globalmente
   }));
 };
 

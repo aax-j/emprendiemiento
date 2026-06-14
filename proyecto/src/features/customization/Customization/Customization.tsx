@@ -106,8 +106,8 @@ export const Customization = () => {
   const [confirmDialog, setConfirmDialog] = useState<{ show: boolean; title: string; message: string; onConfirm: () => void; onCancel?: () => void; onStay?: () => void; isAlert?: boolean } | null>(null);
 
   const [loading, setLoading] = useState(true);
-  const [, setSaving] = useState(false);
-  const [, setSuccess] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [originalConfig, setOriginalConfig] = useState<any>(null);
   const [originalStorefront, setOriginalStorefront] = useState<any>(null);
 
@@ -180,6 +180,7 @@ export const Customization = () => {
     responses,
     default_response: defaultResponse,
     business_hours: businessHours,
+    location: address,
   }) !== JSON.stringify(originalConfig) || 
   JSON.stringify({
     logoUrl, description, address, mapLocation, services, promotions
@@ -203,6 +204,8 @@ export const Customization = () => {
           loadedConfig = JSON.parse(content);
         } catch (e) {}
 
+        const publicProfile = await getWorkshopPublicProfile(profile.workshop_id);
+
         const parsedConfig = {
           oil_change_reminders: loadedConfig?.oil_change_reminders ?? false,
           oil_change_frequency: loadedConfig?.oil_change_frequency ?? 6,
@@ -210,6 +213,7 @@ export const Customization = () => {
           responses: loadedConfig?.responses || DEFAULT_RESPONSES,
           default_response: loadedConfig?.default_response || 'Lo siento, no entiendo tu pregunta.',
           business_hours: loadedConfig?.business_hours || businessHours,
+          location: loadedConfig?.location || publicProfile?.address || '',
         };
 
         setOilReminders(parsedConfig.oil_change_reminders);
@@ -219,8 +223,6 @@ export const Customization = () => {
         setDefaultResponse(parsedConfig.default_response);
         setBusinessHours(parsedConfig.business_hours);
         setOriginalConfig(parsedConfig);
-
-        const publicProfile = await getWorkshopPublicProfile(profile.workshop_id);
         
         const parsedStorefront = {
           logoUrl: publicProfile?.logo_url || '',
@@ -248,8 +250,8 @@ export const Customization = () => {
     fetchData();
   }, [profile?.workshop_id]);
 
-  const handleSave = async () => {
-    if (!profile?.workshop_id) return;
+  const handleSave = async (): Promise<boolean> => {
+    if (!profile?.workshop_id) return false;
     setSaving(true);
     
     const config = {
@@ -274,9 +276,10 @@ export const Customization = () => {
       }).catch(e => console.error("Bot API error:", e));
 
       try {
-        await mkdir('', { baseDir: BaseDirectory.AppData, recursive: true });
         await writeTextFile('chatbot-config.json', JSON.stringify(config, null, 2), { baseDir: BaseDirectory.AppData });
-      } catch (e) {}
+      } catch (e) {
+        console.error("Local file save error:", e);
+      }
       
       let locationPayload = null;
       if (mapLocation) {
@@ -297,9 +300,11 @@ export const Customization = () => {
       
       setSuccess(true);
       setTimeout(() => setSuccess(false), 3000);
+      return true;
     } catch (err) {
-      console.error(err);
+      console.error("Save error:", err);
       setConfirmDialog({ show: true, title: 'Error', message: 'Error al guardar.', onConfirm: () => setConfirmDialog(null), isAlert: true });
+      return false;
     } finally {
       setSaving(false);
     }
@@ -317,9 +322,11 @@ export const Customization = () => {
         title: 'Cambios sin guardar',
         message: 'Tienes cambios pendientes. ¿Qué deseas hacer?',
         onConfirm: async () => {
-          await handleSave();
-          blocker.proceed();
-          setConfirmDialog(null);
+          const success = await handleSave();
+          if (success) {
+            blocker.proceed();
+            setConfirmDialog(null);
+          }
         },
         onCancel: () => {
           blocker.proceed();
@@ -332,6 +339,27 @@ export const Customization = () => {
       });
     }
   }, [blocker.state]);
+
+  const handleGetLocation = () => {
+    if (!navigator.geolocation) {
+      alert('La geolocalización no está soportada por tu navegador.');
+      return;
+    }
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+        setMapLocation({ lat: latitude, lng: longitude });
+        if (leafletMapRef.current) {
+          leafletMapRef.current.setView([latitude, longitude], 16);
+        }
+      },
+      (error) => {
+        console.error("Error obteniendo ubicación:", error);
+        alert('No se pudo obtener tu ubicación. Por favor, asegúrate de dar permisos de ubicación.');
+      },
+      { enableHighAccuracy: true }
+    );
+  };
 
   const addService = () => setServices([...services, { name: '', price: 0, description: '' }]);
   const updateService = (idx: number, field: string, val: any) => {
@@ -357,9 +385,40 @@ export const Customization = () => {
         </div>
       ) : (
         <>
-          <div className={styles.header}>
-            <h1 className={styles.title}>Personalización</h1>
-            <p className={styles.subtitle}>Configura tu escaparate comercial y respuestas automáticas</p>
+          <div className={styles.header} style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+            <div>
+              <h1 className={styles.title}>Personalización</h1>
+              <p className={styles.subtitle}>Configura tu escaparate comercial y respuestas automáticas</p>
+            </div>
+            
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              {success && (
+                <div className={styles.successBox}>
+                  <Icon name="check_circle" /> Guardado
+                </div>
+              )}
+              <button 
+                onClick={handleSave}
+                disabled={!isDirty || saving}
+                style={{ 
+                  background: isDirty ? 'var(--color-primary)' : 'var(--color-surface-container-high)', 
+                  color: isDirty ? 'white' : 'var(--color-on-surface-variant)', 
+                  border: 'none', 
+                  padding: '0.75rem 1.5rem', 
+                  borderRadius: '0.5rem', 
+                  fontWeight: 'bold', 
+                  cursor: (isDirty && !saving) ? 'pointer' : 'not-allowed',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  boxShadow: isDirty ? '0 4px 6px rgba(0,0,0,0.1)' : 'none',
+                  transition: 'all 0.2s ease'
+                }}
+              >
+                <Icon name={saving ? "sync" : "save"} className={saving ? "spin" : ""} /> 
+                {saving ? 'Guardando...' : 'Guardar Cambios'}
+              </button>
+            </div>
           </div>
 
           {/* Theme */}
@@ -410,7 +469,31 @@ export const Customization = () => {
 
               <div className={styles.inputGroup}>
                 <label className={styles.label}>Ubicación en el Mapa (Haz clic para marcar)</label>
-                <div ref={mapRef} style={{ width: '100%', height: '300px', borderRadius: '8px', border: '1px solid var(--color-outline-variant)' }} />
+                <div style={{ position: 'relative', width: '100%' }}>
+                  <div ref={mapRef} style={{ width: '100%', height: '300px', borderRadius: '8px', border: '1px solid var(--color-outline-variant)' }} />
+                  <button 
+                    onClick={(e) => { e.preventDefault(); handleGetLocation(); }} 
+                    style={{
+                      position: 'absolute',
+                      bottom: '10px',
+                      right: '10px',
+                      zIndex: 1000,
+                      background: 'white',
+                      border: '2px solid rgba(0,0,0,0.2)',
+                      borderRadius: '4px',
+                      padding: '8px',
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
+                      color: '#333'
+                    }}
+                    title="Usar mi ubicación actual"
+                  >
+                    <Icon name="my_location" />
+                  </button>
+                </div>
                 {mapLocation && (
                   <p style={{ fontSize: '0.75rem', color: 'var(--color-primary)', marginTop: '0.5rem' }}>
                     Marcador fijado en: {mapLocation.lat.toFixed(5)}, {mapLocation.lng.toFixed(5)}

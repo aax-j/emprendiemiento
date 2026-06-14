@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getNearbyWorkshops, searchWorkshopsByName } from '../../lib/api/workshop_profiles';
 import { Icon } from '../../components/Icon/Icon';
@@ -23,10 +23,8 @@ export const WorkshopDirectory = () => {
   const [loading, setLoading] = useState(false);
   const [locationError, setLocationError] = useState<string | null>(null);
   const [userCoords, setUserCoords] = useState<{ lat: number; lng: number } | null>(null);
-  const [radius, setRadius] = useState(20); // km
+  const FIXED_RADIUS = 100; // km
   const [search, setSearch] = useState('');
-  const mapRef = useRef<HTMLDivElement>(null);
-  const leafletMapRef = useRef<any>(null);
 
   const getDistance = (lat1: number, lon1: number, lat2: number, lon2: number) => {
     const R = 6371e3; // metros
@@ -41,6 +39,39 @@ export const WorkshopDirectory = () => {
     return R * c;
   };
 
+  const applyDistances = (data: any[], lat?: number, lng?: number) => {
+    const originLat = lat ?? userCoords?.lat;
+    const originLng = lng ?? userCoords?.lng;
+    if (originLat === undefined || originLng === undefined) return data;
+
+    return data.map(w => {
+      if (w.location) {
+        let wLng, wLat;
+        if (w.location.coordinates) {
+          wLng = w.location.coordinates[0];
+          wLat = w.location.coordinates[1];
+        } else if (typeof w.location === 'string' && w.location.startsWith('POINT(')) {
+          const match = w.location.match(/POINT\(([^ ]+)\s+([^)]+)\)/);
+          if (match) {
+            wLng = parseFloat(match[1]);
+            wLat = parseFloat(match[2]);
+          }
+        } else if (w.location.lat !== undefined && w.location.lng !== undefined) {
+          wLat = w.location.lat;
+          wLng = w.location.lng;
+        }
+        if (wLng !== undefined && wLat !== undefined) {
+          w.distance_meters = getDistance(originLat, originLng, wLat, wLng);
+        }
+      }
+      return w;
+    }).sort((a, b) => {
+      if (a.distance_meters === undefined) return 1;
+      if (b.distance_meters === undefined) return -1;
+      return a.distance_meters - b.distance_meters;
+    });
+  };
+
   const loadWorkshops = async (lat: number, lng: number, r: number) => {
     setLoading(true);
     setLocationError(null);
@@ -51,45 +82,10 @@ export const WorkshopDirectory = () => {
       if (data.length === 0) {
         setLocationError(`No se encontraron talleres a menos de ${r} km. A continuación se muestran todos los talleres registrados ordenados por distancia.`);
         data = await searchWorkshopsByName('');
-        
-        // Calcular la distancia para todos los resultados del fallback
-        data = data.map(w => {
-          if (w.location) {
-            let wLng, wLat;
-            if (w.location.coordinates) {
-              wLng = w.location.coordinates[0];
-              wLat = w.location.coordinates[1];
-            } else if (typeof w.location === 'string' && w.location.startsWith('POINT(')) {
-              const match = w.location.match(/POINT\(([^ ]+)\s+([^)]+)\)/);
-              if (match) {
-                wLng = parseFloat(match[1]);
-                wLat = parseFloat(match[2]);
-              }
-            } else if (w.location.lat !== undefined && w.location.lng !== undefined) {
-              wLat = w.location.lat;
-              wLng = w.location.lng;
-            }
-            if (wLng !== undefined && wLat !== undefined) {
-              w.distance_meters = getDistance(lat, lng, wLat, wLng);
-            }
-          }
-          return w;
-        }).sort((a, b) => {
-          if (a.distance_meters === undefined) return 1;
-          if (b.distance_meters === undefined) return -1;
-          return a.distance_meters - b.distance_meters;
-        });
+        data = applyDistances(data, lat, lng);
       }
 
       setWorkshops(data);
-      if (leafletMapRef.current && data.length > 0) {
-        updateMapMarkers(data);
-        
-        // Si usamos el fallback, centramos el mapa en el primero
-        if (data[0].location) {
-           leafletMapRef.current.setView([data[0].location.lat || data[0].location.coordinates?.[1], data[0].location.lng || data[0].location.coordinates?.[0]], 10);
-        }
-      }
     } catch (e) {
       console.error(e);
       setLocationError('Hubo un error al cargar los talleres.');
@@ -98,6 +94,11 @@ export const WorkshopDirectory = () => {
     }
   };
 
+  // Initial auto load without relying on map script init
+  useEffect(() => {
+    requestLocation();
+  }, []);
+
   // Búsqueda global por texto (debounced)
   useEffect(() => {
     const timer = setTimeout(async () => {
@@ -105,76 +106,26 @@ export const WorkshopDirectory = () => {
       if (q.length >= 2) {
         setLoading(true);
         try {
-          const data = await searchWorkshopsByName(q);
+          let data = await searchWorkshopsByName(q);
+          data = applyDistances(data); // Add distance to search results
+          // Filter out anything beyond 100km if we have distance
+          data = data.filter(w => w.distance_meters === undefined || w.distance_meters <= FIXED_RADIUS * 1000);
           setWorkshops(data);
-          if (leafletMapRef.current && data.length > 0 && data[0].location) {
-             leafletMapRef.current.setView([data[0].location.lat, data[0].location.lng], 13);
-             updateMapMarkers(data);
-          }
         } catch (e) {
           console.error(e);
         } finally {
           setLoading(false);
         }
       } else if (q.length === 0 && userCoords) {
-        loadWorkshops(userCoords.lat, userCoords.lng, radius);
+        loadWorkshops(userCoords.lat, userCoords.lng, FIXED_RADIUS);
+      } else if (q.length === 0 && !userCoords) {
+        // Just load all if no user coords yet
+        searchWorkshopsByName('').then(data => setWorkshops(data));
       }
     }, 500);
 
     return () => clearTimeout(timer);
-  }, [search, userCoords, radius]);
-
-  const updateMapMarkers = (data: WorkshopEntry[]) => {
-    data.forEach((w: any) => {
-      // Handle both formats: GeoJSON from searchWorkshopsByName or lat/lng from getNearbyWorkshops RPC
-      const lat = w.lat || (w.location?.coordinates?.[1]);
-      const lng = w.lng || (w.location?.coordinates?.[0]);
-      
-      if (lat && lng && leafletMapRef.current) {
-        (window as any).L?.marker([lat, lng])
-          .addTo(leafletMapRef.current)
-          .bindPopup(`<b>${w.name}</b><br/>${w.address ?? ''}`);
-      }
-    });
-  };
-
-  // Initialize Leaflet map after mount
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-    script.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WPjg=';
-    script.crossOrigin = '';
-
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-    link.integrity = 'sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';
-    link.crossOrigin = '';
-
-    document.head.appendChild(link);
-    script.onload = () => {
-      if (mapRef.current && !leafletMapRef.current) {
-        const L = (window as any).L;
-        const map = L.map(mapRef.current).setView([-1.6635, -78.6536], 13); // Centro: Riobamba
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-          maxZoom: 19,
-        }).addTo(map);
-        leafletMapRef.current = map;
-        
-        // Auto-buscar al abrir
-        requestLocation();
-      }
-    };
-    document.head.appendChild(script);
-
-    return () => {
-      if (leafletMapRef.current) {
-        leafletMapRef.current.remove();
-        leafletMapRef.current = null;
-      }
-    };
-  }, []);
+  }, [search, userCoords]);
 
   const requestLocation = async () => {
     setLocationError(null);
@@ -184,8 +135,7 @@ export const WorkshopDirectory = () => {
       const riobamba = { lat: -1.6635, lng: -78.6536 };
       setUserCoords(riobamba);
       setLocationError(`${errorMsg} Mostrando resultados en Riobamba.`);
-      loadWorkshops(riobamba.lat, riobamba.lng, radius);
-      leafletMapRef.current?.setView([riobamba.lat, riobamba.lng], 13);
+      loadWorkshops(riobamba.lat, riobamba.lng, FIXED_RADIUS);
     };
 
     try {
@@ -196,8 +146,7 @@ export const WorkshopDirectory = () => {
         if (data.latitude && data.longitude) {
           const coords = { lat: data.latitude, lng: data.longitude };
           setUserCoords(coords);
-          loadWorkshops(coords.lat, coords.lng, radius);
-          leafletMapRef.current?.setView([coords.lat, coords.lng], 13);
+          loadWorkshops(coords.lat, coords.lng, FIXED_RADIUS);
           return;
         }
       }
@@ -217,8 +166,7 @@ export const WorkshopDirectory = () => {
         if (timeoutRef) clearTimeout(timeoutRef);
         const coords = { lat: pos.coords.latitude, lng: pos.coords.longitude };
         setUserCoords(coords);
-        loadWorkshops(coords.lat, coords.lng, radius);
-        leafletMapRef.current?.setView([coords.lat, coords.lng], 13);
+        loadWorkshops(coords.lat, coords.lng, FIXED_RADIUS);
       },
       () => {
         if (timeoutRef) clearTimeout(timeoutRef);
@@ -270,7 +218,7 @@ export const WorkshopDirectory = () => {
 
       {/* Controles */}
       <div className={styles.controls}>
-        <div className={styles.searchBox}>
+        <div className={styles.searchBox} style={{ flex: 1, maxWidth: '600px' }}>
           <Icon name="search" style={{ color: 'var(--color-outline)' }} />
           <input
             className={styles.searchInput}
@@ -279,28 +227,20 @@ export const WorkshopDirectory = () => {
             onChange={e => setSearch(e.target.value)}
           />
         </div>
-        <div className={styles.radiusControl}>
-          <span className={styles.radiusLabel}>Radio: {radius} km</span>
-          <input
-            type="range" min={1} max={100} value={radius}
-            onChange={e => {
-              setRadius(Number(e.target.value));
-              if (userCoords) loadWorkshops(userCoords.lat, userCoords.lng, Number(e.target.value));
-            }}
-            className={styles.rangeInput}
-          />
-        </div>
       </div>
 
-      {/* Mapa Leaflet */}
-      <div className={styles.mapContainer} ref={mapRef} />
+      <div style={{ marginTop: '2rem', marginBottom: '1rem' }}>
+        <h2 style={{ fontSize: '1.25rem', margin: 0, color: 'var(--color-on-surface)' }}>
+          {search.trim().length >= 2 ? 'Resultados de búsqueda' : 'Talleres recomendados cerca de ti'}
+        </h2>
+      </div>
 
       {/* Lista de resultados */}
       <div className={styles.workshopGrid}>
-        {!userCoords && !loading && (
+        {filtered.length === 0 && !loading && (
           <div className={styles.emptyCard} style={{ gridColumn: '1 / -1' }}>
-            <Icon name="location_searching" style={{ fontSize: '3rem', opacity: 0.3 }} />
-            <p>Haz clic en "Buscar cerca de mí" para encontrar talleres en tu área.</p>
+            <Icon name="search_off" style={{ fontSize: '3rem', opacity: 0.3 }} />
+            <p>No se encontraron talleres que coincidan con tu búsqueda.</p>
           </div>
         )}
         {filtered.map(w => (
@@ -318,11 +258,9 @@ export const WorkshopDirectory = () => {
                   {renderStars(w.average_rating)}
                   <span className={styles.ratingCount}>({w.ratings_count})</span>
                 </div>
-                {w.address && (
-                  <p className={styles.directoryCardAddress}>
-                    <Icon name="location_on" style={{ fontSize: '0.875rem' }} /> {w.address}
-                  </p>
-                )}
+                <p className={styles.directoryCardAddress}>
+                  <Icon name="location_on" style={{ fontSize: '0.875rem' }} /> {w.address || 'Dirección no especificada'}
+                </p>
               </div>
             </div>
             {w.distance_meters !== undefined ? (

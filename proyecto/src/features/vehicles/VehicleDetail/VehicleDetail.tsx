@@ -225,7 +225,7 @@ export const VehicleDetail: React.FC<VehicleDetailProps> = ({
   const fetchHistory = async () => {
     setLoadingHistory(true);
     try {
-      const data = await getRepairHistory(vehicle.id);
+      const data = await getRepairHistory(vehicle.id, undefined, workshopId);
       setHistory(data);
     } catch (err) {
       console.error(err);

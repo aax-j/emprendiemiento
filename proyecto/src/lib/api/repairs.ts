@@ -11,17 +11,41 @@ export interface RepairHistory {
   delivery_date: string | null;  // Fecha estimada de entrega
   created_at: string;
   completed_at: string | null;
+  workshop?: { name: string };
 }
 
-export const getRepairHistory = async (vehicleId: string): Promise<RepairHistory[]> => {
-  const { data, error } = await supabase
+export const getRepairHistory = async (vehicleId: string, plate?: string, workshopId?: string): Promise<RepairHistory[]> => {
+  let vehicleIds = [vehicleId];
+  
+  // Si tenemos la placa, buscamos todos los IDs de vehículos (incluyendo shadow profiles) con esa placa
+  if (plate) {
+    const { data: relatedVehicles } = await supabase
+      .from('vehicles')
+      .select('id')
+      .eq('plate', plate);
+      
+    if (relatedVehicles && relatedVehicles.length > 0) {
+      vehicleIds = relatedVehicles.map(v => v.id);
+    }
+  }
+
+  let query = supabase
     .from('repair_history')
-    .select('*')
-    .eq('vehicle_id', vehicleId)
+    .select('*, workshops(name)')
+    .in('vehicle_id', vehicleIds)
     .order('created_at', { ascending: false });
 
-  if (error) throw error;
-  return data as RepairHistory[];
+  if (workshopId) {
+    query = query.eq('workshop_id', workshopId);
+  }
+
+  const { data, error } = await query;
+
+  if (error) {
+    console.error('Supabase error fetching repair history:', error);
+    throw error;
+  }
+  return data as any[];
 };
 
 export const getAllRepairs = async (workshopId: string): Promise<any[]> => {

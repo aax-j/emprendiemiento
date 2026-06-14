@@ -119,7 +119,7 @@ export const ReportsTab: React.FC<ReportsTabProps> = ({ workshopId, repairsData 
     
     setLoading(true);
     try {
-      const history = await getRepairHistory(vehicle.id);
+      const history = await getRepairHistory(vehicle.id, undefined, workshopId);
       setVehReportData({ vehicle, history });
       
       setPrintType('vehicle');
@@ -150,7 +150,7 @@ export const ReportsTab: React.FC<ReportsTabProps> = ({ workshopId, repairsData 
       let fullHistory: RepairHistory[] = [];
       
       for (const v of clientVehicles) {
-        const hist = await getRepairHistory(v.id);
+        const hist = await getRepairHistory(v.id, undefined, workshopId);
         const histWithVehicle = hist.map(h => ({ ...h, vehicles: v }));
         fullHistory = [...fullHistory, ...histWithVehicle];
       }

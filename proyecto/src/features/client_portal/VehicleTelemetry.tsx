@@ -18,6 +18,7 @@ interface RepairWithReviewable {
   created_at: string;
   workshop_id: string;
   can_review?: boolean;
+  workshop?: { name: string };
 }
 
 export const VehicleTelemetry = () => {
@@ -56,11 +57,11 @@ export const VehicleTelemetry = () => {
     loadVehicles();
   }, [profile?.id]);
 
-  const loadHistory = async (vehicleId: string) => {
+  const loadHistory = async (vehicleId: string, plate?: string) => {
     setLoadingHistory(true);
     setHistory([]);
     try {
-      const data = await getRepairHistory(vehicleId);
+      const data = await getRepairHistory(vehicleId, plate);
       setHistory(data as any);
     } catch (e) {
       console.error(e);
@@ -71,7 +72,7 @@ export const VehicleTelemetry = () => {
 
   const handleSelectVehicle = (v: any) => {
     setSelectedVehicle(v);
-    loadHistory(v.id);
+    loadHistory(v.id, v.plate);
   };
 
   const handleSubmitReview = async () => {
@@ -89,7 +90,7 @@ export const VehicleTelemetry = () => {
       setRating(5);
       setComment('');
       // Recargar historial para marcar la reseña emitida
-      if (selectedVehicle) loadHistory(selectedVehicle.id);
+      if (selectedVehicle) loadHistory(selectedVehicle.id, selectedVehicle.plate);
     } catch (e: any) {
       alert('Error al enviar la reseña: ' + e.message);
     } finally {
@@ -262,6 +263,12 @@ export const VehicleTelemetry = () => {
                       )}
                     </div>
                     <p className={styles.historyDescription}>{h.description}</p>
+                    {h.workshops?.name && (
+                      <p style={{ fontSize: '0.8rem', color: 'var(--color-outline)', margin: '0.5rem 0 0 0', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                        <Icon name="storefront" style={{ fontSize: '0.9rem' }} />
+                        Realizado en: {h.workshops.name}
+                      </p>
+                    )}
                     {(h.status === 'completado' || h.status === 'completed') && (
                       <button
                         className={styles.reviewBtn}
