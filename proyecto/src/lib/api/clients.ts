@@ -1,4 +1,5 @@
 import { supabase } from '../supabase';
+import { sendNotification } from './notifications';
 
 export interface Client {
   id: string;
@@ -154,17 +155,47 @@ export const sendConnectionInvite = async (
     .single();
 
   if (error) throw error;
+
+  // Send notification to the receiver
+  const receiverId = sender === 'workshop' ? clientId : workshopId;
+  const senderName = sender === 'workshop' ? 'Un taller' : 'Un cliente'; // In a real app we could fetch their actual name, but this works for now.
+  await sendNotification(
+    receiverId,
+    'Nueva solicitud de conexión',
+    `${senderName} quiere conectarse contigo en AutoTech.`,
+    'invite',
+    data.id
+  );
+
   return data as WorkshopClientConnection;
 };
 
-// Aceptar invitación de conexión
 export const acceptConnectionInvite = async (connectionId: string): Promise<void> => {
+  // First get the connection details to know who to notify
+  const { data: conn } = await supabase.from('workshop_clients').select('*').eq('id', connectionId).single();
+
   const { error } = await supabase
     .from('workshop_clients')
     .update({ status: 'connected' })
     .eq('id', connectionId);
 
   if (error) throw error;
+
+  if (conn) {
+    // Notify both parties or figure out who accepted.
+    // If the status was pending_client_approval, the client accepted, so notify the workshop.
+    // If pending_workshop_approval, the workshop accepted, so notify the client.
+    const receiverId = conn.status === 'pending_client_approval' ? conn.workshop_id : conn.client_id;
+    const accepterType = conn.status === 'pending_client_approval' ? 'El cliente' : 'El taller';
+    
+    await sendNotification(
+      receiverId,
+      'Solicitud aceptada',
+      `${accepterType} ha aceptado tu solicitud de conexión.`,
+      'invite',
+      connectionId
+    );
+  }
 };
 
 // Declinar / Cancelar conexión

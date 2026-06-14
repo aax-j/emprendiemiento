@@ -1,4 +1,5 @@
 import { supabase } from '../supabase';
+import { sendNotification } from './notifications';
 
 export interface ConnectionMessage {
   id: string;
@@ -38,6 +39,21 @@ export const sendMessage = async (
     .single();
 
   if (error) throw error;
+
+  // Send notification to the other party
+  const { data: conn } = await supabase.from('workshop_clients').select('*').eq('id', connectionId).single();
+  if (conn) {
+    const receiverId = senderType === 'workshop' ? conn.client_id : conn.workshop_id;
+    const senderName = senderType === 'workshop' ? 'El taller' : 'El cliente';
+    await sendNotification(
+      receiverId,
+      'Nuevo mensaje',
+      `${senderName} te ha enviado un mensaje.`,
+      'message',
+      connectionId
+    );
+  }
+
   return data as ConnectionMessage;
 };
 

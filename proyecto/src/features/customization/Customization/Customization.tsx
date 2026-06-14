@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { getBotApiUrl } from '../../../lib/api/bot';
 import { useBlocker } from 'react-router-dom';
-import { writeTextFile, readTextFile, BaseDirectory, mkdir } from '@tauri-apps/plugin-fs';
+import { writeTextFile, readTextFile, BaseDirectory } from '@tauri-apps/plugin-fs';
 import { useTheme } from '../../../contexts/ThemeContext';
 import { useAuth } from '../../../contexts/AuthContext';
 import { getWorkshopPublicProfile, upsertWorkshopPublicProfile } from '../../../lib/api/workshop_profiles';

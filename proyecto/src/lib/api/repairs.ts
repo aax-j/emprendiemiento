@@ -1,4 +1,5 @@
 import { supabase } from '../supabase';
+import { sendNotification } from './notifications';
 
 export interface RepairHistory {
   id: string;
@@ -69,6 +70,19 @@ export const createRepair = async (
     .single();
 
   if (error) throw error;
+
+  // Send notification to the client
+  const { data: vehicle } = await supabase.from('vehicles').select('client_id, brand, model').eq('id', repair.vehicle_id).single();
+  if (vehicle && vehicle.client_id) {
+    await sendNotification(
+      vehicle.client_id,
+      'Nueva Reparación Registrada',
+      `El taller ha registrado una nueva reparación para tu ${vehicle.brand} ${vehicle.model}.`,
+      'repair',
+      data.id
+    );
+  }
+
   return data as RepairHistory;
 };
 
@@ -91,6 +105,25 @@ export const updateRepair = async (
     .single();
 
   if (error) throw error;
+
+  // Send notification to the client if status changed
+  if (updates.status) {
+    const { data: vehicle } = await supabase.from('vehicles').select('client_id, brand, model').eq('id', data.vehicle_id).single();
+    if (vehicle && vehicle.client_id) {
+      let statusText: string = updates.status;
+      if (updates.status === 'completado') statusText = 'completada';
+      else if (updates.status === 'en_proceso') statusText = 'en proceso';
+
+      await sendNotification(
+        vehicle.client_id,
+        'Actualización de Reparación',
+        `La reparación de tu ${vehicle.brand} ${vehicle.model} ha sido marcada como: ${statusText}.`,
+        'repair',
+        data.id
+      );
+    }
+  }
+
   return data as RepairHistory;
 };
 

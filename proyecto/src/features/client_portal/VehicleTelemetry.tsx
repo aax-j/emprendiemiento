@@ -263,10 +263,10 @@ export const VehicleTelemetry = () => {
                       )}
                     </div>
                     <p className={styles.historyDescription}>{h.description}</p>
-                    {h.workshops?.name && (
+                    {(h as any).workshops?.name && (
                       <p style={{ fontSize: '0.8rem', color: 'var(--color-outline)', margin: '0.5rem 0 0 0', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
                         <Icon name="storefront" style={{ fontSize: '0.9rem' }} />
-                        Realizado en: {h.workshops.name}
+                        Realizado en: {(h as any).workshops.name}
                       </p>
                     )}
                     {(h.status === 'completado' || h.status === 'completed') && (
