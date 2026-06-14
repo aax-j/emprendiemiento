@@ -84,6 +84,47 @@ export const ClientDashboard = () => {
         </div>
       </div>
 
+      {/* Sección Expandible Editar Perfil */}
+      {showEditProfile && (
+        <section className={styles.section} style={{ background: 'var(--color-surface-container)', padding: '1.5rem', borderRadius: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <h2 className={styles.sectionTitle} style={{ margin: 0 }}>
+              <Icon name="manage_accounts" /> Editar Mi Perfil
+            </h2>
+            <button onClick={() => setShowEditProfile(false)} style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--color-on-surface-variant)' }}>
+              <Icon name="close" />
+            </button>
+          </div>
+          
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+            <div className={styles.inputGroup}>
+              <label className={styles.label}>Nombre Completo</label>
+              <input 
+                className={styles.input} 
+                value={editName} 
+                onChange={e => setEditName(e.target.value)} 
+              />
+            </div>
+            
+            <div className={styles.inputGroup}>
+              <label className={styles.label}>Teléfono</label>
+              <input 
+                className={styles.input} 
+                value={editPhone} 
+                onChange={e => setEditPhone(e.target.value)} 
+              />
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem' }}>
+            <button className={styles.primaryBtn} onClick={handleSaveProfile} disabled={savingProfile || !editName}>
+              {savingProfile ? 'Guardando…' : 'Guardar Cambios'}
+            </button>
+            <button className={styles.secondaryBtn} onClick={() => setShowEditProfile(false)}>Cancelar</button>
+          </div>
+        </section>
+      )}
+
       {/* KPIs */}
       <div className={styles.kpiGrid}>
         <div className={styles.kpiCard}>
@@ -172,39 +213,6 @@ export const ClientDashboard = () => {
         )}
       </section>
 
-      {/* Modal Editar Perfil */}
-      {showEditProfile && (
-        <div className="mobile-modal-overlay" onClick={() => setShowEditProfile(false)}>
-          <div className={styles.reviewModal} onClick={e => e.stopPropagation()}>
-            <h2 className={styles.modalTitle}>Editar Mi Perfil</h2>
-            
-            <div className={styles.inputGroup} style={{ marginTop: '1rem' }}>
-              <label className={styles.label}>Nombre Completo</label>
-              <input 
-                className={styles.input} 
-                value={editName} 
-                onChange={e => setEditName(e.target.value)} 
-              />
-            </div>
-            
-            <div className={styles.inputGroup}>
-              <label className={styles.label}>Teléfono</label>
-              <input 
-                className={styles.input} 
-                value={editPhone} 
-                onChange={e => setEditPhone(e.target.value)} 
-              />
-            </div>
-
-            <div className={styles.modalActions} style={{ marginTop: '1.5rem' }}>
-              <button className={styles.secondaryBtn} onClick={() => setShowEditProfile(false)}>Cancelar</button>
-              <button className={styles.primaryBtn} onClick={handleSaveProfile} disabled={savingProfile || !editName}>
-                {savingProfile ? 'Guardando…' : 'Guardar Cambios'}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

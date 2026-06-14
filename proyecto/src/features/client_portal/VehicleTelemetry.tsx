@@ -3,6 +3,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import { getVehiclesByClient, createVehicle, updateVehicle } from '../../lib/api/vehicles';
 import { getRepairHistory } from '../../lib/api/repairs';
 import { submitReview } from '../../lib/api/workshop_profiles';
+import { supabase } from '../../lib/supabase';
 import { Icon } from '../../components/Icon/Icon';
 import CameraScanner from '../vehicles/VehicleRegistration/CameraScanner';
 import { CAR_BRANDS, CAR_BRANDS_AND_MODELS } from '../vehicles/VehicleRegistration/carData';
@@ -26,6 +27,13 @@ export const VehicleTelemetry = () => {
   const [selectedVehicle, setSelectedVehicle] = useState<any | null>(null);
   const [history, setHistory] = useState<RepairWithReviewable[]>([]);
   const [loadingHistory, setLoadingHistory] = useState(false);
+  const [activeTab, setActiveTab] = useState<'history' | 'maintenance'>('history');
+
+  // Maintenance state
+  const [notifications, setNotifications] = useState<any[]>([]);
+  const [maintConfig, setMaintConfig] = useState({ type: 'Cambio de Aceite', months: 6, km: 5000 });
+  const [maintRecord, setMaintRecord] = useState({ type: 'Cambio de Aceite', km: '', notes: '' });
+  const [savingMaint, setSavingMaint] = useState(false);
 
   // Review modal state
   const [reviewTarget, setReviewTarget] = useState<RepairWithReviewable | null>(null);
@@ -62,11 +70,74 @@ export const VehicleTelemetry = () => {
     try {
       const data = await getRepairHistory(vehicleId);
       setHistory(data as any);
+      
+      // Load notifications for this vehicle
+      const { data: notifs } = await supabase
+        .from('notificaciones')
+        .select('*')
+        .eq('id_vehiculo', vehicleId)
+        .eq('leido', false);
+      if (notifs) setNotifications(notifs);
+
     } catch (e) {
       console.error(e);
     } finally {
       setLoadingHistory(false);
     }
+  };
+
+  const handleSaveMaintConfig = async () => {
+    if (!profile?.id || !selectedVehicle) return;
+    setSavingMaint(true);
+    try {
+      const payload = {
+        id_usuario: profile.id,
+        id_vehiculo: selectedVehicle.id,
+        tipo_mantenimiento: maintConfig.type,
+        meses_intervalo: maintConfig.months,
+        km_intervalo: maintConfig.km
+      };
+      await fetch('http://localhost:5000/api/maintenance/config', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      alert('Configuración guardada exitosamente');
+    } catch (e: any) {
+      alert('Error guardando configuración');
+    } finally {
+      setSavingMaint(false);
+    }
+  };
+
+  const handleSaveMaintRecord = async () => {
+    if (!profile?.id || !selectedVehicle || !maintRecord.km) return;
+    setSavingMaint(true);
+    try {
+      const payload = {
+        id_usuario: profile.id,
+        id_vehiculo: selectedVehicle.id,
+        tipo_mantenimiento: maintRecord.type,
+        kilometraje: parseInt(maintRecord.km),
+        notas: maintRecord.notes
+      };
+      await fetch('http://localhost:5000/api/maintenance/history', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      alert('Registro guardado exitosamente');
+      setMaintRecord({ ...maintRecord, km: '', notes: '' });
+    } catch (e: any) {
+      alert('Error guardando registro');
+    } finally {
+      setSavingMaint(false);
+    }
+  };
+
+  const markNotificationRead = async (id: string) => {
+    await supabase.from('notificaciones').update({ leido: true }).eq('id', id);
+    setNotifications(prev => prev.filter(n => n.id !== id));
   };
 
   const handleSelectVehicle = (v: any) => {
@@ -231,18 +302,45 @@ export const VehicleTelemetry = () => {
                 <p>Selecciona un vehículo para ver su historial</p>
               </div>
             ) : loadingHistory ? (
-              <p>Cargando historial…</p>
-            ) : history.length === 0 ? (
-              <div className={styles.emptyCard}>
-                <p>No hay órdenes de trabajo registradas para este vehículo.</p>
-              </div>
+              <p>Cargando información…</p>
             ) : (
               <div className={styles.historyList}>
-                <h3 className={styles.sectionTitle}>
-                  Historial · <span style={{ color: 'var(--color-primary)' }}>{selectedVehicle.plate}</span>
+                <h3 className={styles.sectionTitle} style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                  <span style={{ color: 'var(--color-primary)' }}>{selectedVehicle.plate}</span>
+                  <div style={{ display: 'flex', border: '1px solid var(--border-color)', borderRadius: '8px', overflow: 'hidden', marginLeft: 'auto' }}>
+                    <button 
+                      onClick={() => setActiveTab('history')}
+                      style={{ padding: '6px 12px', border: 'none', background: activeTab === 'history' ? 'var(--primary-color)' : 'transparent', color: activeTab === 'history' ? 'white' : 'inherit', cursor: 'pointer' }}
+                    >Historial</button>
+                    <button 
+                      onClick={() => setActiveTab('maintenance')}
+                      style={{ padding: '6px 12px', border: 'none', background: activeTab === 'maintenance' ? 'var(--primary-color)' : 'transparent', color: activeTab === 'maintenance' ? 'white' : 'inherit', cursor: 'pointer' }}
+                    >Mantenimiento Preventivo</button>
+                  </div>
                 </h3>
-                {history.map(h => (
-                  <div key={h.id} className={styles.historyCard}>
+                
+                {/* Panel de Alertas Críticas */}
+                {notifications.length > 0 && (
+                  <div style={{ marginBottom: '1rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                    {notifications.map(n => (
+                      <div key={n.id} style={{ padding: '1rem', background: '#fee2e2', borderLeft: '4px solid #ef4444', borderRadius: '4px', color: '#991b1b', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <div>
+                          <strong>⚠️ ALERTA: </strong> {n.mensaje}
+                        </div>
+                        <button onClick={() => markNotificationRead(n.id)} style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: '#991b1b' }}>
+                          <Icon name="check_circle" />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {activeTab === 'history' && (
+                  <>
+                  {history.length === 0 ? (
+                    <div className={styles.emptyCard}><p>No hay órdenes de trabajo registradas.</p></div>
+                  ) : history.map(h => (
+                    <div key={h.id} className={styles.historyCard}>
                     <div className={styles.historyCardTop}>
                       <div>
                         <span
@@ -272,6 +370,58 @@ export const VehicleTelemetry = () => {
                     )}
                   </div>
                 ))}
+                  </>
+                )}
+
+                {activeTab === 'maintenance' && (
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                    <div className={styles.historyCard}>
+                      <h4>Configurar Alertas (Intervalos)</h4>
+                      <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '1rem' }}>Recibe notificaciones automáticas cuando se venza el plazo.</p>
+                      <div className={styles.inputGroup}>
+                        <label className={styles.label}>Tipo de Servicio</label>
+                        <select className={styles.input} value={maintConfig.type} onChange={e => setMaintConfig({...maintConfig, type: e.target.value})}>
+                          <option>Cambio de Aceite</option>
+                          <option>Revisión Técnica / Matrícula</option>
+                          <option>Líquido de Frenos</option>
+                        </select>
+                      </div>
+                      <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
+                        <div className={styles.inputGroup} style={{ flex: 1 }}>
+                          <label className={styles.label}>Avisar cada (Meses)</label>
+                          <input type="number" className={styles.input} value={maintConfig.months} onChange={e => setMaintConfig({...maintConfig, months: parseInt(e.target.value)})} />
+                        </div>
+                        <div className={styles.inputGroup} style={{ flex: 1 }}>
+                          <label className={styles.label}>O cada (Km)</label>
+                          <input type="number" className={styles.input} value={maintConfig.km} onChange={e => setMaintConfig({...maintConfig, km: parseInt(e.target.value)})} />
+                        </div>
+                      </div>
+                      <button className={styles.primaryBtn} style={{ marginTop: '1rem', width: '100%' }} onClick={handleSaveMaintConfig} disabled={savingMaint}>
+                        Guardar Alerta
+                      </button>
+                    </div>
+
+                    <div className={styles.historyCard}>
+                      <h4>Registrar Servicio Realizado</h4>
+                      <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '1rem' }}>Guarda el último kilometraje para reiniciar el cronómetro.</p>
+                      <div className={styles.inputGroup}>
+                        <label className={styles.label}>Tipo de Servicio</label>
+                        <select className={styles.input} value={maintRecord.type} onChange={e => setMaintRecord({...maintRecord, type: e.target.value})}>
+                          <option>Cambio de Aceite</option>
+                          <option>Revisión Técnica / Matrícula</option>
+                          <option>Líquido de Frenos</option>
+                        </select>
+                      </div>
+                      <div className={styles.inputGroup} style={{ marginTop: '1rem' }}>
+                        <label className={styles.label}>Kilometraje Actual</label>
+                        <input type="number" className={styles.input} value={maintRecord.km} onChange={e => setMaintRecord({...maintRecord, km: e.target.value})} placeholder="Ej. 120500" />
+                      </div>
+                      <button className={styles.primaryBtn} style={{ marginTop: '1rem', width: '100%', background: '#10b981' }} onClick={handleSaveMaintRecord} disabled={savingMaint}>
+                        Registrar Mantenimiento
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -335,7 +485,7 @@ export const VehicleTelemetry = () => {
                   disabled={showVehicleModal === 'edit'}
                   style={{ flex: 1 }}
                 />
-                {showVehicleModal === 'add' && (
+                {showVehicleModal === 'add' && /android|iphone|ipad|ipod/i.test(navigator.userAgent.toLowerCase()) && (
                   <CameraScanner
                     onScanSuccess={(scanned) => setVPlate(scanned)}
                     inputRef={plateInputRef}

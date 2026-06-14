@@ -44,6 +44,9 @@ export const ClientAssistantWidget = () => {
   const [contextLoaded, setContextLoaded] = useState(false);
   // Conversation state for vehicle disambiguation
   const [pendingVehicleQuery, setPendingVehicleQuery] = useState<string | null>(null);
+  
+  // Nuevo estado para el vehículo seleccionado
+  const [selectedVehicleId, setSelectedVehicleId] = useState<string>('');
 
   const chatHistoryEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -287,11 +290,22 @@ export const ClientAssistantWidget = () => {
         // Build a context prefix for the AI to understand the user's data
         const contextPrefix = buildContextPrefix();
         const enrichedMessage = contextPrefix ? `${contextPrefix}\n\nPregunta del usuario: ${text}` : text;
+        
+        // Find selected vehicle name
+        const selectedVehicleName = vehicles.find(v => v.id === selectedVehicleId)?.brand + ' ' + vehicles.find(v => v.id === selectedVehicleId)?.model;
+
+        const payload = { 
+          id_usuario: userId, 
+          message: enrichedMessage,
+          vehiculo_activo: selectedVehicleId ? selectedVehicleName : null,
+          latitud: _userCoords?.lat,
+          longitud: _userCoords?.lng
+        };
 
         const response = await fetch(BACKEND_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ id_usuario: userId, message: enrichedMessage }),
+          body: JSON.stringify(payload),
         });
 
         if (response.ok) {
@@ -427,7 +441,7 @@ export const ClientAssistantWidget = () => {
                         key={idx}
                         className={styles.suggestionButton}
                         onClick={() => handleSendMessage(query)}
-                        disabled={isTyping}
+                        disabled={isTyping || !selectedVehicleId}
                       >
                         {query}
                       </button>
@@ -444,7 +458,27 @@ export const ClientAssistantWidget = () => {
                   <div
                     className={`${styles.messageBubble} ${msg.role === 'user' ? styles.userBubble : styles.assistantBubble}`}
                   >
-                    {msg.content}
+                    {/* Renderizado especial de tarjetas si detectamos talleres */}
+                    {msg.role === 'model' && msg.content.includes("Los talleres más cercanos a ti en este momento son:") ? (
+                      <div>
+                        <p>{msg.content.split('Los talleres más cercanos a ti en este momento son:')[0]}</p>
+                        <p style={{ fontWeight: 'bold', margin: '8px 0' }}>Los talleres más cercanos a ti en este momento son:</p>
+                        <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', padding: '4px 0' }}>
+                          {nearbyWorkshops.slice(0,3).map((w: any, idx) => (
+                             <div key={idx} style={{ minWidth: '180px', padding: '10px', backgroundColor: 'var(--surface-color)', borderRadius: '8px', border: '1px solid var(--border-color)', color: 'var(--text-color)' }}>
+                               <strong style={{ display: 'block', marginBottom: '4px' }}>{w.name}</strong>
+                               <small style={{ display: 'block', color: 'var(--text-secondary)' }}>{w.address || 'Ubicación cercana'}</small>
+                               <div style={{ marginTop: '8px', fontSize: '0.8rem', color: 'var(--primary-color)', fontWeight: 'bold' }}>
+                                 {w.horario_apertura ? `${w.horario_apertura} - ${w.horario_cierre}` : 'Horario disponible en app'}
+                               </div>
+                             </div>
+                          ))}
+                        </div>
+                        <p style={{ marginTop: '8px' }}>¿Te gustaría agendar o vincularte a alguno de ellos?</p>
+                      </div>
+                    ) : (
+                      <div style={{ whiteSpace: 'pre-wrap' }}>{msg.content}</div>
+                    )}
                     <span className={styles.messageTime}>{formatTime(msg.timestamp)}</span>
                   </div>
                 </div>
@@ -464,25 +498,40 @@ export const ClientAssistantWidget = () => {
           </div>
 
           {/* Input footer */}
-          <div className={styles.inputContainer}>
-            <input
-              ref={inputRef}
-              type="text"
-              className={styles.inputField}
-              placeholder="Escribe un mensaje..."
-              value={inputValue}
-              onChange={e => setInputValue(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && handleSendMessage(inputValue)}
-              disabled={isTyping}
-            />
-            <button
-              className={styles.sendButton}
-              onClick={() => handleSendMessage(inputValue)}
-              disabled={!inputValue.trim() || isTyping}
-              aria-label="Enviar"
-            >
-              <Icon name="send" style={{ fontSize: '1.15rem' }} />
-            </button>
+          <div className={styles.inputContainer} style={{ flexDirection: 'column', gap: '8px', padding: '12px' }}>
+            <div style={{ width: '100%' }}>
+              <select 
+                value={selectedVehicleId} 
+                onChange={(e) => setSelectedVehicleId(e.target.value)}
+                style={{ width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid var(--border-color)', backgroundColor: 'var(--surface-color)', color: 'var(--text-color)', fontSize: '0.85rem' }}
+              >
+                <option value="">-- Selecciona un vehículo para consultar --</option>
+                {vehicles.map(v => (
+                  <option key={v.id} value={v.id}>{v.brand} {v.model} ({v.plate})</option>
+                ))}
+              </select>
+            </div>
+            
+            <div style={{ display: 'flex', width: '100%', gap: '8px' }}>
+              <input
+                ref={inputRef}
+                type="text"
+                className={styles.inputField}
+                placeholder={selectedVehicleId ? "Escribe un mensaje..." : "Primero selecciona un vehículo..."}
+                value={inputValue}
+                onChange={e => setInputValue(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && handleSendMessage(inputValue)}
+                disabled={isTyping || !selectedVehicleId}
+              />
+              <button
+                className={styles.sendButton}
+                onClick={() => handleSendMessage(inputValue)}
+                disabled={!inputValue.trim() || isTyping || !selectedVehicleId}
+                aria-label="Enviar"
+              >
+                <Icon name="send" style={{ fontSize: '1.15rem' }} />
+              </button>
+            </div>
           </div>
         </div>
       )}

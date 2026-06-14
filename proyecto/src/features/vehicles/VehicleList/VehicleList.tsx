@@ -165,7 +165,7 @@ const VehicleModal: React.FC<VehicleModalProps> = ({
                     maxLength={10}
                     autoFocus
                   />
-                  {mode === 'add' && (
+                  {mode === 'add' && /android|iphone|ipad|ipod/i.test(navigator.userAgent.toLowerCase()) && (
                     <CameraScanner
                       onScanSuccess={(scanned) => setPlate(scanned)}
                       inputRef={plateInputRef}
