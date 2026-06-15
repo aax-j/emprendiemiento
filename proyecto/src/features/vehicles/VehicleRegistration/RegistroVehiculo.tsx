@@ -40,7 +40,9 @@ const RegistroVehiculo: React.FC = () => {
               placeholder="Ej: ABC-1234"
               className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono uppercase text-lg"
             />
-            <CameraScanner onScanSuccess={handlePlacaScanSuccess} inputRef={placaInputRef} />
+            {/android|iphone|ipad|ipod/i.test(navigator.userAgent.toLowerCase()) && (
+              <CameraScanner onScanSuccess={handlePlacaScanSuccess} inputRef={placaInputRef} />
+            )}
           </div>
         </div>
 

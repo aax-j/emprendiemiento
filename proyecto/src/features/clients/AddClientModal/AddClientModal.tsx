@@ -1,8 +1,6 @@
-import { useState, useEffect } from 'react';
-
+import { useState } from 'react';
 import { useAuth } from '../../../contexts/AuthContext';
 import { createClient } from '../../../lib/api/clients';
-import { supabase } from '../../../lib/supabase';
 import { Icon } from '../../../components/Icon/Icon';
 import styles from './AddClientModal.module.css';
 
@@ -31,21 +29,6 @@ export const AddClientModal: React.FC<AddClientModalProps> = ({ isOpen, onClose,
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-
-
-  useEffect(() => {
-    if (isOpen && profile?.workshop_id) {
-      supabase
-        .from('workshops')
-        .select('name')
-        .eq('id', profile.workshop_id)
-        .single()
-        .then(() => {
-          // data check removed since workshopName is unused
-        });
-    }
-  }, [isOpen, profile?.workshop_id]);
 
   if (!isOpen) return null;
 
