@@ -91,18 +91,16 @@ export const VehicleTelemetry = () => {
     if (!profile?.id || !selectedVehicle) return;
     setSavingMaint(true);
     try {
-      const payload = {
-        id_usuario: profile.id,
-        id_vehiculo: selectedVehicle.id,
-        tipo_mantenimiento: maintConfig.type,
-        meses_intervalo: maintConfig.months,
-        km_intervalo: maintConfig.km
-      };
-      await fetch('http://localhost:5000/api/maintenance/config', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
+      // Usar el campo notes del vehículo para guardar la configuración como JSON para evitar errores con localhost
+      let currentNotes: any = {};
+      try { currentNotes = JSON.parse(selectedVehicle.notes || '{}'); } catch(e) {}
+      
+      currentNotes.maintenanceConfig = maintConfig;
+      const newNotesString = JSON.stringify(currentNotes);
+      
+      await updateVehicle(selectedVehicle.id, { notes: newNotesString });
+      setSelectedVehicle({ ...selectedVehicle, notes: newNotesString });
+      
       alert('Configuración guardada exitosamente');
     } catch (e: any) {
       alert('Error guardando configuración');
@@ -115,18 +113,19 @@ export const VehicleTelemetry = () => {
     if (!profile?.id || !selectedVehicle || !maintRecord.km) return;
     setSavingMaint(true);
     try {
-      const payload = {
-        id_usuario: profile.id,
-        id_vehiculo: selectedVehicle.id,
-        tipo_mantenimiento: maintRecord.type,
-        kilometraje: parseInt(maintRecord.km),
-        notas: maintRecord.notes
-      };
-      await fetch('http://localhost:5000/api/maintenance/history', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+      let currentNotes: any = {};
+      try { currentNotes = JSON.parse(selectedVehicle.notes || '{}'); } catch(e) {}
+      
+      if (!currentNotes.maintenanceRecords) currentNotes.maintenanceRecords = [];
+      currentNotes.maintenanceRecords.push({
+        ...maintRecord,
+        date: new Date().toISOString()
       });
+      const newNotesString = JSON.stringify(currentNotes);
+      
+      await updateVehicle(selectedVehicle.id, { notes: newNotesString });
+      setSelectedVehicle({ ...selectedVehicle, notes: newNotesString });
+
       alert('Registro guardado exitosamente');
       setMaintRecord({ ...maintRecord, km: '', notes: '' });
     } catch (e: any) {
@@ -144,6 +143,16 @@ export const VehicleTelemetry = () => {
   const handleSelectVehicle = (v: any) => {
     setSelectedVehicle(v);
     loadHistory(v.id, v.plate);
+    
+    // Cargar configuración de mantenimiento si existe
+    try {
+      if (v.notes && v.notes.startsWith('{')) {
+        const notesData = JSON.parse(v.notes);
+        if (notesData.maintenanceConfig) {
+          setMaintConfig(notesData.maintenanceConfig);
+        }
+      }
+    } catch (e) {}
   };
 
   const handleSubmitReview = async () => {
@@ -308,14 +317,14 @@ export const VehicleTelemetry = () => {
               <div className={styles.historyList}>
                 <h3 className={styles.sectionTitle} style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                   <span style={{ color: 'var(--color-primary)' }}>{selectedVehicle.plate}</span>
-                  <div style={{ display: 'flex', border: '1px solid var(--border-color)', borderRadius: '8px', overflow: 'hidden', marginLeft: 'auto' }}>
+                  <div style={{ display: 'flex', gap: '0.5rem', marginLeft: 'auto' }}>
                     <button 
                       onClick={() => setActiveTab('history')}
-                      style={{ padding: '6px 12px', border: 'none', background: activeTab === 'history' ? 'var(--primary-color)' : 'transparent', color: activeTab === 'history' ? 'white' : 'inherit', cursor: 'pointer' }}
+                      style={{ padding: '8px 16px', border: '2px solid var(--color-primary)', borderRadius: '8px', background: activeTab === 'history' ? 'var(--color-primary)' : 'transparent', color: activeTab === 'history' ? 'white' : 'var(--color-primary)', cursor: 'pointer', fontWeight: 'bold', transition: 'all 0.2s' }}
                     >Historial</button>
                     <button 
                       onClick={() => setActiveTab('maintenance')}
-                      style={{ padding: '6px 12px', border: 'none', background: activeTab === 'maintenance' ? 'var(--primary-color)' : 'transparent', color: activeTab === 'maintenance' ? 'white' : 'inherit', cursor: 'pointer' }}
+                      style={{ padding: '8px 16px', border: '2px solid var(--color-primary)', borderRadius: '8px', background: activeTab === 'maintenance' ? 'var(--color-primary)' : 'transparent', color: activeTab === 'maintenance' ? 'white' : 'var(--color-primary)', cursor: 'pointer', fontWeight: 'bold', transition: 'all 0.2s' }}
                     >Mantenimiento Preventivo</button>
                   </div>
                 </h3>

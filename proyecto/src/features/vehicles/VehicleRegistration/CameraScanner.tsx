@@ -7,28 +7,58 @@ interface CameraScannerProps {
 
 // Función para limpiar y formatear la placa detectada
 function extractPlate(text: string): string | null {
-  const upper = text.toUpperCase();
+  // Limpiamos el texto: mayúsculas, reemplazamos confusiones comunes del OCR
+  let upper = text.toUpperCase();
 
-  // Esta expresión regular es "a prueba de balas" contra los espacios del OCR.
-  // Busca:
-  // - Inicio de línea o caracter no alfanumérico (para no cortar a la mitad de una palabra equivocada)
-  // - 2 a 3 Letras (con posibles espacios entre ellas)
-  // - 3 a 4 Números (con posibles espacios entre ellos)
-  // - Fin de palabra (para no capturar placas de 5 números)
-  const regex = /(?:^|[^A-Z0-9])([A-Z])[\s\-]*([A-Z])[\s\-]*([A-Z])?[\s\-]*(\d)[\s\-]*(\d)[\s\-]*(\d)[\s\-]*(\d)?(?=[^A-Z0-9]|$)/;
-  
-  const match = upper.match(regex);
+  // Primero, extraemos solo los bloques que parezcan alfanuméricos (ignorando basura del OCR)
+  // Unimos todo el texto quitando espacios/guiones para analizar mejor
+  const cleaned = upper.replace(/[\s\-_.,:;|]/g, '');
 
-  if (match) {
-    const l1 = match[1];
-    const l2 = match[2];
-    const l3 = match[3] || '';
-    const d1 = match[4];
-    const d2 = match[5];
-    const d3 = match[6];
-    const d4 = match[7] || '';
-    
-    return `${l1}${l2}${l3}-${d1}${d2}${d3}${d4}`;
+  // Patrones de placas latinoamericanas (Colombia, Panamá, etc.)
+  // Formato principal: 3 letras + 3 o 4 dígitos (ej: ABC123, ABC1234)
+  // Formato motos CO: 3 letras + 2 dígitos + 1 letra (ej: ABC12D)
+  const patterns = [
+    // 3 letras + 4 dígitos (ej: ABCD1234 — sin confundir con texto largo)
+    /([A-Z]{3})\s*[-.]?\s*(\d{4})(?!\d)/,
+    // 3 letras + 3 dígitos (ej: ABC123)
+    /([A-Z]{3})\s*[-.]?\s*(\d{3})(?!\d)/,
+    // 2 letras + 4 dígitos (ej: AB1234)
+    /([A-Z]{2})\s*[-.]?\s*(\d{4})(?!\d)/,
+    // 2 letras + 3 dígitos (ej: AB123)
+    /([A-Z]{2})\s*[-.]?\s*(\d{3})(?!\d)/,
+    // 3 letras + 2 dígitos + 1 letra — motos (ej: ABC12D)
+    /([A-Z]{3})\s*[-.]?\s*(\d{2}[A-Z])(?![A-Z0-9])/,
+  ];
+
+  // Intentar primero con el texto limpio (sin espacios ni guiones)
+  for (const regex of patterns) {
+    const match = cleaned.match(regex);
+    if (match) {
+      const letters = match[1];
+      const numbers = match[2];
+      return `${letters}-${numbers}`;
+    }
+  }
+
+  // Si no funcionó con texto limpio, intentar con el texto original
+  // (por si los espacios ayudan a delimitar la placa)
+  for (const regex of patterns) {
+    const match = upper.match(regex);
+    if (match) {
+      const letters = match[1];
+      const numbers = match[2];
+      return `${letters}-${numbers}`;
+    }
+  }
+
+  // Último intento: buscar patrón con espacios entre cada carácter (OCR fragmentado)
+  // Ej: "A B C 1 2 3" o "A B C 1 2 3 4"
+  const fragmented = /([A-Z])\s+([A-Z])\s+([A-Z])\s+(\d)\s+(\d)\s+(\d)(?:\s+(\d))?/;
+  const fragMatch = upper.match(fragmented);
+  if (fragMatch) {
+    const letters = fragMatch[1] + fragMatch[2] + fragMatch[3];
+    const numbers = fragMatch[4] + fragMatch[5] + fragMatch[6] + (fragMatch[7] || '');
+    return `${letters}-${numbers}`;
   }
 
   return null;
